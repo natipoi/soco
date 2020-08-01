@@ -1,19 +1,19 @@
 <template>
-<footer>
-    <div id="footer-wrap" class="side-space">
-        <div class="footer-logo">
+<footer :class="{ 'dark_mode_white_background': active }">
+    <div id="footer-wrap" :class="{ 'side-space': true, 'dark_mode_white_background': active }">
+        <div :class="{ 'footer-logo': true, 'dark_mode_white': active }">
             <Logo />
-            <p class="logo-bottom-text">soco kyoto</p>
+            <p :class="{ 'logo-bottom-text': true, 'dark_mode_balck_color': active }">soco kyoto</p>
         </div>
 
         <div class="footer-info">
-            <p class="footer-addres">〒602-0862 京都府上京区出水町260</p>
-            <p class="footer-tel">Tel: 070-6548-8399</p>
-            <p class="footer-email">Email: support@soco-kyoto.com</p>
+            <p :class="{ 'footer-addres': true, 'dark_mode_balck_color': active }">〒602-0862 京都府上京区出水町260</p>
+            <p :class="{ 'footer-tel': true, 'dark_mode_balck_color': active }">Tel: 070-6548-8399</p>
+            <p :class="{ 'footer-email': true, 'dark_mode_balck_color': active }">Email: support@soco-kyoto.com</p>
         </div>
 
         <div class="copyright">
-            <p>COPYRIGHT  soco kyoto.</p>
+            <p :class="{ 'dark_mode_balck_color': active }">COPYRIGHT  soco kyoto.</p>
         </div>
 
     </div>
@@ -23,7 +23,7 @@
 <style>
       footer { background: #000; color: #fff; padding-top: 30px;}
       .footer-logo {text-align: center; margin-bottom: 20px;}
-      .footer-logo .logo-svg {fill: #fff !important; height: 30px !important;}
+      .footer-logo .logo-svg {fill: #fff; height: 30px !important;}
       .logo-bottom-text {font-size: 0.8rem; margin-top: -5px;}
 
       .footer-info {margin-bottom: 20px;}
@@ -34,3 +34,20 @@
 
       }
 </style>
+
+<script>
+export default {
+  data() {
+    var now = new Date();
+    var hour = now.getHours();
+    hour = parseInt(hour)
+    console.log("hour is ", hour)
+    // 5時〜18時の間はお昼モード
+    var firstActive =  hour >= 5 && hour < 18 ? false : true;
+    return {
+      active: firstActive
+    }
+  }
+}
+
+</script>

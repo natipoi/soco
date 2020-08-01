@@ -1,8 +1,8 @@
 <template>
-<header>
+<header :class="{ 'dark_mode_background': active }">
     <div id="header-wrap">
-    <div id="header-background"></div>
-        <div id="header-logo">
+    <div id="header-background" :class="{ 'dark_mode_background': active }"></div>
+        <div id="header-logo" :class="{ 'dark_mode': active }">
             <a href="/">
             <Logo />
             </a>
@@ -22,23 +22,23 @@
             <input type="checkbox" name="click-hamburger" id="click-hamburger">
             <label id="header-hamburger" for="click-hamburger"　onclick="">
                 <span class="hamburger-bar-wrap">
-                    <span class="hamburger-bar" id="hamburger-bar-top"></span>
+                    <span id="hamburger-bar-top" :class="{'hamburger-bar': true, 'dark_mode_white_background': active }"></span>
                 </span>
                 <span class="hamburger-bar-wrap">
-                    <span class="hamburger-bar" id="hamburger-bar-bottom"></span>
+                    <span id="hamburger-bar-bottom" :class="{'hamburger-bar': true, 'dark_mode_white_background': active }"></span>
                 </span>
             </label>
-            <div id="sp-modal-menu-wrap">
+            <div id="sp-modal-menu-wrap" :class="{'dark_mode_background': active }">
                 <ul id="sp-modal-menu">
-                    <li><a href="" class="sp-modal-menu-a">Kitchen</a></li>
-                    <li><a href="" class="sp-modal-menu-a">Bar</a></li>
-                    <li><a href="" class="sp-modal-menu-a">Labo</a></li>
-                    <li><a href="" class="sp-modal-menu-a">Rooms</a></li>
-                    <li><a href="" class="sp-modal-menu-a">Access</a></li>
+                    <li><a href="" :class="{ 'sp-modal-menu-a': true, 'dark_mode_color': active }">Kitchen</a></li>
+                    <li><a href="" :class="{ 'sp-modal-menu-a': true, 'dark_mode_color': active }">Bar</a></li>
+                    <li><a href="" :class="{ 'sp-modal-menu-a': true, 'dark_mode_color': active }">Labo</a></li>
+                    <li><a href="" :class="{ 'sp-modal-menu-a': true, 'dark_mode_color': active }">Rooms</a></li>
+                    <li><a href="" :class="{ 'sp-modal-menu-a': true, 'dark_mode_color': active }">Access</a></li>
                 </ul>
-                <div class="change-lang">
+                <!--<div class="change-lang">
                 <p><span class="selected-lang">日本語</span> / <span class="noselected-lang">English</span></p>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -46,7 +46,6 @@
 </template>
 
 <style>
-
       header {position: fixed; background: #fff; padding: 10px 15px; width: 100%;z-index: 1000;}
       header .logo-svg {position: relative; z-index: 10000;}
       header ul {line-height: 1;}
@@ -102,3 +101,18 @@
         #sp-modal-menu-wrap {display: none;}
       }
 </style>
+
+<script>
+export default {
+  data() {
+    var now = new Date();
+    var hour = now.getHours();
+    // 5時〜18時の間はお昼モード
+    var firstActive =  hour >= 5 && hour < 18 ? false : true;
+    return {
+      active: firstActive
+    }
+  }
+}
+
+</script>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="{ 'dark_mode_background': active }">
     <Header />
     <Nuxt />
     <Footer />
@@ -9,7 +9,13 @@
 </template>
 
 <style>
-
+.dark_mode_background {background: #000 !important;}
+.dark_mode_white_background {background: #fff !important;}
+.dark_mode_color {color: #fff !important;}
+.dark_mode_balck_color {color: #000 !important;}
+.dark_mode_a_color {color: #fff !important; border-color: #fff !important;}
+.dark_mode .logo-svg {fill: #fff !important;}
+.dark_mode_white .logo-svg {fill: #000 !important;}
 
 html { color: #000001; font-size: 14px;}
 body {margin: 0 auto; font-family: "San Francisco", Sans-Serif;}
@@ -40,3 +46,18 @@ p {font-size: 0.9rem}
   .section {max-width: 800px;margin: 0 auto;}
 }
 </style>
+
+<script>
+export default {
+  data() {
+    var now = new Date();
+    var hour = now.getHours();
+    // 5時〜18時の間はお昼モード
+    var firstActive =  hour >= 5 && hour < 18 ? false : true;
+    return {
+      active: firstActive
+    }
+  }
+}
+
+</script>
