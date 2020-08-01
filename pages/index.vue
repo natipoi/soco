@@ -550,8 +550,17 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
       var hour = now.getHours();
       // 5時〜18時の間はお昼モード
       var firstActive =  hour >= 5 && hour < 18 ? false : true;
+      var day = firstActive ? false : true;
       return {
-        active: firstActive
+        active: firstActive,
+        day: day
+      }
+    },
+    methods: {
+      onClick() {
+        this.active = !this.active
+        this.day = !this.day
+
       }
     },
     // `env` is available in the context object

@@ -3,12 +3,28 @@
     <Header />
     <Nuxt />
     <Footer />
+    <div class="day-and-night-switch-wrap">
+      <div class="day-and-night-switch">
+        <span id="swith-selected-bg" :class="{ 'change-switch': active }"></span>
+        <span :class="{ 'day-and-night-btn': true, 'switch-selected': day }" @click="onClick">昼</span>
+        <span :class="{ 'day-and-night-btn': true, 'switch-selected': !day }" @click="onClick">夜</span>
+      </div>
+    </div>
     
 </div>
   </div>
 </template>
 
 <style>
+
+.day-and-night-switch-wrap {position:fixed; bottom: 10px; right: 10px;}
+.day-and-night-switch {position: relative; height: 45px; background: #000; border-radius: 50px;border: solid 3px #000;overflow:hidden;}
+.day-and-night-btn {position:relative; color: #fff;font-size: 1.3rem; display: inline-block; width: 50px;height: 39px;line-height: 39px;text-align: center;border-radius: 50px;z-index: 100;}
+.switch-selected {color: #000;}
+#swith-selected-bg {position: absolute; background: #fff; height: 39px;width: 55px; top: 0;border-radius: 50px; transition: transform .3s; transform: translateX(0)}
+.change-switch {transform: translateX(55px) !important;}
+
+
 .dark_mode_background {background: #000 !important;}
 .dark_mode_white_background {background: #fff !important;}
 .dark_mode_color {color: #fff !important;}
@@ -54,10 +70,20 @@ export default {
     var hour = now.getHours();
     // 5時〜18時の間はお昼モード
     var firstActive =  hour >= 5 && hour < 18 ? false : true;
+    var day = firstActive ? false : true;
     return {
-      active: firstActive
+      active: firstActive,
+      day: day
+    }
+  },
+  methods: {
+    onClick() {
+      this.active = !this.active
+      this.day = !this.day
+
     }
   }
+
 }
 
 </script>
