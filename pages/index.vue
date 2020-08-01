@@ -1,11 +1,54 @@
 <template>
   <div class="container">
     <section class="main">
-      <picture id="main-visual" class="img">
-        <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
-        <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
-        <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
-      </picture>
+      <div class="slide-dots">
+        <span class="slide-dot slide-dot-selected"></span>
+        <span class="slide-dot"></span>
+        <span class="slide-dot"></span>
+        <span class="slide-dot"></span>
+        <span class="slide-dot"></span>
+      </div>
+      <div class="main-visuals">
+        <div class="main-visual-wrap">
+          <picture class="main-visual img">
+            <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
+            <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
+          </picture>
+        </div>
+
+        <div class="main-visual-wrap">
+          <picture class="main-visual img">
+            <source media="(max-width: 720px)" srcset="~/assets/top/kitchen.jpg">
+            <source media="(min-width: 721px)" srcset="~/assets/top/kitchen.jpg">
+            <img src="~/assets/top/kitchen.jpg" alt="メインビジュアル">
+          </picture>
+        </div>
+
+        <div class="main-visual-wrap">
+          <picture class="main-visual img">
+            <source media="(max-width: 720px)" srcset="~/assets/top/labo.jpg">
+            <source media="(min-width: 721px)" srcset="~/assets/top/labo.jpg">
+            <img src="~/assets/top/labo.jpg" alt="メインビジュアル">
+          </picture>
+        </div>
+
+        <div class="main-visual-wrap">
+          <picture class="main-visual img">
+            <source media="(max-width: 720px)" srcset="~/assets/top/rooms.jpg">
+            <source media="(min-width: 721px)" srcset="~/assets/top/rooms.jpg">
+            <img src="~/assets/top/rooms.jpg" alt="メインビジュアル">
+          </picture>
+        </div>
+
+        <div class="main-visual-wrap">
+          <picture class="main-visual img">
+            <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
+            <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
+          </picture>
+        </div>
+      </div>
     </section>
 
     <section class="section">
@@ -264,7 +307,70 @@
 .img {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
 .text-yellow {color: #F2CB0C;}
 .main {position: relative;height: calc(100vw * 0.6); overflow: hidden;margin-bottom: 30px;}
-#main-visual img {width: 100%;}
+.main-visuals {display: flex; position: relative;height: calc(100vw * 0.6); flex-wrap: nowrap; transform: translateX(0%);
+animation: slide 25s ease-out 0s infinite normal backwards running;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    17% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    37% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    57% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    77% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    97% {
+        transform: translateX(-400%);
+    }
+}
+.main-visual-wrap {position: relative; width: 100%; height: calc(100vw * 0.6);flex-shrink: 0;flex-grow: 0;}
+
+.slide-dots {position: absolute; bottom: 10px; left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%); -ms-transform: translateX(-50%);z-index:10;}
+.slide-dot {display: inline-block;width: 8px;height: 8px; background: #FFF;border-radius: 50%;margin-right:8px; animation: dots 25s backwards 0s infinite normal running;}
+.slide-dot:first-child {animation-delay: 0s;}
+.slide-dot:nth-child(2) {animation-delay: 5s;}
+.slide-dot:nth-child(3) {animation-delay: 10s;}
+.slide-dot:nth-child(4) {animation-delay: 15s;}
+.slide-dot:last-child {margin-right:0; animation-delay: 20s;}
+
+@keyframes dots {
+    0% {
+        background: #FFF;
+    }
+    1% {
+        background: #F2CB0C;
+    }
+    19% {
+        background: #F2CB0C;
+    }
+    20% {
+        background: #FFF;
+    }
+    100% {
+        background: #FFF;
+    }
+}
+
 .h2 {color: #A2A2A2;font-size: 0.9rem; margin-bottom: 15px;}
 .h3 { font-size: 1.1rem;}
 .h3 span {position: relative;color: #A2A2A2; font-size: 0.9rem; margin-left: 80px;}
@@ -392,5 +498,12 @@
         }
       }).catch(console.error)
     }
+  }
+
+  if (process.client) {
+  $(function(){
+
+    console.log("OK")
+  })
   }
 </script>

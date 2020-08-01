@@ -9,19 +9,19 @@ const client = contentful.createClient({
 
 export default {
   /*
-  ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
-  */
-  mode: 'universal',
+   ** Nuxt rendering mode
+   ** See https://nuxtjs.org/api/configuration-mode
+   */
+  mode: "universal",
   /*
-  ** Nuxt target
-  ** See https://nuxtjs.org/api/configuration-target
-  */
-  target: 'server',
+   ** Nuxt target
+   ** See https://nuxtjs.org/api/configuration-target
+   */
+  target: "server",
   /*
-  ** Headers of the page
-  ** See https://nuxtjs.org/api/configuration-head
-  */
+   ** Headers of the page
+   ** See https://nuxtjs.org/api/configuration-head
+   */
   head: {
     htmlAttrs: {
       prefix: "og: http://ogp.me/ns#"
@@ -34,8 +34,7 @@ export default {
       {
         hid: "description",
         name: "description",
-        content:
-          "soco"
+        content: "soco"
       },
       {
         hid: "og:site_name",
@@ -48,13 +47,17 @@ export default {
       {
         hid: "og:description",
         property: "og:description",
-        content:
-          "soco"
+        content: "soco"
       },
       {
         hid: "og:image",
         property: "og:image",
         content: "~/assets/pc_main.jpg"
+      }
+    ],
+    script: [
+      {
+        src: "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
       }
     ],
     link: [
@@ -66,32 +69,27 @@ export default {
     ]
   },
   /*
-  ** Global CSS
-  */
-  css: [
-  ],
+   ** Global CSS
+   */
+  css: [],
   /*
-  ** Plugins to load before mounting the App
-  ** https://nuxtjs.org/guide/plugins
-  */
-  plugins: [
-    '~/plugins/contentful'
-  ],
+   ** Plugins to load before mounting the App
+   ** https://nuxtjs.org/guide/plugins
+   */
+  plugins: ["~/plugins/contentful"],
   /*
-  ** Auto import components
-  ** See https://nuxtjs.org/api/configuration-components
-  */
+   ** Auto import components
+   ** See https://nuxtjs.org/api/configuration-components
+   */
   components: true,
   /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-  ],
+   ** Nuxt.js dev-modules
+   */
+  buildModules: [],
   /*
-  ** Nuxt.js modules
-  */
-  modules: [
-  ],
+   ** Nuxt.js modules
+   */
+  modules: [],
 
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
@@ -119,9 +117,8 @@ export default {
     }
   },
   /*
-  ** Build configuration
-  ** See https://nuxtjs.org/api/configuration-build/
-  */
-  build: {
-  }
-}
+   ** Build configuration
+   ** See https://nuxtjs.org/api/configuration-build/
+   */
+  build: {}
+};
