@@ -429,8 +429,8 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 #floor-navi li {position: relative; width: 15vw; font-size: 1.2rem; padding: 5px 0;}
 
 .selected:before {content: "";position: absolute; width: 100%;height: 2px; background: #000; bottom: 0;left: 0; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); border-radius: 10px;}
-.floor-not-yet {color: #A2A2A2;}
-.floor-not-yet:before {content: "COMING SOON"; font-size: 0.2rem; color: #fff; font-weight: 900; position: absolute; width: 120%; padding: 5px 0; line-height: 1.2; background: rgba(162, 162, 162, 0.4); top: 50%; left:50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
+.floor-not-yet {color: #A2A2A2 !important;}
+.floor-not-yet:before {content: "COMING SOON"; font-size: 0.5rem; color: #fff; font-weight: 900; position: absolute; width: 120%; padding: 5px 0; line-height: 1.2; background: rgba(162, 162, 162, 0.4); top: 50%; left:50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
 
 .construction {margin-bottom: 50px}
 .construction img {width: 100%;} 
