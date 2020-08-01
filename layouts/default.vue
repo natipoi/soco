@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'dark_mode_background': active }">
+  <div :class="{ 'dark_mode': active }">
     <Header />
     <Nuxt />
     <Footer />
@@ -25,13 +25,17 @@
 .change-switch {transform: translateX(55px) !important;}
 
 
-.dark_mode_background {background: #000 !important;}
-.dark_mode_white_background {background: #fff !important;}
-.dark_mode_color {color: #fff !important;}
-.dark_mode_balck_color {color: #000 !important;}
-.dark_mode_a_color {color: #fff !important; border-color: #fff !important;}
-.dark_mode .logo-svg {fill: #fff !important;}
-.dark_mode_white .logo-svg {fill: #000 !important;}
+.dark_mode {background: #000 !important;}
+.dark_mode p, .dark_mode a, .dark_mode li, .dark_mode .h3, .dark_mode td {color: #fff;}
+.dark_mode a {border-color: #fff !important;}
+.dark_mode #header-background, .dark_mode #sp-modal-menu-wrap {background: #000 !important;}
+.dark_mode .logo-svg {fill: #fff;}
+.dark_mode .hamburger-bar {background: #fff !important;}
+.dark_mode footer {background: #fff !important;}
+.dark_mode footer p {color: #000 !important;}
+.dark_mode footer .logo-svg {fill: #000;}
+.dark_mode .selected:before {background: #fff !important;}
+
 
 html { color: #000001; font-size: 14px;}
 body {margin: 0 auto; font-family: "San Francisco", Sans-Serif;}
@@ -42,6 +46,7 @@ ul {list-style-type: none;list-style-position: inside;margin-bottom: 20px; line-
 h1 {margin: 40px 0; font-size: 1.4rem;}
 h4 {margin-bottom: 10px;font-weight: 400;font-size: 1.0rem;}
 p {margin-bottom: 0;font-weight: 400; font-size: 1.0rem; line-height: 2.0;}
+.gray {color: #A2A2A2 !important;}
 .p1 {font-size: 0.9rem;}
 .p1-m0 {font-size: 1.1rem; margin:0}
 .p3 {font-size: 0.8rem; color: #969594}
@@ -66,14 +71,9 @@ p {font-size: 0.9rem}
 <script>
 export default {
   data() {
-    var now = new Date();
-    var hour = now.getHours();
-    // 5時〜18時の間はお昼モード
-    var firstActive =  hour >= 5 && hour < 18 ? false : true;
-    var day = firstActive ? false : true;
-    return {
-      active: firstActive,
-      day: day
+      return {
+        active: this.$active(),
+        day: this.$day()
     }
   },
   methods: {

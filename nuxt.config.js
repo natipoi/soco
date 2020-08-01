@@ -76,7 +76,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ["~/plugins/contentful"],
+  plugins: ["~/plugins/contentful", "~/plugins/util"],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -96,8 +96,7 @@ export default {
     CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
     CTF_PERSON_ID: config.CTF_PERSON_ID,
     CTF_BLOG_POST_TYPE_ID: config.CTF_BLOG_POST_TYPE_ID,
-    DARK_BACKGROUND_COLOR: "#000",
-    
+    DARK_BACKGROUND_COLOR: "#000"
   },
   router: {
     base: "/"

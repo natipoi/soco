@@ -93,8 +93,6 @@
       input[id="click-hamburger"]:checked + label .hamburger-bar-wrap:nth-child(2) {transform: rotate(-45deg) translateY(-3.2px); transition: all 0.3s;}
       
       .hamburger-bar-wrap {transition: all 0.3s;}
-
-
       @media screen and (min-width: 820px){
         header {position: relative;}
         #header-background {display: none;}
@@ -105,14 +103,11 @@
 <script>
 export default {
   data() {
-    var now = new Date();
-    var hour = now.getHours();
-    // 5時〜18時の間はお昼モード
-    var firstActive =  hour >= 5 && hour < 18 ? false : true;
     return {
-      active: firstActive
+        active: this.$active(),
+        day: this.$day()
+        }
     }
-  }
 }
 
 </script>

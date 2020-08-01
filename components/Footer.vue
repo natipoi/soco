@@ -38,16 +38,11 @@
 <script>
 export default {
   data() {
-    var now = new Date();
-    var hour = now.getHours();
-    hour = parseInt(hour)
-    console.log("hour is ", hour)
-    // 5時〜18時の間はお昼モード
-    var firstActive =  hour >= 5 && hour < 18 ? false : true;
-    return {
-      active: firstActive
+      return {
+        active: this.$active(),
+        day: this.$day()
+      }
     }
-  }
 }
 
 </script>

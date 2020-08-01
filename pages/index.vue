@@ -49,7 +49,7 @@
     </section>
 
     <section class="section">
-      <h2 class="h2 side-space">socoのコンセプト</h2>
+      <h2 class="h2 side-space gray">socoのコンセプト</h2>
       <p :class="{ 'catch-phrase side-space': true, 'dark_mode_color': active }"><ruby>
 <rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>にいけば何かある。<span class="sp-br"></span>だからちょっと<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>まで。</p>
       <p :class="{ 'sub-text side-space': true, 'dark_mode_color': active }">さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。</p>
@@ -59,7 +59,7 @@
     </section>
 
     <section class="section">
-      <h2 class="h2 side-space">socoの空間</h2>
+      <h2 class="h2 side-space gray">socoの空間</h2>
       <p :class="{ 'catch-phrase side-space': true, 'dark_mode_color': active }">倉庫。いや、<ruby><rb>soco</rb>
 <rp>（</rp>
 <rt>ソコ</rt>
@@ -78,7 +78,7 @@
       <div class="floor-content">
         <div :class="{ 'floor-heading side-space': true, 'dark_mode': active }">
           <Logo />
-          <h3 :class="{ 'h3': true, 'dark_mode_color': active }">Kitchen<span>1階</span></h3>
+          <h3 :class="{ 'h3': true, 'dark_mode_color': active }">Kitchen<span class="gray">1階</span></h3>
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
@@ -109,8 +109,8 @@
               socoにいけば誰かいる、何かがある。だからちょっとsocoまで。<br>
               そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。
             </p>
-            <p class="floor-content-text-detail">OPEN 9:00 | CLOSE 18:00 (L.O. 17:30)</p>
-            <p class="floor-content-text-detail">※18:00以降は「<span class="text-yellow">soco bar</span>」として営業しています。</p>
+            <p class="floor-content-text-detail gray">OPEN 9:00 | CLOSE 18:00 (L.O. 17:30)</p>
+            <p class="floor-content-text-detail gray">※18:00以降は「<span class="text-yellow">soco bar</span>」として営業しています。</p>
             <div class="floor-content-button">
               <a href="">Kitchenを覗く</a>
             </div>
@@ -121,7 +121,7 @@
       <div class="floor-content">
         <div :class="{ 'floor-heading side-space': true, 'dark_mode': active }">
           <Logo />
-          <h3 :class="{ 'h3': true, 'dark_mode_color': active }">Labo<span>1階</span></h3>
+          <h3 :class="{ 'h3': true, 'dark_mode_color': active }">Labo<span class="gray">1階</span></h3>
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
@@ -149,7 +149,7 @@
               socoにいけば誰かいる、何かがある。だからちょっとsocoまで。<br>
               そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。
             </p>
-            <p class="floor-content-text-detail">OPEN 9:00 | CLOSE 18:00</p>
+            <p class="floor-content-text-detail gray">OPEN 9:00 | CLOSE 18:00</p>
             <div class="floor-content-button">
               <a href="">Laboを覗く</a>
             </div>
@@ -160,7 +160,7 @@
       <div class="floor-content">
         <div :class="{ 'floor-heading side-space': true, 'dark_mode': active }">
           <Logo />
-          <h3 :class="{ 'h3': true, 'dark_mode_color': active }">Rooms<span>2階, 3階</span></h3>
+          <h3 :class="{ 'h3': true, 'dark_mode_color': active }">Rooms<span class="gray">2階, 3階</span></h3>
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
@@ -191,7 +191,7 @@
               socoにいけば誰かいる、何かがある。だからちょっとsocoまで。<br>
               そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。
             </p>
-            <p class="floor-content-text-detail">1泊 6500円〜 (税抜)</p>
+            <p class="floor-content-text-detail gray">1泊 6500円〜 (税抜)</p>
             <div class="floor-content-button">
               <a href="">Roomsを覗く</a>
             </div>
@@ -201,7 +201,7 @@
     </section>
 
     <section class="section">
-      <h2 class="h2 side-space">socoの仲間たち</h2>
+      <h2 class="h2 side-space gray">socoの仲間たち</h2>
       <p :class="{ 'catch-phrase side-space': true, 'dark_mode_color': active }">いつでも<ruby><rb>soco</rb>
 <rp>（</rp>
 <rt>ソコ</rt>
@@ -213,7 +213,7 @@
         </div>
         <div class="person-text">
           <p :class="{ 'person-name': true, 'dark_mode_color': active }">ケイちゃん</p>
-          <p class="person-hours">出没時間：主に夜</p>
+          <p class="person-hours gray">出没時間：主に夜</p>
           <p :class="{ 'person-description': true, 'dark_mode_color': active }">
             さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
             生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
@@ -227,7 +227,7 @@
         </div>
         <div class="person-text">
           <p :class="{ 'person-name': true, 'dark_mode_color': active }">ケイちゃん</p>
-          <p class="person-hours">出没時間：主に夜</p>
+          <p class="person-hours gray">出没時間：主に夜</p>
           <p :class="{ 'person-description': true, 'dark_mode_color': active }">
             さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
             生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
@@ -241,7 +241,7 @@
         </div>
         <div class="person-text">
           <p :class="{ 'person-name': true, 'dark_mode_color': active }">ケイちゃん</p>
-          <p class="person-hours">出没時間：主に夜</p>
+          <p class="person-hours gray">出没時間：主に夜</p>
           <p :class="{ 'person-description': true, 'dark_mode_color': active }">
             さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
             生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
@@ -255,7 +255,7 @@
         </div>
         <div class="person-text">
           <p :class="{ 'person-name': true, 'dark_mode_color': active }">ケイちゃん</p>
-          <p class="person-hours">出没時間：主に夜</p>
+          <p class="person-hours gray">出没時間：主に夜</p>
           <p :class="{ 'person-description': true, 'dark_mode_color': active }">
             さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
             生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
@@ -269,7 +269,7 @@
     </section>
 
     <section class="section">
-      <h2 class="h2 side-space">socoのニュース</h2>
+      <h2 class="h2 side-space gray">socoのニュース</h2>
       <p :class="{ 'catch-phrase side-space': true, 'dark_mode_color': active }">日々、形作られていく、<ruby><rb>soco</rb>
 <rp>（</rp>
 <rt>ソコ</rt>
@@ -283,7 +283,7 @@
         </div>
         <div class="blog-text">
           <p :class="{ 'blog-heading': true, 'dark_mode_color': active }">{{ post.fields.title }}</p>
-          <p class="blog-date">{{ post.fields.publishDate }}</p>
+          <p class="blog-date gray">{{ post.fields.publishDate }}</p>
         </div>
       </nuxt-link>
     </div>
@@ -297,7 +297,7 @@
 
 
     <section class="section">
-      <h2 class="h2 side-space">socoの場所</h2>
+      <h2 class="h2 side-space gray">socoの場所</h2>
       <p :class="{ 'catch-phrase side-space': true, 'dark_mode_color': active }">京都の<ruby><rb>soco</rb>
 <rp>（</rp>
 <rt>ソコ</rt>
@@ -321,19 +321,19 @@
             <p :class="{ 'business-hours-title': true, 'dark_mode_color': active }">営業時間</p>
               <table class="business-hours-table">
                 <tr>
-                  <th>soco Kitchen</th>
+                  <th class="gray">soco Kitchen</th>
                   <td :class="{ 'dark_mode_color': active }">18:00 〜 24:00</td>
                 </tr>
                 <tr>
-                  <th>soco Bar</th>
+                  <th class="gray">soco Bar</th>
                   <td :class="{ 'dark_mode_color': active }">9:00 〜 18:00</td>
                 </tr>
                 <tr>
-                  <th>soco Labo</th>
+                  <th class="gray">soco Labo</th>
                   <td :class="{ 'dark_mode_color': active }">9:00 〜 18:00</td>
                 </tr>
                 <tr>
-                  <th>soco Rooms</th>
+                  <th class="gray">soco Rooms</th>
                   <td :class="{ 'dark_mode_color': active }">9:00 〜 24:00</td>
                 </tr>
               </table>
@@ -417,10 +417,10 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
     }
 }
 
-.h2 {color: #A2A2A2;font-size: 0.9rem; margin-bottom: 15px;}
+.h2 { font-size: 0.9rem; margin-bottom: 15px;}
 .h3 { font-size: 1.1rem;flex: 1;text-align: left;}
-.h3 span {position: relative;color: #A2A2A2; font-size: 0.9rem; margin-left: 60px;}
-.h3 span:before {content: ""; position: absolute; width: 30px;height: 1.5px; background: #A2A2A2; top: 50%; left: -40px; transform: translateY(-50%);-webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);border-radius: 10px;}
+.h3 span {position: relative; font-size: 0.9rem; margin-left: 60px;}
+.h3 span:before {content: ""; position: absolute; width: 30px;height: 1.5px; background: #A2A2A2 !important; top: 50%; left: -40px; transform: translateY(-50%);-webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);border-radius: 10px;}
 .section {text-align: center; margin-bottom: 100px;}
 .catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 2.0; margin-bottom: 30px;}
 .sub-text {margin-bottom: 20px;}
@@ -471,7 +471,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 }
 
 .floor-content-text {padding: 20px 0;}
-.floor-content-text-detail {text-align: right; color: #A2A2A2; font-size: 0.9rem;margin-bottom: 0px;}
+.floor-content-text-detail {text-align: right; font-size: 0.9rem;margin-bottom: 0px;}
 .floor-content-button {text-align: center;margin-top: 30px;}
 .floor-content-button a {position: relative; display: inline-block; color: #fff; background: #F2CB0C;padding: 15px 25px; border-radius: 10px; font-weight: 900;}
 .floor-content-button a:after {content:"\f105";font-family: "Font Awesome 5 Free"; font-weight: 900; margin-left: 10px; }
@@ -481,7 +481,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .person-image {position: relative; width: 30vw; height: 30vw; overflow: hidden; border-radius: 50%;}
 .person-text {flex: 1;margin-left: 10px; text-align:left;}
 .person-name {font-size: 1.2rem;}
-.person-hours {color: #A2A2A2; font-size: 0.9rem;}
+.person-hours {font-size: 0.9rem;}
 .person-description {font-size: 0.9rem;}
 
 .section-bottom-button a {display: inline-block; padding: 10px 15px; border-bottom: solid 2px #000; color: #000;}
@@ -495,13 +495,13 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
 .business-hours {text-align: center;}
 .business-hours-table {table-layout: fixed;width: 100%;}
-.business-hours-table th {color: #A2A2A2; text-align: center;font-weight: 400;}
+.business-hours-table th { text-align: center;font-weight: 400;}
 .business-hours-table tr {padding: 10px 0}
 .blog { margin-bottom: 50px; }
 .blog a {display: block; color: #000;}
 .blog-img {position: relative; width: 100%;height: calc(100vw * 0.6);overflow:hidden;margin-bottom: 10px;}
 .blog-heading {text-align:left;font-size: 1.1rem;margin-bottom: 5px; }
-.blog-date {text-align: right;color: #A2A2A2; font-size:0.9rem;}
+.blog-date {text-align: right; font-size:0.9rem;}
 
 @media screen and (min-width: 820px){
 .container {padding-top: 0;}
@@ -546,24 +546,11 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
   export default {
     data() {
-      var now = new Date();
-      var hour = now.getHours();
-      // 5時〜18時の間はお昼モード
-      var firstActive =  hour >= 5 && hour < 18 ? false : true;
-      var day = firstActive ? false : true;
       return {
-        active: firstActive,
-        day: day
+        active: this.$active(),
+        day: this.$day()
       }
     },
-    methods: {
-      onClick() {
-        this.active = !this.active
-        this.day = !this.day
-
-      }
-    },
-    // `env` is available in the context object
     asyncData ({env}) {
       return Promise.all([
         // fetch the owner of the blog
@@ -589,7 +576,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
         return {
           person: entries.items[0],
           posts: posts.items,
-          dark_background_color: env.DARK_BACKGROUND_COLOR
+          
 
         }
       }).catch(console.error)
