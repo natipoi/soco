@@ -96,7 +96,7 @@
       .hamburger-bar-wrap {transition: all 0.3s;}
 
 
-      @media screen and (min-width: 720px){
+      @media screen and (min-width: 820px){
         header {position: relative;}
         #header-background {display: none;}
         #sp-modal-menu-wrap {display: none;}

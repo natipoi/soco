@@ -30,7 +30,7 @@
 
       .copyright {text-align: center;padding: 20px 0;}
 
-      @media screen and (min-width: 720px){
+      @media screen and (min-width: 820px){
 
       }
 </style>
