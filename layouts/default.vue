@@ -17,8 +17,8 @@
 
 <style>
 
-.day-and-night-switch-wrap {position:fixed; bottom: 10px; right: 10px;}
-.day-and-night-switch {position: relative; height: 45px; background: #000; border-radius: 50px;border: solid 3px #000;overflow:hidden;}
+.day-and-night-switch-wrap {position:fixed; bottom: 10px; right: 10px;z-index: 1000;}
+.day-and-night-switch {position: relative; height: 45px; background: #000; border-radius: 50px;border: solid 3px #000;overflow:hidden; box-shadow: -2px -2px 10px rgba(0,0,0,0.2);z-index: 10000;}
 .day-and-night-btn {position:relative; color: #fff;font-size: 1.3rem; display: inline-block; width: 50px;height: 39px;line-height: 39px;text-align: center;border-radius: 50px;z-index: 100;}
 .switch-selected {color: #000;}
 #swith-selected-bg {position: absolute; background: #fff; height: 39px;width: 55px; top: 0;border-radius: 50px; transition: transform .3s; transform: translateX(0px)}
@@ -27,7 +27,7 @@
 
 .dark_mode, .dark_mode,.change-switch  {background: #000 !important; transition: background 0.2s;}
 .dark_mode p, .dark_mode a, .dark_mode li, .dark_mode .h3, .dark_mode td {color: #fff; transition: all 0.2s;}
-.dark_mode a {border-color: #fff !important; transition: all 0.2s;}
+.dark_mode a {color: #fff !important; border-color: #fff !important; transition: all 0.2s;}
 .dark_mode #header-background, .dark_mode #sp-modal-menu-wrap {background: #000 !important; transition: all 0.2s;}
 .dark_mode .logo-svg {fill: #fff; transition: fill 0.2s;}
 .dark_mode .hamburger-bar {background: #fff !important; transition: background 0.2s;}

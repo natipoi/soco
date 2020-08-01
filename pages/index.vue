@@ -470,7 +470,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
     content:""
 }
 
-.floor-content-text {padding: 20px 0;}
+.floor-content-text {padding: 20px 0; text-align:left;}
 .floor-content-text-detail {text-align: right; font-size: 0.9rem;margin-bottom: 0px;}
 .floor-content-button {text-align: center;margin-top: 30px;}
 .floor-content-button a {position: relative; display: inline-block; color: #fff; background: #F2CB0C;padding: 15px 25px; border-radius: 10px; font-weight: 900;}
@@ -515,7 +515,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
   .floor-content-image {width: 50%; height: 300px;}
   .floor-content-image img {height: 100%; height: 300px;}
   .floor-content-bottom {flex: 1; margin-left: 20px !important;}
-  .floor-content-text {font-size: 0.9rem;padding: 0 0 10px; text-align: left;line-height: 2.0;}
+  .floor-content-text {font-size: 0.9rem;padding: 0 0 10px;line-height: 2.0;}
 
 .floor-content-button a {padding: 10px 30px;}
 .person-introduction {max-width: 600px; margin-left: auto !important; margin-right: auto !important;}
