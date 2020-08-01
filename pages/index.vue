@@ -185,35 +185,17 @@
 <rp>）</rp>
 </ruby>。</p>
     <div class="blogs side-space">
-      <a class="blog">
+    <div class="blog" v-for="post in posts">
+      <nuxt-link :to="`/posts/${post.fields.slug}`">
         <div class="blog-img">
-          <img class="img" src="~/assets/top/blog.jpg">
+        <img :src="post.fields.heroImage.fields.file.url" :alt="post.fields.heroImage.fields.description" class="img">
         </div>
         <div class="blog-text">
-          <p class="blog-heading">[予約受付開始] ゲストハウス「soco Rooms」が9月15日にオープンします！</p>
-          <p class="blog-date">2020/9/1</p>
+          <p class="blog-heading">{{ post.fields.title }}</p>
+          <p class="blog-date">{{ post.fields.publishDate }}</p>
         </div>
-      </a>
-
-      <a class="blog">
-        <div class="blog-img">
-          <img class="img" src="~/assets/top/blog.jpg">
-        </div>
-        <div class="blog-text">
-          <p class="blog-heading">[予約受付開始] ゲストハウス「soco Rooms」が9月15日にオープンします！</p>
-          <p class="blog-date">2020/9/1</p>
-        </div>
-      </a>
-
-      <a class="blog">
-        <div class="blog-img">
-          <img class="img" src="~/assets/top/blog.jpg">
-        </div>
-        <div class="blog-text">
-          <p class="blog-heading">[予約受付開始] ゲストハウス「soco Rooms」が9月15日にオープンします！</p>
-          <p class="blog-date">2020/9/1</p>
-        </div>
-      </a>
+      </nuxt-link>
+    </div>
 
 
     </div>
@@ -333,7 +315,8 @@
 .business-hours-table {table-layout: fixed;width: 100%;}
 .business-hours-table th {color: #A2A2A2; text-align: center;font-weight: 400;}
 .business-hours-table tr {padding: 10px 0}
-.blog {display: block; margin-bottom: 50px; color: #000;}
+.blog { margin-bottom: 50px; }
+.blog a {display: block; color: #000;}
 .blog-img {position: relative; width: 100%;height: calc(100vw * 0.6);overflow:hidden;margin-bottom: 10px;}
 .blog-heading {text-align:left;font-size: 1.1rem;margin-bottom: 5px; }
 .blog-date {text-align: right;color: #A2A2A2; font-size:0.9rem;}
@@ -353,7 +336,7 @@
   .floor-content-text {font-size: 0.9rem;padding: 0 0 10px; text-align: left;line-height: 2.0;}
 
 .floor-content-button a {padding: 10px 30px;}
-.person-introduction {max-width: 600px; margin-left: auto; margin-right: autol}
+.person-introduction {max-width: 600px; margin-left: auto !important; margin-right: auto !important;}
 .person-image {width: 120px; height: 120px; margin-right: 30px;}
 .place {display: flex; align-items: end;}
 .map-image {width: 65%;height:350px;margin-right: 20px;}
@@ -367,7 +350,7 @@
  .blogs {display:flex;flex-wrap: wrap;justify-content: flex-start; }
  .blog {width: 30%; margin-right: 5%;}
  .blog:nth-child(3n){margin-right:0;}
- .blog-img {height: 130px;}
+ .blog-img {height: 150px;}
  .blog-heading {line-height: 1.5;font-size: 0.9rem;}
 
 }
