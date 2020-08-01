@@ -44,7 +44,8 @@ p, a, li, .h3, td, .switch-selected, footer p, .day-and-night-btn  {transition: 
 
 
 html { color: #000001; font-size: 14px;}
-body {margin: 0 auto; font-family: "San Francisco", Sans-Serif;}
+body {margin: 0 auto; font-family: "San Francisco", Sans-Serif;-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;}
 body * {margin: 0; padding: 0; box-sizing: border-box;}
 .side-space {margin-left: 8vw;margin-right: 8vw; }
 a {text-decoration: none; color: #969594}
