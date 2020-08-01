@@ -30,11 +30,13 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
 .only-pc {display: none;}
 .sp-br {display: block;}
 
+
 @media screen and (min-width: 820px){
 p {font-size: 0.9rem}
   .only-pc {display: block;}
   .only-sp {display: none;}
   .sp-br {display: inline;}
+  .side-space { margin-left: 0; margin-right: 0;}
   .section {max-width: 800px;margin: 0 auto;}
 }
 </style>
