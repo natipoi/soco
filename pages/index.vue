@@ -343,7 +343,6 @@
       
     </section>
 
-
   </div>
 </template>
 
@@ -351,7 +350,7 @@
 <style>
 
 .container {padding-top: 68px;}
-
+.overlay:before { content: ""; position:fixed; top:0; left:0; right:0;bottom:0; z-index: 1000;}
 .img {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
 .text-yellow {color: #F2CB0C;}
 .main {position: relative;height: calc(100vw * 0.6); overflow: hidden;margin-bottom: 30px;}
@@ -626,7 +625,18 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
         }
     })
 
-    $(".tap-arrow").on("click", function(){
+    var flg = false
+
+    $(".tap-arrow").on("click", function(e){
+
+       if (flg) {
+        return false;
+       } else {
+        flg = true;
+        setTimeout(function(){
+          flg = false;
+        },600);
+       }
 
         // kitchen or labo or rooms
           var data = $(this).attr("data")
@@ -651,7 +661,8 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
           select = data
           didSlide = true
         } else if ( select !== data ){
-          return
+          $("body").toggleClass("overlay");
+          return false;
         }
         
 
@@ -659,8 +670,9 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
         nowPosi = nowPosi.split('(')[1];
         nowPosi = nowPosi.split(')')[0];
         var x = nowPosi.split(', ')[4];
+        var nowWidth = $select.children(".floor-content-image").width()
 
-        x = attr === "right" ? - (imageWidth - parseInt(x)): imageWidth + parseInt(x);
+        x = attr === "right" ? - (nowWidth - parseInt(x)): nowWidth + parseInt(x);
         var slide = true
 
         if (attr === "right" &&  now === imageNum) {
@@ -691,6 +703,8 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
             }
             
         }
+        
+        
         
 
     })
