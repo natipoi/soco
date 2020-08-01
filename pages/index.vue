@@ -19,28 +19,25 @@
 
         <div class="main-visual-wrap">
           <picture class="main-visual img">
-            <source media="(max-width: 720px)" srcset="~/assets/top/kitchen.jpg">
-            <source media="(min-width: 721px)" srcset="~/assets/top/kitchen.jpg">
-            <img src="~/assets/top/kitchen.jpg" alt="メインビジュアル">
+            <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
+            <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
           </picture>
         </div>
-
         <div class="main-visual-wrap">
           <picture class="main-visual img">
-            <source media="(max-width: 720px)" srcset="~/assets/top/labo.jpg">
-            <source media="(min-width: 721px)" srcset="~/assets/top/labo.jpg">
-            <img src="~/assets/top/labo.jpg" alt="メインビジュアル">
+            <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
+            <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
           </picture>
         </div>
-
         <div class="main-visual-wrap">
           <picture class="main-visual img">
-            <source media="(max-width: 720px)" srcset="~/assets/top/rooms.jpg">
-            <source media="(min-width: 721px)" srcset="~/assets/top/rooms.jpg">
-            <img src="~/assets/top/rooms.jpg" alt="メインビジュアル">
+            <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
+            <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
           </picture>
         </div>
-
         <div class="main-visual-wrap">
           <picture class="main-visual img">
             <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
@@ -84,8 +81,26 @@
           <h3 class="h3">Kitchen<span>1階</span></h3>
         </div>
         <div class="floor-content-detail">
-          <div class="floor-content-image">
-              <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
+          <div class="floor-content-images-wrap only-sp">
+            <span attr="left" class="floor-content-images-arrow arrow-left tap-arrow hidden-arrow" data="kitchen"></span>
+            <span attr="right" class="floor-content-images-arrow arrow-right tap-arrow" data="kitchen"></span>
+            <div class="floor-content-images" id="kitchen-images">
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
+              </div>
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
+              </div>
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
+              </div>
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
+              </div>
+            </div>
+          </div>
+          <div class="floor-content-image only-pc">
+            <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
           </div>
           <div class="floor-content-bottom side-space">
             <p class="floor-content-text">
@@ -109,8 +124,23 @@
           <h3 class="h3">Labo<span>1階</span></h3>
         </div>
         <div class="floor-content-detail">
-          <div class="floor-content-image">
-              <img class="img" src="~/assets/top/labo.jpg" alt="ラボ">
+          <div class="floor-content-images-wrap only-sp">
+            <span attr="left" class="floor-content-images-arrow arrow-left tap-arrow hidden-arrow" data="labo"></span>
+            <span attr="right" class="floor-content-images-arrow arrow-right tap-arrow" data="labo"></span>
+            <div class="floor-content-images" id="labo-images">
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/labo.jpg" alt="ラボ">
+              </div>
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/labo.jpg" alt="ラボ">
+              </div>
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/labo.jpg" alt="ラボ">
+              </div>
+            </div>
+          </div>
+          <div class="floor-content-image only-pc">
+            <img class="img" src="~/assets/top/labo.jpg" alt="ラボ">
           </div>
           <div class="floor-content-bottom side-space">
             <p class="floor-content-text">
@@ -133,8 +163,26 @@
           <h3 class="h3">Rooms<span>2階, 3階</span></h3>
         </div>
         <div class="floor-content-detail">
-          <div class="floor-content-image">
-              <img class="img" src="~/assets/top/rooms.jpg" alt="部屋">
+          <div class="floor-content-images-wrap only-sp">
+            <span attr="left" class="floor-content-images-arrow arrow-left tap-arrow hidden-arrow" data="rooms"></span>
+            <span attr="right" class="floor-content-images-arrow arrow-right tap-arrow" data="rooms"></span>
+            <div class="floor-content-images" id="rooms-images">
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/rooms.jpg" alt="部屋">
+              </div>
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/rooms.jpg" alt="部屋">
+              </div>
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/rooms.jpg" alt="部屋">
+              </div>
+              <div class="floor-content-image">
+                  <img class="img" src="~/assets/top/rooms.jpg" alt="部屋">
+              </div>
+            </div>
+          </div>
+          <div class="floor-content-image only-pc">
+            <img class="img" src="~/assets/top/rooms.jpg" alt="部屋">
           </div>
           <div class="floor-content-bottom side-space">
             <p class="floor-content-text">
@@ -373,7 +421,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
 .h2 {color: #A2A2A2;font-size: 0.9rem; margin-bottom: 15px;}
 .h3 { font-size: 1.1rem;}
-.h3 span {position: relative;color: #A2A2A2; font-size: 0.9rem; margin-left: 80px;}
+.h3 span {position: relative;color: #A2A2A2; font-size: 0.9rem; margin-left: 60px;}
 .h3 span:before {content: ""; position: absolute; width: 30px;height: 1.5px; background: #A2A2A2; top: 50%; left: -40px; transform: translateY(-50%);-webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);border-radius: 10px;}
 .section {text-align: center; margin-bottom: 100px;}
 .catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 2.0; margin-bottom: 30px;}
@@ -393,7 +441,37 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .logo-svg {height: 20px; margin-right: 10px;}
 
 .floor-content {margin-bottom: 70px}
-.floor-content-image {position:relative; width: 100%; height: calc(100vw * 0.6);overflow:hidden;}
+.floor-content-images-wrap {position: relative; overflow:hidden;}
+.floor-content-images { display: flex; flex-wrap: nowrap;transform: translateX(calc((100% - 280px)/ 2));
+    transition: transform .5s;}
+.floor-content-image {position:relative; width: 280px; height: calc(100vw * 0.6);overflow:hidden;flex-shrink: 0;
+    flex-grow: 0;}
+    .floor-content-image img {height: 100%; width: auto;}
+
+.floor-content-images-arrow {position: absolute;top: 0; bottom: 0; width: calc((100% - 280px)/ 2); background: rgba(0, 0, 0, 0.5); z-index: 100;}
+
+.arrow-left {left: 0;}
+.arrow-right {right: 0;}
+.arrow-left:before, .arrow-right:before {
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    color: #fff;
+}
+.arrow-left:before {
+    content: "\f104";
+}
+.arrow-right:before {
+    content: "\f105";
+}
+.hidden-arrow:before {
+    content:""
+}
+
 .floor-content-text {padding: 20px 0;}
 .floor-content-text-detail {text-align: right; color: #A2A2A2; font-size: 0.9rem;margin-bottom: 0px;}
 .floor-content-button {text-align: center;margin-top: 30px;}
@@ -501,9 +579,121 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
   }
 
   if (process.client) {
+
   $(function(){
 
-    console.log("OK")
+    var $kitchen = $("#kitchen-images");
+    var $labo = $("#labo-images");
+    var $rooms = $("#rooms-images");
+    const kitchenImageNum = $kitchen.children().length;
+    const laboImageNum = $labo.children().length;
+    const roomsImageNum = $rooms.children().length;
+    var windowWidth = $(window).width();
+    var kitchenNow = 1;
+    var laboNow = 1;
+    var roomsNow = 1;
+    var nows = [kitchenNow,laboNow,roomsNow];
+    var now = 1;
+    var imageNum = 1;
+    var $select = $kitchen
+    var select = "kitchen"
+    var imageWidth = 280;
+    var firstX = `translateX(calc((100% - ${imageWidth}px)/2))`;
+
+    var didSlide = false;
+    
+
+    $(window).scroll(function(){
+        if (didSlide) {
+          now = 1
+          didSlide = false
+          $select.css("transform", firstX);
+          $('.arrow-left').addClass("hidden-arrow");
+          $('.arrow-right').removeClass("hidden-arrow");
+        }
+    })
+
+    $(window).resize(function(){
+        if (didSlide) {
+          now = 1
+          didSlide = false
+          firstX = `translateX(calc((100% - ${imageWidth}px)/2))`;
+          $kitchen.css("transform", firstX);
+          $labo.css("transform", firstX);
+          $rooms.css("transform", firstX);
+          $('.arrow-left').addClass("hidden-arrow");
+          $('.arrow-right').removeClass("hidden-arrow");
+        }
+    })
+
+    $(".tap-arrow").on("click", function(){
+
+        // kitchen or labo or rooms
+          var data = $(this).attr("data")
+        // left or right
+        var attr = $(this).attr("attr")
+        if (!didSlide) {
+          
+          if ( data === "kitchen" ){
+              $select = $kitchen
+              
+              now = nows[0]
+              imageNum = kitchenImageNum
+          } else if ( data === "labo" ) {
+              $select = $labo
+              now = nows[1]
+              imageNum = laboImageNum
+          } else {
+              $select = $rooms
+              now = nows[2]
+              imageNum = roomsImageNum
+          }
+          select = data
+          didSlide = true
+        } else if ( select !== data ){
+          return
+        }
+        
+
+        var nowPosi = $select.css("transform")
+        nowPosi = nowPosi.split('(')[1];
+        nowPosi = nowPosi.split(')')[0];
+        var x = nowPosi.split(', ')[4];
+
+        x = attr === "right" ? - (imageWidth - parseInt(x)): imageWidth + parseInt(x);
+        var slide = true
+
+        if (attr === "right" &&  now === imageNum) {
+            slide = false
+        } else if (attr === "left" &&  now === 1) {
+            slide = false
+        }
+        if (slide) {
+            $select.css({
+                transform: `translateX(${x}px)`
+            })
+            if (attr === "right"){
+                now = now + 1;
+                if ( now === imageNum ) {
+                    $(this).addClass("hidden-arrow");
+                }
+                if (now !== 1 ){
+                    $(this).prev().removeClass("hidden-arrow");
+                }
+            } else {
+                now = now - 1;
+                if (now === 1 ){
+                    $(this).addClass("hidden-arrow");
+                }
+                if ( now !== imageNum ){
+                    $(this).next().removeClass("hidden-arrow");
+                }
+            }
+            
+        }
+        
+
+    })
   })
   }
 </script>
