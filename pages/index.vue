@@ -419,7 +419,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 }
 
 .h2 {color: #A2A2A2;font-size: 0.9rem; margin-bottom: 15px;}
-.h3 { font-size: 1.1rem;width: 100%;text-align: left;}
+.h3 { font-size: 1.1rem;flex: 1;text-align: left;}
 .h3 span {position: relative;color: #A2A2A2; font-size: 0.9rem; margin-left: 60px;}
 .h3 span:before {content: ""; position: absolute; width: 30px;height: 1.5px; background: #A2A2A2; top: 50%; left: -40px; transform: translateY(-50%);-webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);border-radius: 10px;}
 .section {text-align: center; margin-bottom: 100px;}
@@ -505,7 +505,6 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .blog-date {text-align: right;color: #A2A2A2; font-size:0.9rem;}
 
 @media screen and (min-width: 820px){
-.h3 {width: auto;}
 .container {padding-top: 0;}
   .main {height: 400px;}
   .floor-heading {margin-bottom: 30px;}
