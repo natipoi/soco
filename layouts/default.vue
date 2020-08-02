@@ -116,22 +116,18 @@ export default {
     // 5時〜18時の間はお昼モード
     console.log("hour is ", hour)
     var firstActive = hour >= 5 && hour < 18 ? false : true;
-    console.log("firstActive is ", firstActive)
+
   　var path = this.$route.path;
     path = path.split("/");
-    var active = true;
     if (path[1] === "bar") {
-      active = true;
+      firstActive = true;
     } else if (path[1] === "kitchen") {
-      active = false;
-    } else {
-      console.log("トップページだよ")
-      active = firstActive
+      firstActive = false;
     }
-    console.log(active)
+    console.log(firstActive)
     return {
-      active: active,
-      day: !active
+      active: firstActive,
+      day: !firstActive
     }
   },
   mounted() {
