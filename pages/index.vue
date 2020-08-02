@@ -435,12 +435,6 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
   const client = createClient()
 
   export default {
-    data() {
-      return {
-        active: this.$active(),
-        day: this.$day()
-      }
-    },
     asyncData ({env}) {
       return Promise.all([
         // fetch the owner of the blog

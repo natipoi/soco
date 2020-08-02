@@ -103,20 +103,39 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
 <script>
 export default {
   data() {
+  　var path = this.$route.path;
+    path = path.split("/");
+    var active = true;
+    if (path[1] === "bar") {
+      active = true;
+    } else if (path[1] === "kitchen") {
+      active = false;
+    } else {
+      active = this.$active()
+    }
     return {
-        active: this.$active(),
-        day: this.$day()
-      }
+      active: active,
+      day: !active
+    }
   },
   mounted() {
-      Typekit.load({async: true})
+    Typekit.load({async: true})
       
   },
   methods: {
     onClick() {
       this.active = !this.active
-      this.day = !this.day
-
+      this.day = !this.active
+      if (process.client) {
+        var path = location.pathname;
+        path = path.split("/");
+        if (path[1] === "bar") {
+          history.replaceState('','','kitchen/');
+        } else if (path[1] === "kitchen") {
+          history.replaceState('','','bar/');
+        }
+      }
+      
     }
   }
 

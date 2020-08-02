@@ -103,13 +103,5 @@
 </style>
 
 <script>
-export default {
-  data() {
-    return {
-        active: this.$active(),
-        day: this.$day()
-        }
-    }
-}
 
 </script>

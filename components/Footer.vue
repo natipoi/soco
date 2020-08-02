@@ -1,7 +1,7 @@
 <template>
 <footer>
     <div id="footer-wrap" :class="{ 'side-space': true }">
-        <div :class="{ 'footer-logo': true, 'dark_mode_white': active }">
+        <div :class="{ 'footer-logo': true}">
             <Logo />
             <p :class="{ 'logo-bottom-text': true }">soco kyoto</p>
         </div>
@@ -35,15 +35,3 @@
 
       }
 </style>
-
-<script>
-export default {
-  data() {
-      return {
-        active: this.$active(),
-        day: this.$day()
-      }
-    }
-}
-
-</script>
