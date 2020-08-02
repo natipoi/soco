@@ -7,6 +7,19 @@ const client = contentful.createClient({
   accessToken: config.CTF_CDA_ACCESS_TOKEN
 });
 
+const now = new Date();
+const month = now.getMonth() + 1;
+var season = "summer";
+if (month >= 3 && month < 6) {
+  season = "spring";
+} else if (month >= 6 && month < 9) {
+  season = "summer";
+} else if (month >= 9 && month < 12) {
+  season = "autumn";
+} else {
+  season = "winter";
+}
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -62,7 +75,7 @@ export default {
       { src: "https://use.typekit.net/fzc8ycq.js" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/summer-favicon.ico" },
+      { rel: "icon", type: "image/x-icon", href: `/${season}-favicon.ico` },
       {
         rel: "stylesheet",
         href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css"
