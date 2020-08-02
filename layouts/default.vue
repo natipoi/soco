@@ -40,7 +40,7 @@
 .dark_mode .day-and-night-switch {border-color: #fff;}
 .dark_mode .switch-selected {color: #fff !important; transition: color 0.2s;}
 .dark_mode .kitchen-bar-h1:before {content: "Bar"}
-.dark_mode .only-night {display: block;}
+.dark_mode .only-night {display: inline-block;}
 .dark_mode .only-day {display: none;}
 
 p, a, li, .h3, td, .switch-selected, footer p, .day-and-night-btn  {transition: color 0.2s;}
@@ -82,7 +82,7 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
 @media screen and (min-width: 820px){
   .container {padding-top: 0;}
   p, li {font-size: 0.9rem}
-  .only-pc {display: block;}
+  .only-pc {display: inline-block;}
   .only-sp {display: none;}
   .sp-br {display: inline;}
   .side-space { margin-left: 0; margin-right: 0;}

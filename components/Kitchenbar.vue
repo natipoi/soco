@@ -6,7 +6,7 @@
             <p class="main-heading">
                 <span class="only-day">OPEN 9:00 | CLOSE 18:00 (L.O. 17:30)</span>
                 <span class="only-night">OPEN 18:00 | CLOSE 24:00 (L.O. 23:30)</span>
-                Tel: 070-xxxx-xxxx
+                <br>Tel: 070-xxxx-xxxx
             </p>
         </div>
         <div class="main-visual-wrap">
