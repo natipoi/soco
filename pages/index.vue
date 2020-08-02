@@ -11,37 +11,37 @@
       <div class="main-visuals">
         <div class="main-visual-wrap">
           <picture class="main-visual img">
-            <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
             <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
           </picture>
         </div>
 
         <div class="main-visual-wrap">
           <picture class="main-visual img">
-            <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
             <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
           </picture>
         </div>
         <div class="main-visual-wrap">
           <picture class="main-visual img">
-            <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
             <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
           </picture>
         </div>
         <div class="main-visual-wrap">
           <picture class="main-visual img">
-            <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
             <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
           </picture>
         </div>
         <div class="main-visual-wrap">
           <picture class="main-visual img">
-            <source media="(max-width: 720px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 721px)" srcset="~/assets/main_pc.jpg">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
             <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
           </picture>
         </div>
@@ -315,7 +315,7 @@
 </ruby>まで。</p>
       <div class="side-space place">
         <div class="map-image">
-          <img class="img" src="~/assets/top/map.png">
+            <img src="~/assets/top/map.jpg" alt="地図" class="img">
         </div>
         <div class="address-hours">
           <div class="address">
