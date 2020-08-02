@@ -344,7 +344,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .h2 { font-size: 0.9rem; margin-bottom: 10px; font-weight: 400;}
 .catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 1.0; margin-bottom: 30px;}
 .h3 { font-size: 1.1rem;flex: 1;text-align: left;}
-.h3 .sub-h3 {position: relative; font-size: 0.9rem; margin-left: 60px;}
+.h3 .sub-h3 {position: relative; font-size: 0.9rem; margin-left: 50px;}
 .h3 .sub-h3:before {content: ""; position: absolute; width: 30px;height: 1.5px; background: #A2A2A2 !important; top: 50%; left: -40px; transform: translateY(-50%);-webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);border-radius: 10px;}
 .section {text-align: center;}
 
@@ -362,6 +362,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
 .floor-heading {display: flex; flex-wrap: nowrap; align-items: center;margin-bottom: 15px;}
 .floor-heading .h3 {margin-left: 15px;}
+.floor-heading .logo-svg {zoom: 0.8}
 
 .floor-content {margin-bottom: 70px}
 .floor-content-images-wrap {position: relative; overflow:hidden;}
@@ -416,6 +417,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
   .h3 .sub-h3 {margin-left: 100px;}
   .h3 .sub-h3:before {left: -50px;}
   .floor-heading {margin-bottom: 35px;}
+  .floor-heading .logo-svg {zoom: 1.0}
   .construction {margin-bottom: 100px;}
   .catch-phrase {font-size: 1.5rem}
   #floor-navi li {width: 80px; font-size: 1.5rem;}
