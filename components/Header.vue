@@ -1,8 +1,8 @@
 <template>
-<header :class="{ 'dark_mode_background': active }">
+<header>
     <div id="header-wrap">
-    <div id="header-background" :class="{ 'dark_mode_background': active }"></div>
-        <div id="header-logo" :class="{ 'dark_mode': active }">
+    <div id="header-background"></div>
+        <div id="header-logo">
             <a href="/">
             <Logo />
             </a>
@@ -22,19 +22,19 @@
             <input type="checkbox" name="click-hamburger" id="click-hamburger">
             <label id="header-hamburger" for="click-hamburger"　onclick="">
                 <span class="hamburger-bar-wrap">
-                    <span id="hamburger-bar-top" :class="{'hamburger-bar': true, 'dark_mode_white_background': active }"></span>
+                    <span id="hamburger-bar-top" :class="{'hamburger-bar': true }"></span>
                 </span>
                 <span class="hamburger-bar-wrap">
-                    <span id="hamburger-bar-bottom" :class="{'hamburger-bar': true, 'dark_mode_white_background': active }"></span>
+                    <span id="hamburger-bar-bottom" :class="{'hamburger-bar': true }"></span>
                 </span>
             </label>
-            <div id="sp-modal-menu-wrap" :class="{'dark_mode_background': active }">
+            <div id="sp-modal-menu-wrap">
                 <ul id="sp-modal-menu">
-                    <li><a href="" :class="{ 'sp-modal-menu-a': true, 'dark_mode_color': active }">Kitchen</a></li>
-                    <li><a href="" :class="{ 'sp-modal-menu-a': true, 'dark_mode_color': active }">Bar</a></li>
-                    <li><a href="" :class="{ 'sp-modal-menu-a': true, 'dark_mode_color': active }">Labo</a></li>
-                    <li><a href="" :class="{ 'sp-modal-menu-a': true, 'dark_mode_color': active }">Rooms</a></li>
-                    <li><a href="" :class="{ 'sp-modal-menu-a': true, 'dark_mode_color': active }">Access</a></li>
+                    <li><a href="" :class="{ 'sp-modal-menu-a': true }">Kitchen</a></li>
+                    <li><a href="" :class="{ 'sp-modal-menu-a': true }">Bar</a></li>
+                    <li><a href="" :class="{ 'sp-modal-menu-a': true }">Labo</a></li>
+                    <li><a href="" :class="{ 'sp-modal-menu-a': true }">Rooms</a></li>
+                    <li><a href="" :class="{ 'sp-modal-menu-a': true }">Access</a></li>
                 </ul>
                 <!--<div class="change-lang">
                 <p><span class="selected-lang">日本語</span> / <span class="noselected-lang">English</span></p>
@@ -49,7 +49,7 @@
       header {position: fixed; background: #fff; padding: 10px 15px; width: 100%;z-index: 1000;}
       header .logo-svg {position: relative; z-index: 10000;}
       header ul {line-height: 1;}
-      #header-wrap {display: flex; flex-wrap: nowrap; align-items: baseline; max-width: 700px;margin: 0 auto;}
+      #header-wrap {display: flex; flex-wrap: nowrap; align-items: baseline; max-width: 800px;margin: 0 auto;}
       #header-logo{ display: inherit; margin: auto 0;}
       #header-logo a {display: inherit;}
       #header-catch {margin: auto 30px;}
@@ -60,7 +60,7 @@
 
       #header-menu-left {margin: auto 0 auto auto; margin-left: auto; }
       #header-menu-sns li a {font-family: "Font Awesome 5 Brands"; font-weight: 900; display: block;text-align: center; color: #000;}
-      #header-menu-sns { margin: auto 0;}
+      #header-menu-sns { margin: auto 0 auto 20px;}
 
 
       .no-link {color: #E5E5E5 !important;}
@@ -97,6 +97,7 @@
         header {position: relative;}
         #header-background {display: none;}
         #sp-modal-menu-wrap {display: none;}
+        #header-menu-sns li a {font-size: 1.2rem;}
       }
 </style>
 

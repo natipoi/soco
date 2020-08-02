@@ -50,25 +50,25 @@
 
     <section class="section">
       <h2 class="h2 side-space gray">socoのコンセプト</h2>
-      <p :class="{ 'catch-phrase side-space': true, 'dark_mode_color': active }"><ruby>
+      <p :class="{ 'catch-phrase side-space': true }"><ruby>
 <rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>にいけば何かある。<span class="sp-br"></span>だからちょっと<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>まで。</p>
-      <p :class="{ 'sub-text side-space': true, 'dark_mode_color': active }">さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。</p>
-      <p :class="{ 'sub-text side-space': true, 'dark_mode_color': active }">生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。</p>
-      <p :class="{ 'sub-text side-space': true, 'dark_mode_color': active }">socoにいけば誰かいる、何かがある。だからちょっとsocoまで。</p>
-      <p :class="{ 'sub-text side-space': true, 'dark_mode_color': active }">そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。</p>
+      <p :class="{ 'sub-text side-space': true }">さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。</p>
+      <p :class="{ 'sub-text side-space': true }">生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。</p>
+      <p :class="{ 'sub-text side-space': true }">socoにいけば誰かいる、何かがある。だからちょっとsocoまで。</p>
+      <p :class="{ 'sub-text side-space': true }">そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。</p>
     </section>
 
     <section class="section">
       <h2 class="h2 side-space gray">socoの空間</h2>
-      <p :class="{ 'catch-phrase side-space': true, 'dark_mode_color': active }">倉庫。いや、<ruby><rb>soco</rb>
+      <p :class="{ 'catch-phrase side-space': true }">倉庫。いや、<ruby><rb>soco</rb>
 <rp>（</rp>
 <rt>ソコ</rt>
 <rp>）</rp>
 </ruby>。</p>
       <ul id="floor-navi" class="side-space">
-        <li :class="{ 'selected': true, 'dark_mode_color': active }">1階</li>
-        <li :class="{ 'floor-not-yet': true, 'dark_mode_color': active }">2階</li>
-        <li :class="{ 'floor-not-yet': true, 'dark_mode_color': active }">3階</li>
+        <li :class="{ 'selected': true }">1階</li>
+        <li :class="{ 'floor-not-yet': true }">2階</li>
+        <li :class="{ 'floor-not-yet': true }">3階</li>
       </ul>
       
       <div class="construction side-space">
@@ -76,9 +76,9 @@
       </div>
 
       <div class="floor-content">
-        <div :class="{ 'floor-heading side-space': true, 'dark_mode': active }">
+        <div :class="{ 'floor-heading side-space': true }">
           <Logo />
-          <h3 :class="{ 'h3': true, 'dark_mode_color': active }">Kitchen<span class="gray">1階</span></h3>
+          <h3 :class="{ 'h3': true }">Kitchen<span class="gray">1階</span></h3>
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
@@ -103,7 +103,7 @@
             <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
           </div>
           <div class="floor-content-bottom side-space">
-            <p :class="{ 'floor-content-text': true, 'dark_mode_color': active }">
+            <p :class="{ 'floor-content-text': true }">
               さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
               生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。<br>
               socoにいけば誰かいる、何かがある。だからちょっとsocoまで。<br>
@@ -119,9 +119,9 @@
       </div>
 
       <div class="floor-content">
-        <div :class="{ 'floor-heading side-space': true, 'dark_mode': active }">
+        <div :class="{ 'floor-heading side-space': true }">
           <Logo />
-          <h3 :class="{ 'h3': true, 'dark_mode_color': active }">Labo<span class="gray">1階</span></h3>
+          <h3 :class="{ 'h3': true }">Labo<span class="gray">1階</span></h3>
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
@@ -143,7 +143,7 @@
             <img class="img" src="~/assets/top/labo.jpg" alt="ラボ">
           </div>
           <div class="floor-content-bottom side-space">
-            <p :class="{ 'floor-content-text': true, 'dark_mode_color': active }">
+            <p :class="{ 'floor-content-text': true }">
               さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
               生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。<br>
               socoにいけば誰かいる、何かがある。だからちょっとsocoまで。<br>
@@ -158,9 +158,9 @@
       </div>
 
       <div class="floor-content">
-        <div :class="{ 'floor-heading side-space': true, 'dark_mode': active }">
+        <div :class="{ 'floor-heading side-space': true }">
           <Logo />
-          <h3 :class="{ 'h3': true, 'dark_mode_color': active }">Rooms<span class="gray">2階, 3階</span></h3>
+          <h3 :class="{ 'h3': true }">Rooms<span class="gray">2階, 3階</span></h3>
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
@@ -185,7 +185,7 @@
             <img class="img" src="~/assets/top/rooms.jpg" alt="部屋">
           </div>
           <div class="floor-content-bottom side-space">
-            <p :class="{ 'floor-content-text': true, 'dark_mode_color': active }">
+            <p :class="{ 'floor-content-text': true }">
               さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
               生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。<br>
               socoにいけば誰かいる、何かがある。だからちょっとsocoまで。<br>
@@ -202,7 +202,7 @@
 
     <section class="section">
       <h2 class="h2 side-space gray">socoの仲間たち</h2>
-      <p :class="{ 'catch-phrase side-space': true, 'dark_mode_color': active }">いつでも<ruby><rb>soco</rb>
+      <p :class="{ 'catch-phrase side-space': true }">いつでも<ruby><rb>soco</rb>
 <rp>（</rp>
 <rt>ソコ</rt>
 <rp>）</rp>
@@ -212,9 +212,9 @@
           <img class="img" src="~/assets/top/person.png">
         </div>
         <div class="person-text">
-          <p :class="{ 'person-name': true, 'dark_mode_color': active }">ケイちゃん</p>
+          <p :class="{ 'person-name': true }">ケイちゃん</p>
           <p class="person-hours gray">出没時間：主に夜</p>
-          <p :class="{ 'person-description': true, 'dark_mode_color': active }">
+          <p :class="{ 'person-description': true }">
             さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
             生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
           </p>
@@ -226,9 +226,9 @@
           <img class="img" src="~/assets/top/person.png">
         </div>
         <div class="person-text">
-          <p :class="{ 'person-name': true, 'dark_mode_color': active }">ケイちゃん</p>
+          <p :class="{ 'person-name': true }">ケイちゃん</p>
           <p class="person-hours gray">出没時間：主に夜</p>
-          <p :class="{ 'person-description': true, 'dark_mode_color': active }">
+          <p :class="{ 'person-description': true}">
             さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
             生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
           </p>
@@ -240,9 +240,9 @@
           <img class="img" src="~/assets/top/person.png">
         </div>
         <div class="person-text">
-          <p :class="{ 'person-name': true, 'dark_mode_color': active }">ケイちゃん</p>
+          <p :class="{ 'person-name': true }">ケイちゃん</p>
           <p class="person-hours gray">出没時間：主に夜</p>
-          <p :class="{ 'person-description': true, 'dark_mode_color': active }">
+          <p :class="{ 'person-description': true }">
             さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
             生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
           </p>
@@ -254,9 +254,9 @@
           <img class="img" src="~/assets/top/person.png">
         </div>
         <div class="person-text">
-          <p :class="{ 'person-name': true, 'dark_mode_color': active }">ケイちゃん</p>
+          <p :class="{ 'person-name': true }">ケイちゃん</p>
           <p class="person-hours gray">出没時間：主に夜</p>
-          <p :class="{ 'person-description': true, 'dark_mode_color': active }">
+          <p :class="{ 'person-description': true }">
             さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
             生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
           </p>
@@ -264,13 +264,13 @@
       </div>
 
       <div class="section-bottom-button">
-        <a href="" :class="{ 'dark_mode_a_color': active }">スタッフ募集中</a>
+        <a href="">スタッフ募集中</a>
       </div>
     </section>
 
     <section class="section">
       <h2 class="h2 side-space gray">socoのニュース</h2>
-      <p :class="{ 'catch-phrase side-space': true, 'dark_mode_color': active }">日々、形作られていく、<ruby><rb>soco</rb>
+      <p :class="{ 'catch-phrase side-space': true }">日々、形作られていく、<ruby><rb>soco</rb>
 <rp>（</rp>
 <rt>ソコ</rt>
 <rp>）</rp>
@@ -282,7 +282,7 @@
         <img :src="post.fields.heroImage.fields.file.url" :alt="post.fields.heroImage.fields.description" class="img">
         </div>
         <div class="blog-text">
-          <p :class="{ 'blog-heading': true, 'dark_mode_color': active }">{{ post.fields.title }}</p>
+          <p :class="{ 'blog-heading': true }">{{ post.fields.title }}</p>
           <p class="blog-date gray">{{ post.fields.publishDate }}</p>
         </div>
       </nuxt-link>
@@ -291,14 +291,14 @@
 
     </div>
     <div class="section-bottom-button">
-      <a href="" :class="{ 'dark_mode_a_color': active }">ニュースをもっと見る</a>
+      <a href="">ニュースをもっと見る</a>
     </div>
     </section>
 
 
     <section class="section">
       <h2 class="h2 side-space gray">socoの場所</h2>
-      <p :class="{ 'catch-phrase side-space': true, 'dark_mode_color': active }">京都の<ruby><rb>soco</rb>
+      <p :class="{ 'catch-phrase side-space': true }">京都の<ruby><rb>soco</rb>
 <rp>（</rp>
 <rt>ソコ</rt>
 <rp>）</rp>
@@ -309,32 +309,32 @@
         </div>
         <div class="address-hours">
           <div class="address">
-            <p :class="{ 'address-name': true, 'dark_mode_color': active }">soco Kyoto</p>
-            <p :class="{ 'address-text': true, 'dark_mode_color': active }">〒602-0862 京都府上京区出水町260</p>
+            <p :class="{ 'address-name': true }">soco Kyoto</p>
+            <p :class="{ 'address-text': true }">〒602-0862 京都府上京区出水町260</p>
             <ul class="how-to-way">
-              <li :class="{ 'dark_mode_color': active }">神宮丸太町駅から徒歩5分</li>
-              <li :class="{ 'dark_mode_color': active }">神宮丸太町駅から徒歩5分</li>
-              <li :class="{ 'dark_mode_color': active }">神宮丸太町駅から徒歩5分</li>
+              <li>神宮丸太町駅から徒歩5分</li>
+              <li>神宮丸太町駅から徒歩5分</li>
+              <li>神宮丸太町駅から徒歩5分</li>
             </ul>
           </div>
           <div class="business-hours">
-            <p :class="{ 'business-hours-title': true, 'dark_mode_color': active }">営業時間</p>
+            <p :class="{ 'business-hours-title': true }">営業時間</p>
               <table class="business-hours-table">
                 <tr>
                   <th class="gray">soco Kitchen</th>
-                  <td :class="{ 'dark_mode_color': active }">18:00 〜 24:00</td>
+                  <td>18:00 〜 24:00</td>
                 </tr>
                 <tr>
                   <th class="gray">soco Bar</th>
-                  <td :class="{ 'dark_mode_color': active }">9:00 〜 18:00</td>
+                  <td>9:00 〜 18:00</td>
                 </tr>
                 <tr>
                   <th class="gray">soco Labo</th>
-                  <td :class="{ 'dark_mode_color': active }">9:00 〜 18:00</td>
+                  <td>9:00 〜 18:00</td>
                 </tr>
                 <tr>
                   <th class="gray">soco Rooms</th>
-                  <td :class="{ 'dark_mode_color': active }">9:00 〜 24:00</td>
+                  <td>9:00 〜 24:00</td>
                 </tr>
               </table>
           </div>
@@ -425,7 +425,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 2.0; margin-bottom: 30px;}
 .sub-text {margin-bottom: 20px;}
 
-#floor-navi {display: flex; justify-content: space-around; margin-bottom: 40px;}
+#floor-navi {display: flex; justify-content: space-around; margin: 0 auto 40px;max-width: 500px;}
 #floor-navi li {position: relative; width: 15vw; font-size: 1.2rem; padding: 5px 0;}
 
 .selected:before {content: "";position: absolute; width: 100%;height: 2px; background: #000; bottom: 0;left: 0; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); border-radius: 10px;}
@@ -506,11 +506,12 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 @media screen and (min-width: 820px){
 .container {padding-top: 0;}
   .main {height: 400px;}
-  .floor-heading {margin-bottom: 30px;}
+  .floor-heading {margin-bottom: 35px;}
   .construction {margin-bottom: 100px;}
   .catch-phrase {font-size: 1.5rem}
-  #floor-navi li {width: 60px;}
+  #floor-navi li {width: 80px; font-size: 1.5rem;}
   .floor-content-detail {display: flex; align-items: end;}
+  .floor-content-text-detail {font-size: 0.8rem;}
   .floor-content-detail .side-space {margin-left: 0;margin-right: 0;}
   .floor-content-image {width: 50%; height: 300px;}
   .floor-content-image img {height: 100%; height: 300px;}
@@ -534,6 +535,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
  .blog:nth-child(3n){margin-right:0;}
  .blog-img {height: 150px;}
  .blog-heading {line-height: 1.5;font-size: 0.9rem;}
+ .blog-date {font-size:0.8rem;}
 
 }
 
