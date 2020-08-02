@@ -116,6 +116,7 @@ export default {
     // 5時〜18時の間はお昼モード
     console.log("hour is ", hour)
     var firstActive = hour >= 5 && hour < 18 ? false : true;
+    console.log("firstActive is ", firstActive)
   　var path = this.$route.path;
     path = path.split("/");
     var active = true;
