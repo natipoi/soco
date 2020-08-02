@@ -360,8 +360,8 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .construction {margin-bottom: 50px}
 .construction img {width: 100%;} 
 
-.floor-heading {display: flex; flex-wrap: nowrap; align-items: end;margin-bottom: 15px;}
-
+.floor-heading {display: flex; flex-wrap: nowrap; align-items: center;margin-bottom: 15px;}
+.floor-heading .h3 {margin-left: 15px;}
 
 .floor-content {margin-bottom: 70px}
 .floor-content-images-wrap {position: relative; overflow:hidden;}
