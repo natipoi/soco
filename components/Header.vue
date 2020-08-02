@@ -9,7 +9,8 @@
         </div>
         <div id="header-catch" class="only-pc"><p>京都のXXXX</p></div>
         <ul class="header-menu only-pc" id="header-menu-left">
-            <li><a href="/Kitchen/" class="no-link">Kitchen</a></li>
+            <li class="only-day"><a href="/kitchen/" class="no-link">Kitchen</a></li>
+            <li class="only-night"><a href="/bar/" class="no-link">Bar</a></li>
             <li><a href="javascript:void(0)" class="no-link">Works</a></li>
             <li><a href="javascript:void(0)" class="no-link">Rooms</a></li>
             <li><a href="javascript:void(0)" class="no-link">Access</a></li>
@@ -30,8 +31,8 @@
             </label>
             <div id="sp-modal-menu-wrap">
                 <ul id="sp-modal-menu">
-                    <li><a href="/kitchen/" :class="{ 'sp-modal-menu-a': true }">Kitchen</a></li>
-                    <li><a href="" :class="{ 'sp-modal-menu-a': true }">Bar</a></li>
+                    <li class="only-day"><a href="/kitchen/" :class="{ 'sp-modal-menu-a': true }">Kitchen</a></li>
+                    <li class="only-night"><a href="/bar/" :class="{ 'sp-modal-menu-a': true }">Bar</a></li>
                     <li><a href="" :class="{ 'sp-modal-menu-a': true }">Labo</a></li>
                     <li><a href="" :class="{ 'sp-modal-menu-a': true }">Rooms</a></li>
                     <li><a href="" :class="{ 'sp-modal-menu-a': true }">Access</a></li>
