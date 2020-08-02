@@ -50,8 +50,7 @@
 
     <section class="section">
       <h2 class="h2 side-space gray">socoのコンセプト</h2>
-      <p :class="{ 'catch-phrase side-space': true }"><ruby>
-<rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>にいけば何かある。<span class="sp-br"></span>だからちょっと<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>まで。</p>
+      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>にいけば何かある。<span class="sp-br"></span>だからちょっと<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>まで。</p>
       <p :class="{ 'sub-text side-space': true }">さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。</p>
       <p :class="{ 'sub-text side-space': true }">生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。</p>
       <p :class="{ 'sub-text side-space': true }">socoにいけば誰かいる、何かがある。だからちょっとsocoまで。</p>
@@ -60,11 +59,7 @@
 
     <section class="section">
       <h2 class="h2 side-space gray">socoの空間</h2>
-      <p :class="{ 'catch-phrase side-space': true }">倉庫。いや、<ruby><rb>soco</rb>
-<rp>（</rp>
-<rt>ソコ</rt>
-<rp>）</rp>
-</ruby>。</p>
+      <p :class="{ 'catch-phrase side-space': true }">倉庫。いや、<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。</p>
       <ul id="floor-navi" class="side-space">
         <li :class="{ 'selected': true }">1階</li>
         <li :class="{ 'floor-not-yet': true }">2階</li>
@@ -212,66 +207,14 @@
 
     <section class="section">
       <h2 class="h2 side-space gray">socoの仲間たち</h2>
-      <p :class="{ 'catch-phrase side-space': true }">いつでも<ruby><rb>soco</rb>
-<rp>（</rp>
-<rt>ソコ</rt>
-<rp>）</rp>
-</ruby>に。</p>
-      <div class="person-introduction side-space">
-        <div class="person-image">
-          <img class="img" src="~/assets/top/person.png">
-        </div>
-        <div class="person-text">
-          <p :class="{ 'person-name': true }">ケイちゃん</p>
-          <p class="person-hours gray">出没時間：主に夜</p>
-          <p :class="{ 'person-description': true }">
-            さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
-            生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
-          </p>
-        </div>
-      </div>
+      <p :class="{ 'catch-phrase side-space': true }">いつでも<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>に。</p>
+      <Person />
 
-      <div class="person-introduction side-space">
-        <div class="person-image">
-          <img class="img" src="~/assets/top/person.png">
-        </div>
-        <div class="person-text">
-          <p :class="{ 'person-name': true }">ケイちゃん</p>
-          <p class="person-hours gray">出没時間：主に夜</p>
-          <p :class="{ 'person-description': true}">
-            さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
-            生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
-          </p>
-        </div>
-      </div>
+      <Person />
 
-      <div class="person-introduction side-space">
-        <div class="person-image">
-          <img class="img" src="~/assets/top/person.png">
-        </div>
-        <div class="person-text">
-          <p :class="{ 'person-name': true }">ケイちゃん</p>
-          <p class="person-hours gray">出没時間：主に夜</p>
-          <p :class="{ 'person-description': true }">
-            さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
-            生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
-          </p>
-        </div>
-      </div>
+      <Person />
 
-      <div class="person-introduction side-space">
-        <div class="person-image">
-          <img class="img" src="~/assets/top/person.png">
-        </div>
-        <div class="person-text">
-          <p :class="{ 'person-name': true }">ケイちゃん</p>
-          <p class="person-hours gray">出没時間：主に夜</p>
-          <p :class="{ 'person-description': true }">
-            さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
-            生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
-          </p>
-        </div>
-      </div>
+      <Person />
 
       <div class="section-bottom-button">
         <a href="">スタッフ募集中</a>
@@ -280,11 +223,7 @@
 
     <section class="section">
       <h2 class="h2 side-space gray">socoのニュース</h2>
-      <p :class="{ 'catch-phrase side-space': true }">日々、形作られていく、<ruby><rb>soco</rb>
-<rp>（</rp>
-<rt>ソコ</rt>
-<rp>）</rp>
-</ruby>。</p>
+      <p :class="{ 'catch-phrase side-space': true }">日々、形作られていく、<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。</p>
     <div class="blogs side-space">
     <div class="blog" v-for="post in posts">
       <nuxt-link :to="`/posts/${post.fields.slug}`">
@@ -313,43 +252,7 @@
 <rt>ソコ</rt>
 <rp>）</rp>
 </ruby>まで。</p>
-      <div class="side-space place">
-        <div class="map-image">
-            <img src="~/assets/top/map.jpg" alt="地図" class="img">
-        </div>
-        <div class="address-hours">
-          <div class="address">
-            <p :class="{ 'address-name': true }">soco Kyoto</p>
-            <p :class="{ 'address-text': true }">〒602-0862 京都府上京区出水町260</p>
-            <ul class="how-to-way">
-              <li>神宮丸太町駅から徒歩5分</li>
-              <li>神宮丸太町駅から徒歩5分</li>
-              <li>神宮丸太町駅から徒歩5分</li>
-            </ul>
-          </div>
-          <div class="business-hours">
-            <p :class="{ 'business-hours-title': true }">営業時間</p>
-              <table class="business-hours-table">
-                <tr>
-                  <th class="gray">soco Kitchen</th>
-                  <td>18:00 〜 24:00</td>
-                </tr>
-                <tr>
-                  <th class="gray">soco Bar</th>
-                  <td>9:00 〜 18:00</td>
-                </tr>
-                <tr>
-                  <th class="gray">soco Labo</th>
-                  <td>9:00 〜 18:00</td>
-                </tr>
-                <tr>
-                  <th class="gray">soco Rooms</th>
-                  <td>9:00 〜 24:00</td>
-                </tr>
-              </table>
-          </div>
-        </div>
-      </div>
+      <Map />
       
     </section>
 
@@ -358,11 +261,10 @@
 
 
 <style>
-.container {padding-top: 68px;}
+
 .overlay:before { content: ""; position:fixed; top:0; left:0; right:0;bottom:0; z-index: 1000;}
-.img {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
+
 .text-yellow {color: #F2CB0C;}
-.main {position: relative;height: calc(100vw * 0.6); overflow: hidden;margin-bottom: 30px;}
 .main-visuals {display: flex; position: relative;height: calc(100vw * 0.6); flex-wrap: nowrap; transform: translateX(0%);
 animation: slide 25s ease-out 0s infinite normal backwards running;
 }
@@ -430,12 +332,13 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
     }
 }
 
-.h2 { font-size: 0.9rem; margin-bottom: 10px;}
+.h2 { font-size: 0.9rem; margin-bottom: 10px; font-weight: 400;}
+.catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 1.0; margin-bottom: 30px;}
 .h3 { font-size: 1.1rem;flex: 1;text-align: left;}
 .h3 span {position: relative; font-size: 0.9rem; margin-left: 60px;}
 .h3 span:before {content: ""; position: absolute; width: 30px;height: 1.5px; background: #A2A2A2 !important; top: 50%; left: -40px; transform: translateY(-50%);-webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);border-radius: 10px;}
-.section {text-align: center; margin-bottom: 100px;}
-.catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 2.0; margin-bottom: 30px;}
+.section {text-align: center;}
+
 .sub-text {margin-bottom: 20px;}
 
 #floor-navi {display: flex; justify-content: space-around; margin: 0 auto 40px;max-width: 500px;}
@@ -489,27 +392,9 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .floor-content-button a {position: relative; display: inline-block; color: #fff; background: #F2CB0C;padding: 15px 25px; border-radius: 10px; font-weight: 900;}
 .floor-content-button a:after {content:"\f105";font-family: "Font Awesome 5 Free"; font-weight: 900; margin-left: 10px; }
 
-
-.person-introduction {display: flex; flex-wrap: nowrap; margin-bottom: 40px;}
-.person-image {position: relative; width: 30vw; height: 30vw; overflow: hidden; border-radius: 50%;}
-.person-text {flex: 1;margin-left: 10px; text-align:left;}
-.person-name {font-size: 1.2rem;}
-.person-hours {font-size: 0.9rem;}
-.person-description {font-size: 0.9rem;}
-
 .section-bottom-button a {display: inline-block; padding: 10px 15px; border-bottom: solid 2px #000; color: #000;}
 .section-bottom-button a:after {content:"\f105";font-family: "Font Awesome 5 Free"; font-weight: 900; margin-left: 10px; }
 
-.map-image {position: relative;height: calc(100vw * 0.6); overflow: hidden;margin-bottom: 20px;}
-
-.address {text-align: center; margin-bottom: 30px;}
-.address-name {font-weight: 900; font-size: 1.1rem; margin-bottom: 10px;}
-.address-text {margin-bottom: 10px;}
-
-.business-hours {text-align: center;}
-.business-hours-table {table-layout: fixed;width: 100%;}
-.business-hours-table th { text-align: center;font-weight: 400;}
-.business-hours-table tr {padding: 10px 0}
 .blog { margin-bottom: 50px; }
 .blog a {display: block; color: #000;}
 .blog-img {position: relative; width: 100%;height: calc(100vw * 0.6);overflow:hidden;margin-bottom: 10px;}
@@ -517,7 +402,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .blog-date {text-align: right; font-size:0.9rem;}
 
 @media screen and (min-width: 820px){
-.container {padding-top: 0;}
+
   .main {height: 400px;}
   .floor-heading {margin-bottom: 35px;}
   .construction {margin-bottom: 100px;}
@@ -531,24 +416,14 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
   .floor-content-bottom {flex: 1; margin-left: 20px !important;}
   .floor-content-text {font-size: 0.9rem;padding: 0 0 10px;line-height: 2.0;}
 
-.floor-content-button a {padding: 10px 30px;}
-.person-introduction {max-width: 600px; margin-left: auto !important; margin-right: auto !important;}
-.person-image {width: 120px; height: 120px; margin-right: 30px;}
-.place {display: flex; align-items: end;}
-.map-image {width: 65%;height:350px;margin-right: 20px;}
-.map-image img {height: 100%; width: auto;}
-.address-hours {flex: 1;}
-
-.business-hours-table {border-collapse: collapse;font-size: 0.9rem;}
-.address, .business-hours {text-align: left;}
-.business-hours-table th {text-align: left;}
- .business-hours-table tr {height: 30px;}
- .blogs {display:flex;flex-wrap: wrap;justify-content: flex-start; }
- .blog {width: 30%; margin-right: 5%;}
- .blog:nth-child(3n){margin-right:0;}
- .blog-img {height: 150px;}
- .blog-heading {line-height: 1.5;font-size: 0.9rem;}
- .blog-date {font-size:0.8rem;}
+  .floor-content-button a {padding: 10px 30px;}
+  
+  .blogs {display:flex;flex-wrap: wrap;justify-content: flex-start; }
+  .blog {width: 30%; margin-right: 5%;}
+  .blog:nth-child(3n){margin-right:0;}
+  .blog-img {height: 150px;}
+  .blog-heading {line-height: 1.5;font-size: 0.9rem;}
+  .blog-date {font-size:0.8rem;}
 
 }
 
