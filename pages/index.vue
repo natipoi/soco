@@ -83,6 +83,7 @@
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
             <div class="slide-dots floor-slide-dots">
+            <span class='slide-dot selected-dot'></span>
             </div>
             <span attr="left" class="floor-content-images-arrow arrow-left tap-arrow hidden-arrow" data="kitchen"></span>
             <span attr="right" class="floor-content-images-arrow arrow-right tap-arrow" data="kitchen"></span>
@@ -128,6 +129,7 @@
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
             <div class="slide-dots floor-slide-dots">
+            <span class='slide-dot selected-dot'></span>
             </div>
             <span attr="left" class="floor-content-images-arrow arrow-left tap-arrow hidden-arrow" data="labo"></span>
             <span attr="right" class="floor-content-images-arrow arrow-right tap-arrow" data="labo"></span>
@@ -169,6 +171,7 @@
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
             <div class="slide-dots floor-slide-dots">
+            <span class='slide-dot selected-dot'></span>
             </div>
             <span attr="left" class="floor-content-images-arrow arrow-left tap-arrow hidden-arrow" data="rooms"></span>
             <span attr="right" class="floor-content-images-arrow arrow-right tap-arrow" data="rooms"></span>
@@ -603,8 +606,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
         var $images = $(this).children(".floor-content-images");
         var imageNum = $images.children().length
         var $dotsBox = $(this).children(".floor-slide-dots");
-        var dotHtml = "<span class='slide-dot selected-dot'></span>"
-        dotHtml += "<span class='slide-dot'></span>".repeat(imageNum - 1);
+        var dotHtml = "<span class='slide-dot'></span>".repeat(imageNum - 1);
         $dotsBox.append(dotHtml)
     })
 
