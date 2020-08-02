@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <section class="main">
-      <div class="slide-dots">
+      <div class="slide-dots main-slide-dot">
         <span class="slide-dot slide-dot-selected"></span>
         <span class="slide-dot"></span>
         <span class="slide-dot"></span>
@@ -82,6 +82,8 @@
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
+            <div class="slide-dots floor-slide-dots">
+            </div>
             <span attr="left" class="floor-content-images-arrow arrow-left tap-arrow hidden-arrow" data="kitchen"></span>
             <span attr="right" class="floor-content-images-arrow arrow-right tap-arrow" data="kitchen"></span>
             <div class="floor-content-images" id="kitchen-images">
@@ -125,6 +127,8 @@
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
+            <div class="slide-dots floor-slide-dots">
+            </div>
             <span attr="left" class="floor-content-images-arrow arrow-left tap-arrow hidden-arrow" data="labo"></span>
             <span attr="right" class="floor-content-images-arrow arrow-right tap-arrow" data="labo"></span>
             <div class="floor-content-images" id="labo-images">
@@ -164,9 +168,12 @@
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
+            <div class="slide-dots floor-slide-dots">
+            </div>
             <span attr="left" class="floor-content-images-arrow arrow-left tap-arrow hidden-arrow" data="rooms"></span>
             <span attr="right" class="floor-content-images-arrow arrow-right tap-arrow" data="rooms"></span>
             <div class="floor-content-images" id="rooms-images">
+
               <div class="floor-content-image">
                   <img class="img" src="~/assets/top/rooms.jpg" alt="部屋">
               </div>
@@ -392,12 +399,15 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .main-visual-wrap {position: relative; width: 100%; height: calc(100vw * 0.6);flex-shrink: 0;flex-grow: 0;}
 
 .slide-dots {position: absolute; bottom: 10px; left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%); -ms-transform: translateX(-50%);z-index:10;}
-.slide-dot {display: inline-block;width: 8px;height: 8px; background: #FFF;border-radius: 50%;margin-right:8px; animation: dots 25s backwards 0s infinite normal running;}
-.slide-dot:first-child {animation-delay: 0s;}
-.slide-dot:nth-child(2) {animation-delay: 5s;}
-.slide-dot:nth-child(3) {animation-delay: 10s;}
-.slide-dot:nth-child(4) {animation-delay: 15s;}
-.slide-dot:last-child {margin-right:0; animation-delay: 20s;}
+
+.slide-dot {display: inline-block;width: 8px;height: 8px; background: #FFF;border-radius: 50%;margin-right:8px;}
+.main-slide-dots .slide-dot { animation: dots 25s backwards 0s infinite normal running;}
+.main-slide-dots .main-slide-dots.slide-dot:first-child {animation-delay: 0s;}
+.main-slide-dots .slide-dot:nth-child(2) {animation-delay: 5s;}
+.main-slide-dots .slide-dot:nth-child(3) {animation-delay: 10s;}
+.main-slide-dots .slide-dot:nth-child(4) {animation-delay: 15s;}
+.main-slide-dots .slide-dot:last-child {margin-right:0; animation-delay: 20s;}
+.selected-dot {background: #F2CB0C;}
 
 @keyframes dots {
     0% {
@@ -589,6 +599,15 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
   $(function(){
 
+    $('.floor-content-images-wrap').each(function(i, elem){
+        var $images = $(this).children(".floor-content-images");
+        var imageNum = $images.children().length
+        var $dotsBox = $(this).children(".floor-slide-dots");
+        var dotHtml = "<span class='slide-dot selected-dot'></span>"
+        dotHtml += "<span class='slide-dot'></span>".repeat(imageNum - 1);
+        $dotsBox.append(dotHtml)
+    })
+
     var $kitchen = $("#kitchen-images");
     var $labo = $("#labo-images");
     var $rooms = $("#rooms-images");
@@ -617,6 +636,10 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
           $select.css("transform", firstX);
           $('.arrow-left').addClass("hidden-arrow");
           $('.arrow-right').removeClass("hidden-arrow");
+          $('.floor-slide-dots').each(function(i, elem){
+              $(this).children(".selected-dot").removeClass("selected-dot")
+              $(this).children().eq(0).addClass("selected-dot")
+          })
         }
     })
 
@@ -692,8 +715,13 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
             $select.css({
                 transform: `translateX(${x}px)`
             })
+            var $selectedDot = $(this).parent().find('.selected-dot');
+            $selectedDot.removeClass('selected-dot');
             if (attr === "right"){
                 now = now + 1;
+                
+                
+                $selectedDot.next().addClass('selected-dot');
                 if ( now === imageNum ) {
                     $(this).addClass("hidden-arrow");
                 }
@@ -701,6 +729,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
                     $(this).prev().removeClass("hidden-arrow");
                 }
             } else {
+                $selectedDot.prev().addClass('selected-dot');
                 now = now - 1;
                 if (now === 1 ){
                     $(this).addClass("hidden-arrow");
