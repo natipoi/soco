@@ -128,6 +128,7 @@ export default {
       console.log("トップページだよ")
       active = firstActive
     }
+    console.log(active)
     return {
       active: active,
       day: !active
