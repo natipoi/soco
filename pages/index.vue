@@ -351,7 +351,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .construction {margin-bottom: 50px}
 .construction img {width: 100%;} 
 
-.floor-heading {display: flex; flex-wrap: nowrap; align-items: center;margin-bottom: 15px;}
+.floor-heading {display: flex; flex-wrap: nowrap; align-items: end;margin-bottom: 15px;}
 .logo-svg {height: 20px; margin-right: 10px;}
 
 .floor-content {margin-bottom: 70px}
@@ -403,7 +403,9 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
 @media screen and (min-width: 820px){
 
-  .main {height: 400px;}
+  .main {height: 400px;margin-bottom: 80px;}
+  .h3 span {margin-left: 100px;}
+  .h3 span:before {left: -50px;}
   .floor-heading {margin-bottom: 35px;}
   .construction {margin-bottom: 100px;}
   .catch-phrase {font-size: 1.5rem}

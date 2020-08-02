@@ -97,6 +97,9 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
   .address, .business-hours {text-align: left;}
   .business-hours-table th {text-align: left;}
   .business-hours-table tr {height: 30px;}
+   .day-and-night-btn {line-height: 1.2;padding: 4px 0;}
+  .day-and-night-btn:after {content: "のsoco"; display: block;font-size: 0.7rem;}
+
 }
 </style>
 
