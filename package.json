@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "contentful": "^7.14.6",
-    "nuxt": "^2.14.0"
+    "nuxt": "^2.14.0",
+    "vue-scrollto": "^2.18.2"
   },
   "devDependencies": {
     "push-dir": "^0.4.1"

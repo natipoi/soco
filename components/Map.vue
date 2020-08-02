@@ -54,7 +54,6 @@
 .container {padding-top: 0;}
 
 .map-image {width: 65%;height:350px;margin-right: 20px;}
-.map-image img {height: 100%; width: auto;}
 .address-hours {flex: 1;}
 
 .business-hours-table {border-collapse: collapse;font-size: 0.9rem;}

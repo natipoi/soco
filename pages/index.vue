@@ -73,7 +73,11 @@
       <div class="floor-content">
         <div :class="{ 'floor-heading side-space': true }">
           <Logo />
-          <h3 :class="{ 'h3': true }">Kitchen<span class="gray">1階</span></h3>
+          <h3 :class="{ 'h3': true }">
+            <span class="only-day">Kitchen</span>
+            <span class="only-night">Bar</span>
+            <span class="gray sub-h3">1階</span>
+          </h3>
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
@@ -107,10 +111,15 @@
               socoにいけば誰かいる、何かがある。だからちょっとsocoまで。<br>
               そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。
             </p>
-            <p class="floor-content-text-detail gray">OPEN 9:00 | CLOSE 18:00 (L.O. 17:30)</p>
-            <p class="floor-content-text-detail gray">※18:00以降は「<span class="text-yellow">soco bar</span>」として営業しています。</p>
+            <div class="bar-kitchen-text-detail">
+              <p class="floor-content-text-detail gray only-day">OPEN 9:00 | CLOSE 18:00 (L.O. 17:30)<br>
+              ※18:00以降は「<span class="text-yellow">soco bar</span>」として営業しています。</p>
+              <p class="floor-content-text-detail gray only-night">OPEN 18:00 | CLOSE 24:00 (L.O. 23:30)<br>
+              ※18:00までは「<span class="text-yellow">soco kitchen</span>」として営業しています。。</p>
+            </div>
             <div class="floor-content-button">
-              <a href="">Kitchenを覗く</a>
+              <a href="/kitchen/" class="only-day">Kitchenを覗く</a>
+              <a href="/bar/" class="only-night">Barを覗く</a>
             </div>
           </div>
         </div>
@@ -119,7 +128,7 @@
       <div class="floor-content">
         <div :class="{ 'floor-heading side-space': true }">
           <Logo />
-          <h3 :class="{ 'h3': true }">Labo<span class="gray">1階</span></h3>
+          <h3 :class="{ 'h3': true }">Labo<span class="gray sub-h3">1階</span></h3>
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
@@ -161,7 +170,7 @@
       <div class="floor-content">
         <div :class="{ 'floor-heading side-space': true }">
           <Logo />
-          <h3 :class="{ 'h3': true }">Rooms<span class="gray">2階, 3階</span></h3>
+          <h3 :class="{ 'h3': true }">Rooms<span class="gray sub-h3">2階, 3階</span></h3>
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
@@ -335,8 +344,8 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .h2 { font-size: 0.9rem; margin-bottom: 10px; font-weight: 400;}
 .catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 1.0; margin-bottom: 30px;}
 .h3 { font-size: 1.1rem;flex: 1;text-align: left;}
-.h3 span {position: relative; font-size: 0.9rem; margin-left: 60px;}
-.h3 span:before {content: ""; position: absolute; width: 30px;height: 1.5px; background: #A2A2A2 !important; top: 50%; left: -40px; transform: translateY(-50%);-webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);border-radius: 10px;}
+.h3 .sub-h3 {position: relative; font-size: 0.9rem; margin-left: 60px;}
+.h3 .sub-h3:before {content: ""; position: absolute; width: 30px;height: 1.5px; background: #A2A2A2 !important; top: 50%; left: -40px; transform: translateY(-50%);-webkit-transform: translateY(-50%); -ms-transform: translateY(-50%);border-radius: 10px;}
 .section {text-align: center;}
 
 .sub-text {margin-bottom: 20px;}
@@ -388,6 +397,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
 .floor-content-text {padding: 20px 0; text-align:left;}
 .floor-content-text-detail {text-align: right; font-size: 0.9rem;margin-bottom: 0px;}
+.bar-kitchen-text-detail {text-align: right;}
 .floor-content-button {text-align: center;margin-top: 30px;}
 .floor-content-button a {position: relative; display: inline-block; color: #fff; background: #F2CB0C;padding: 15px 25px; border-radius: 10px; font-weight: 900;}
 .floor-content-button a:after {content:"\f105";font-family: "Font Awesome 5 Free"; font-weight: 900; margin-left: 10px; }
@@ -402,10 +412,9 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .blog-date {text-align: right; font-size:0.9rem;}
 
 @media screen and (min-width: 820px){
-
-  .main {height: 400px;margin-bottom: 80px;}
-  .h3 span {margin-left: 100px;}
-  .h3 span:before {left: -50px;}
+  .main {margin-bottom: 80px;}
+  .h3 .sub-h3 {margin-left: 100px;}
+  .h3 .sub-h3:before {left: -50px;}
   .floor-heading {margin-bottom: 35px;}
   .construction {margin-bottom: 100px;}
   .catch-phrase {font-size: 1.5rem}

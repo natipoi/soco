@@ -23,7 +23,7 @@
 .person-hours {font-size: 0.9rem;}
 .person-description {font-size: 0.9rem;}
 @media screen and (min-width: 820px){
-.person-introduction {max-width: 600px; margin-left: auto !important; margin-right: auto !important;}
+.person-introduction {max-width: 700px; margin-left: auto; margin-right: auto;}
 .person-image {width: 120px; height: 120px; margin-right: 30px;}
 
 }

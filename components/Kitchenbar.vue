@@ -10,15 +10,33 @@
             </p>
         </div>
         <div class="main-visual-wrap">
-          <picture class="main-visual">
+          <picture class="main-visual only-day">
             <source media="(max-width: 820px)" srcset="~/assets/kitchen/main_sp.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/kitchen/main_pc.jpg">
             <img class="img" src="~/assets/kitchen/main_pc.jpg" alt="メインビジュアル">
           </picture>
+          <picture class="main-visual only-night">
+            <source media="(max-width: 820px)" srcset="~/assets/bar/main_sp.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/bar/main_pc.jpg">
+            <img class="img" src="~/assets/bar/main_pc.jpg" alt="メインビジュアル">
+          </picture>
+        </div>
+    </section>
+    <section class="navi-section only-pc">
+        <div class="navi-wrap">
+            <ul class="navi">
+                <li><nuxt-link v-scroll-to="'#menu-section'" to>MENU</nuxt-link></li>
+                <li><nuxt-link v-scroll-to="'#story-section'" to>STORIES</nuxt-link></li>
+                <li><nuxt-link v-scroll-to="'#chef-section'" to>CHEFS</nuxt-link></li>
+                <li><nuxt-link v-scroll-to="'#info-section'" to>INFO</nuxt-link></li>
+                <li><nuxt-link v-scroll-to="'#reservation-section'" to>RESERVATIONS</nuxt-link></li>
+                <li class="only-day"><a href="/bar/">BAR</a></li>
+                <li class="only-night"><a href="/kitchen/">KITCHEN</a></li>
+            </ul>
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="menu-section">
         <h2 class="h2 side-space gray">MENU</h2>
         <p :class="{ 'catch-phrase side-space': true }">
             ソコソコ多様なメニューが、<span class="sp-br"></span>
@@ -128,7 +146,7 @@
     </section>
 
     <!-- blog-->
-    <section class="section">
+    <section class="section" id="story-section">
         <h2 class="h2 side-space gray">STORIES</h2>
         <p :class="{ 'catch-phrase side-space': true }">
             <ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>
@@ -185,7 +203,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="chef-section">
         <h2 class="h2 side-space gray">CHFES</h2>
         <p :class="{ 'catch-phrase side-space': true }">
             いつでも
@@ -199,7 +217,7 @@
 
     </section>
 
-    <section class="section">
+    <section class="section" id="info-section">
         <h2 class="h2 side-space gray">INFO</h2>
         <p :class="{ 'catch-phrase side-space': true }">
             京都の
@@ -208,7 +226,7 @@
         <Map />
     </section>
 
-    <section class="section">
+    <section class="section" id="reservation-section">
         <h2 class="h2 side-space gray">RESERVATIONS</h2>
         <p :class="{ 'catch-phrase side-space': true }">
         <ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>の空き時間に。
@@ -234,6 +252,7 @@
 
 
 <style>
+
 .h2 { font-size: 0.9rem; margin-bottom: 10px; font-weight: 400;}
 .catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 1; margin-bottom: 30px;}
 .h3 {font-weight: 400;font-size: 1.0rem;margin-bottom: 5px;}
@@ -263,8 +282,18 @@
 .reservation-tel p {font-size: 0.9rem;line-height: 1.6;}
 
 @media screen and (min-width: 820px){
+    .main {margin-bottom: 0;}
     .h3 {margin-bottom: 0; font-size: 1.2rem;}
     .catch-phrase {font-size: 1.5rem; margin-bottom: 30px;}
+
+    .navi-wrap {box-shadow: 2px 0 10px rgba(0,0,0,0.1); margin-bottom: 80px;}
+    .navi {display: flex; flex-wrap: nowrap; justify-content:space-between; max-width: 800px; margin: 0 auto;}
+    .navi li { margin: 20px 0px; width: 120px; text-align: center; max-width: calc(100vw / 6);}
+    .navi li a {color: #000;}
+    .navi li:last-child, .navi li:nth-child(6) {border-left: solid 1px #000;}
+    
+    .navi li:hover {cursor: pointer;}
+
     .item {margin-bottom: 30px;}
     .item-intro {display: flex; flex-wrap: nowrap; align-items: center; margin-bottom: 10px;}
     .item-price {margin-left: 20px;flex: 1;}
@@ -282,6 +311,8 @@
     .story { margin-bottom: 70px;}
 
     .person-introduction {margin-left: 0 !important; max-width: 700px;}
+
+    
 }
 
 </style>

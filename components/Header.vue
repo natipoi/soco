@@ -9,8 +9,8 @@
         </div>
         <div id="header-catch" class="only-pc"><p>京都のXXXX</p></div>
         <ul class="header-menu only-pc" id="header-menu-left">
-            <li class="only-day"><a href="/kitchen/" class="no-link">Kitchen</a></li>
-            <li class="only-night"><a href="/bar/" class="no-link">Bar</a></li>
+            <li class="only-day"><a href="/kitchen/">Kitchen</a></li>
+            <li class="only-night"><a href="/bar/">Bar</a></li>
             <li><a href="javascript:void(0)" class="no-link">Works</a></li>
             <li><a href="javascript:void(0)" class="no-link">Rooms</a></li>
             <li><a href="javascript:void(0)" class="no-link">Access</a></li>
@@ -47,36 +47,36 @@
 </template>
 
 <style>
-      header {position: fixed; background: #fff; padding: 10px 15px; width: 100%;z-index: 1000;}
-      header .logo-svg {position: relative; z-index: 10000;}
-      header ul {line-height: 1;}
-      #header-wrap {display: flex; flex-wrap: nowrap; align-items: baseline; max-width: 800px;margin: 0 auto;}
-      #header-logo{ display: inherit; margin: auto 0;}
-      #header-logo a {display: inherit;}
-      #header-catch {margin: auto 30px;}
-      #header-catch p {margin-bottom: 0;}
-      .header-menu {height: 100%; }
-      .header-menu li {display: inline-block; padding: 0 10px;}
-      .header-menu li a {color: #000;}
+    header {position: fixed; background: #fff; padding: 10px 15px; width: 100%;z-index: 1000;}
+    header .logo-svg {position: relative; z-index: 10000;}
+    header ul {line-height: 1;}
+    #header-wrap {display: flex; flex-wrap: nowrap; align-items: baseline; max-width: 800px;margin: 0 auto;}
+    #header-logo{ display: inherit; margin: auto 0;}
+    #header-logo a {display: inherit;}
+    #header-catch {margin: auto 30px;}
+    #header-catch p {margin-bottom: 0;}
+    .header-menu {height: 100%; }
+    .header-menu li {display: inline-block; padding: 0 10px;}
+    .header-menu li a {color: #000;}
 
-      #header-menu-left {margin: auto 0 auto auto; margin-left: auto; }
-      #header-menu-sns li a {font-family: "Font Awesome 5 Brands"; font-weight: 900; display: block;text-align: center; color: #000;}
-      #header-menu-sns { margin: auto 0 auto 20px;}
+    #header-menu-left {margin: auto 0 auto auto; margin-left: auto; }
+    #header-menu-sns li a {font-family: "Font Awesome 5 Brands"; font-weight: 900; display: block;text-align: center; color: #000;}
+    #header-menu-sns { margin: auto 0 auto 20px;}
 
 
-      .no-link {color: #E5E5E5 !important;}
+    .no-link {color: #E5E5E5 !important;}
 
-      .insta::before {content: '\f16d'; }
-      .fb::before {content: '\f39e';}
-      .twitter::before {content: '\f099';}
+    .insta::before {content: '\f16d'; }
+    .fb::before {content: '\f39e';}
+    .twitter::before {content: '\f099';}
 
-      #header-sp-menu {position: relative; margin-left: auto; width: 48px; height: 48px;}
-      #header-hamburger {position: relative;z-index: 1000}
-      .hamburger-bar-wrap {position: absolute; top: 9px;left: 9px;width: 30px;height: 30px;}
-      .hamburger-bar {display: block; position: absolute; width: 17px;height: 2px; left: 7px;background: rgb(0 0 0);border-radius: 0.5px;}
-      #hamburger-bar-top {top: 10px;}
-      #hamburger-bar-bottom {bottom: 10px;}
-      #header-background {position: absolute; top: 0;left:0;bottom:0;right:0;background:#fff; z-index:1;}
+    #header-sp-menu {position: relative; margin-left: auto; width: 48px; height: 48px;}
+    #header-hamburger {position: relative;z-index: 1000}
+    .hamburger-bar-wrap {position: absolute; top: 9px;left: 9px;width: 30px;height: 30px;}
+    .hamburger-bar {display: block; position: absolute; width: 17px;height: 2px; left: 7px;background: rgb(0 0 0);border-radius: 0.5px;}
+    #hamburger-bar-top {top: 10px;}
+    #hamburger-bar-bottom {bottom: 10px;}
+    #header-background {position: absolute; top: 0;left:0;bottom:0;right:0;background:#fff; z-index:1;}
     #sp-modal-menu-wrap {position: fixed; top:0; 
     transform-origin: 0% 0%;
     transform: translate(0, calc(-100% + 68px));
@@ -90,8 +90,8 @@
 
 
     input[id="click-hamburger"] {display: none;}
-      input[id="click-hamburger"]:checked + label .hamburger-bar-wrap:nth-child(1) {transform: rotate(45deg) translateY(3.2px); transition: all 0.3s;}
-      input[id="click-hamburger"]:checked + label .hamburger-bar-wrap:nth-child(2) {transform: rotate(-45deg) translateY(-3.2px); transition: all 0.3s;}
+      input[id="click-hamburger"]:checked + label .hamburger-bar-wrap:nth-child(1) {transform: rotate(45deg) translateY(3.3px); transition: all 0.3s;}
+      input[id="click-hamburger"]:checked + label .hamburger-bar-wrap:nth-child(2) {transform: rotate(-45deg) translateY(-3.3px); transition: all 0.3s;}
       
       .hamburger-bar-wrap {transition: all 0.3s;}
       @media screen and (min-width: 820px){
