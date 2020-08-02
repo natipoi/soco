@@ -125,6 +125,7 @@ export default {
     } else if (path[1] === "kitchen") {
       active = false;
     } else {
+      console.log("トップページだよ")
       active = firstActive
     }
     return {
