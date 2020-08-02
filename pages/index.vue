@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <section class="main">
-      <div class="slide-dots main-slide-dot">
+      <div class="slide-dots main-slide-dots">
         <span class="slide-dot slide-dot-selected"></span>
         <span class="slide-dot"></span>
         <span class="slide-dot"></span>
