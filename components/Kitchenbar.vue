@@ -259,7 +259,7 @@
 .kitchen-bar-h1 {position: relative; color: #00BFFF; margin-top: 0; margin-bottom: 0px;font-weight: 900; font-size: 3.0rem;text-shadow: 0px 0px 10px rgba(0,0,0,0.8);}
 .kitchen-bar-h1:before {content: "Kitchen"}
 .main-text {position: absolute; width: 100%; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -30%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); z-index: 2;}
-.main-heading {color: #fff; font-size: 0.9rem;line-height: 1.7;    text-shadow: 0px 0px 2px rgba(0,0,0,0.8);}
+.main-heading {color: #fff; font-size: 0.9rem;line-height: 1.7;    text-shadow: 0px 0px 2px rgba(0,0,0,0.8);font-weight: 900;}
 
 .main-visual-wrap {position: relative; z-index: 1; height: 100%;width: 100%;}
 
