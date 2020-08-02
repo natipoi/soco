@@ -22,7 +22,7 @@
 .day-and-night-btn {position:relative; color: #fff;font-size: 1.3rem; display: inline-block; width: 50px;height: 39px;line-height: 39px;text-align: center;border-radius: 50px;z-index: 100;}
 .day-and-night-btn:hover {cursor: pointer;}
 .switch-selected {color: #000;}
-#swith-selected-bg {position: absolute; background: #fff; height: 39px;width: 55px; top: 0;border-radius: 50px; transition: transform .3s; transform: translateX(0px)}
+#swith-selected-bg {position: absolute; background: #fff; height: 42px;width: 55px; top: 0;border-radius: 50px; transition: transform .3s; transform: translateX(0px)}
 .change-switch {transform: translateX(50px) !important;}
 
 

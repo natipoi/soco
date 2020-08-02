@@ -62,7 +62,7 @@ export default {
       { src: "https://use.typekit.net/fzc8ycq.js" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "icon", type: "image/x-icon", href: "/summer-favicon.ico" },
       {
         rel: "stylesheet",
         href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css"
