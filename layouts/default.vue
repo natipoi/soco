@@ -111,6 +111,11 @@ p, a, li, .h3, td, .switch-selected, footer p, .day-and-night-btn  {transition: 
 <script>
 export default {
   data() {
+    var now = new Date();
+    var hour = now.getHours();
+    // 5時〜18時の間はお昼モード
+    console.log("hour is ", hour)
+    var firstActive = hour >= 5 && hour < 18 ? false : true;
   　var path = this.$route.path;
     path = path.split("/");
     var active = true;
@@ -119,7 +124,7 @@ export default {
     } else if (path[1] === "kitchen") {
       active = false;
     } else {
-      active = this.$active()
+      active = firstActive
     }
     return {
       active: active,

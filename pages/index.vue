@@ -361,7 +361,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .construction img {width: 100%;} 
 
 .floor-heading {display: flex; flex-wrap: nowrap; align-items: end;margin-bottom: 15px;}
-.logo-svg {height: 20px; margin-right: 10px;}
+
 
 .floor-content {margin-bottom: 70px}
 .floor-content-images-wrap {position: relative; overflow:hidden;}
