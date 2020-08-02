@@ -45,9 +45,10 @@ p, a, li, .h3, td, .switch-selected, footer p, .day-and-night-btn  {transition: 
 
 
 html { color: #000001; font-size: 14px;}
-body {margin: 0 auto; font-family: "San Francisco", Sans-Serif;-webkit-font-smoothing: antialiased;
+body {margin: 0 auto; font-family: heisei-maru-gothic-std, sans-serif; -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;}
 body * {margin: 0; padding: 0; box-sizing: border-box;}
+rt { margin-bottom: -5px; transform: translateY(5px);}
 .side-space {margin-left: 8vw;margin-right: 8vw; }
 a {text-decoration: none; color: #969594}
 ul {list-style-type: none;list-style-position: inside;margin-bottom: 20px; line-height: 2.0}
@@ -80,10 +81,14 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
 <script>
 export default {
   data() {
-      return {
+    return {
         active: this.$active(),
         day: this.$day()
-    }
+      }
+  },
+  mounted() {
+      Typekit.load({async: true})
+      
   },
   methods: {
     onClick() {
