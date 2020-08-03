@@ -478,6 +478,23 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
   $(function(){
 
+    
+　　const japanStandardTime = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
+    const hour = new Date(japanStandardTime).getHours();
+    const status = $("#wrap").hasClass("dark_mode");
+    // 5時〜18時の間はお昼モード
+    if ( parseInt(hour) >= 6 && parseInt(hour) < 18 ) {
+      console.log("☀️")
+      if ( status ){
+          $("#wrap").removeClass("dark_mode");
+      } 
+    } else {
+      console.log("🌕")
+      if ( !status ){
+          $("#wrap").addClass("dark_mode");
+      } 
+    }
+
     $("#navi-access").on("click", function() {
        $('input[id="click-hamburger"]').prop("checked", false);
     });

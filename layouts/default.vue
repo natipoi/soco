@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'dark_mode': active }">
+  <div :class="{ 'dark_mode': active }" id="wrap">
     <Header />
     <Nuxt 
       :active=active
@@ -138,26 +138,12 @@ export default {
         firstActive = false
       }
     }
-    console.log(firstActive)
     return {
       active: firstActive
     }
   },
   mounted() {
     Typekit.load({async: true})
-    var firstActive = true;
-  　var path = this.$route.path;
-    path = path.split("/");
-    if (process.client) {
-      if (path[1] !== "bar" && path[1] !== "kitchen") {
-        const japanStandardTime = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
-        const hour = new Date(japanStandardTime).getHours();
-        // 5時〜18時の間はお昼モード
-        if ( parseInt(hour) >= 3 && parseInt(hour) < 18 ) {
-          this.active = false
-        }
-      }
-    }
   },
   methods: {
     onClick() {
