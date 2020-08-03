@@ -132,7 +132,7 @@ export default {
       firstActive = true;
     } else if (path[1] === "kitchen") {
       firstActive = false;
-    } else if (path[1] === "") {
+    } else {
 
       var now = new Date();
       var hour = now.getHours();
