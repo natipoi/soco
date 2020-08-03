@@ -35,7 +35,7 @@ body {margin: 0 auto; font-family: heisei-maru-gothic-std, sans-serif; -webkit-f
 body * {margin: 0; padding: 0; box-sizing: border-box;}
 .main {position: relative; height: calc(100vw * 0.6); overflow: hidden;margin-bottom: 80px;}
 .img {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
-rt { margin-bottom: 0px; transform: translateY(0%); -webkit-transform: translateY(-8%); -ms-transform: translateY(0%);}
+rt { margin-bottom: 0px; transform: translateY(0%); -webkit-transform: translateY(50%); -ms-transform: translateY(0%);}
 .side-space {margin-left: 8vw;margin-right: 8vw; }
 a {text-decoration: none; color: #969594}
 ul {list-style-type: none;list-style-position: inside;margin-bottom: 20px; line-height: 2.0}
