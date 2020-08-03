@@ -5,7 +5,7 @@
     <Footer />
     <div class="day-and-night-switch-wrap">
       <div class="day-and-night-switch">
-        <span id="swith-selected-bg" :class="{ 'change-switch': active }"></span>
+        <span id="switch-selected-bg" :class="{ 'change-switch': active }"></span>
         <span :class="{ 'day-and-night-btn day-btn': true, 'switch-selected': !active }" @click="onClick" style="padding-left: 5px;">昼</span>
         <span :class="{ 'day-and-night-btn night-btn': true, 'switch-selected': active }" @click="onClick" style="padding-right: 5px;">夜</span>
       </div>
@@ -24,8 +24,8 @@
 .day-and-night-btn:hover {cursor: pointer;}
 .day-btn {color: #000;}
 .night-btn {color: #fff;}
-#swith-selected-bg {position: absolute; background: #fff; height: 39px;width: 55px; top: 0;border-radius: 50px; transition: transform .3s; transform: translateX(0px)}
-.change-switch {transform: translateX(50px) !important;background: #000; transition: all 0.2s;}
+#switch-selected-bg {position: absolute; background: #fff; height: 39px;width: 55px; top: 0;border-radius: 50px; transition: transform .3s; transform: translateX(0px)}
+.change-switch {transform: translateX(50px) !important;background: #000 !important; transition: all 0.2s;}
 
 
 
