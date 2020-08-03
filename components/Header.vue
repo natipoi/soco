@@ -51,7 +51,7 @@
     header .logo-svg {position: relative; z-index: 10000;}
     header ul {line-height: 1;}
     #header-wrap {display: flex; flex-wrap: nowrap; align-items: baseline; max-width: 800px;margin: 0 auto;}
-    #header-logo{ display: inherit; margin: auto 0;}
+    #header-logo{ margin: auto 0; display: block;}
     #header-logo a {display: inherit;}
     #header-catch {margin: auto 30px;}
     #header-catch p {margin-bottom: 0;}
