@@ -131,10 +131,10 @@ export default {
     } else if (path[1] === "kitchen") {
       firstActive = false;
     } else {
-      var now = new Date();
-      var hour = now.getHours();
+      const japanStandardTime = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
+      const hour = new Date(japanStandardTime).getHours();
       // 5時〜18時の間はお昼モード
-      firstActive = parseInt(hour) >= 5 && hour > 18 ? false : true;
+      firstActive = parseInt(hour) >= 5 && hour < 18 ? false : true;
     }
     console.log(firstActive)
     return {
