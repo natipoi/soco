@@ -225,7 +225,7 @@
 
       <Person />
 
-      <div class="section-bottom-button">
+      <div class="section-bottom-button" style="display:none;">
         <a href="">スタッフ募集中</a>
       </div>
     </section>
