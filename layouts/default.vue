@@ -6,8 +6,8 @@
     <div class="day-and-night-switch-wrap">
       <div class="day-and-night-switch">
         <span id="swith-selected-bg" :class="{ 'change-switch': active }"></span>
-        <span :class="{ 'day-and-night-btn': true, 'switch-selected': day }" @click="onClick" style="padding-left: 5px;">昼</span>
-        <span :class="{ 'day-and-night-btn': true, 'switch-selected': !day }" @click="onClick" style="padding-right: 5px;">夜</span>
+        <span :class="{ 'day-and-night-btn': true, 'switch-selected': !night }" @click="onClick" style="padding-left: 5px;">昼</span>
+        <span :class="{ 'day-and-night-btn': true, 'switch-selected': night }" @click="onClick" style="padding-right: 5px;">夜</span>
       </div>
     </div>
     
@@ -133,7 +133,7 @@ export default {
     console.log(firstActive)
     return {
       active: firstActive,
-      day: !firstActive
+      night: firstActive
     }
   },
   mounted() {
@@ -143,7 +143,7 @@ export default {
   methods: {
     onClick() {
       this.active = !this.active
-      this.day = !this.active
+      this.night = !this.active
       if (process.client) {
         var path = location.pathname;
         path = path.split("/");
