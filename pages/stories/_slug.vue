@@ -31,7 +31,6 @@ h3 {margin-bottom: 10px;margin-top: 20px;}
 <script>
 import { createClient } from '~/plugins/contentful.js'
 import marked from 'marked';
-import hljs from 'highlight.js';
 
 const client = createClient()
 export default {
