@@ -123,17 +123,14 @@ p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
 <script>
 export default {
   data() {
-    var firstActive = true
-
+    var firstActive = true;
   　var path = this.$route.path;
     path = path.split("/");
-    console.log("path[1]", path[1])
     if (path[1] === "bar") {
       firstActive = true;
     } else if (path[1] === "kitchen") {
       firstActive = false;
     } else {
-
       var now = new Date();
       var hour = now.getHours();
       // 5時〜18時の間はお昼モード
@@ -143,7 +140,7 @@ export default {
     return {
       active: firstActive
     }
-  },　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　mhbf
+  },
   mounted() {
     Typekit.load({async: true})
   },
