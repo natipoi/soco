@@ -137,7 +137,7 @@ export default {
       var now = new Date();
       var hour = now.getHours();
       // 5時〜18時の間はお昼モード
-      firstActive = hour >= 5 && hour < 18 ? false : true;
+      firstActive = true;
     }
     console.log(firstActive)
     return {
