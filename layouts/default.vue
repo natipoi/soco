@@ -35,7 +35,7 @@ body {margin: 0 auto; font-family: heisei-maru-gothic-std, sans-serif; -webkit-f
 body * {margin: 0; padding: 0; box-sizing: border-box;}
 .main {position: relative; height: calc(100vw * 0.6); overflow: hidden;margin-bottom: 80px;}
 .img {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
-rt { margin-bottom: -8px; transform: translateY(8px);}
+rt { margin-bottom: 0px; transform: translateY(8px);}
 .side-space {margin-left: 8vw;margin-right: 8vw; }
 a {text-decoration: none; color: #969594}
 ul {list-style-type: none;list-style-position: inside;margin-bottom: 20px; line-height: 2.0}
@@ -97,7 +97,7 @@ p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
   .sp-br {display: inline;}
   .side-space { margin-left: 0; margin-right: 0;}
   .section {max-width: 800px;    margin: 0 auto 120px !important;}
-  .day-and-night-switch-wrap {bottom: 20px;right: 20px;zoom: 1.2;}
+  .day-and-night-switch-wrap {bottom: 50px;right: 50px;zoom: 1.2;}
   .positive-button a {padding: 10px 30px;}
   
 

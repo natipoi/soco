@@ -356,7 +356,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .construction {margin-bottom: 50px}
 .construction img {width: 100%;} 
 
-.floor-heading {display: flex; flex-wrap: nowrap; align-items: center;margin-bottom: 15px;}
+.floor-heading {display: flex;display: -webkit-flex;flex-wrap: nowrap; align-items: center; -webkit-align-items: center;margin-bottom: 15px; justyify-content: flex-start;-webkit-justify-content: flex-start;}
 .floor-heading .h3 {margin-left: 15px;}
 .floor-heading .logo-svg {zoom: 0.7}
 
