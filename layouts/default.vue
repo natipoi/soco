@@ -10,7 +10,7 @@
         <span :class="{ 'day-and-night-btn night-btn': true, 'switch-selected': active }" @click="onClick" style="padding-right: 5px;">夜</span>
       </div>
     </div>
-    <p>{{ hour }}時</p>
+    <p style="display: none">{{ hour }}時</p>
     
 </div>
   </div>
@@ -126,7 +126,7 @@ export default {
     var hour = now.getHours();
     // 5時〜18時の間はお昼モード
     console.log("hour is ", hour)
-    var firstActive = hour >= 5 && hour < 18 ? true : false;
+    var firstActive = hour >= 5 && hour < 18 ? false : true;
 
   　var path = this.$route.path;
     path = path.split("/");
