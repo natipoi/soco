@@ -143,6 +143,9 @@ export default {
   },
   mounted() {
     Typekit.load({async: true})
+    return {
+      active: this.active
+    }
       
   },
   methods: {
