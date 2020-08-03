@@ -24,7 +24,7 @@
       footer { background: #000; color: #fff; padding-top: 30px;text-align: center;}
       #footer-wrap {max-width: 800px;margin: 0 auto;}
       .footer-logo {text-align: center; margin-bottom: 20px;}
-      .footer-logo .logo-svg {fill: #fff; height: 30px !important;}
+      .footer-logo .logo-svg {fill: #fff; height: 30px !important;    margin: 0 auto;}
       .logo-bottom-text {font-size: 0.8rem; margin-top: -5px;}
 
       .footer-info {margin-bottom: 20px;}
