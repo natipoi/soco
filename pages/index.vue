@@ -426,11 +426,12 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 </style>
 
 <script>
+  import Stories from '~/components/Stories.vue'
+  import {createClient} from '~/plugins/contentful.js'
+
+  const client = createClient()
 
 
-  export default {
-
-  }
 
   if (process.client) {
 
