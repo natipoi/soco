@@ -12,7 +12,6 @@
         <span :class="{ 'day-and-night-btn night-btn': true, 'switch-selected': active }" @click="onClick" style="padding-right: 5px;">夜</span>
       </div>
     </div>
-    <p style="display: none">{{ hour }}時</p>
     
 </div>
   </div>
@@ -124,11 +123,7 @@ p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
 <script>
 export default {
   data() {
-    var now = new Date();
-    var hour = now.getHours();
-    // 5時〜18時の間はお昼モード
-    console.log("hour is ", hour)
-    var firstActive = hour >= 5 && hour < 18 ? false : true;
+    var firstActive = true
 
   　var path = this.$route.path;
     path = path.split("/");
@@ -136,10 +131,15 @@ export default {
       firstActive = true;
     } else if (path[1] === "kitchen") {
       firstActive = false;
+    } else {
+      var now = new Date();
+      var hour = now.getHours();
+      // 5時〜18時の間はお昼モード
+      console.log("hour is ", hour)
+      firstActive = hour >= 5 && hour < 18 ? false : true;
     }
     console.log(firstActive)
     return {
-      hour: hour,
       active: firstActive
     }
   },
