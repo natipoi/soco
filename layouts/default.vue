@@ -1,7 +1,9 @@
 <template>
   <div :class="{ 'dark_mode': active }">
     <Header />
-    <Nuxt />
+    <Nuxt 
+      :active=active
+    />
     <Footer />
     <div class="day-and-night-switch-wrap">
       <div class="day-and-night-switch">
@@ -140,14 +142,6 @@ export default {
       hour: hour,
       active: firstActive
     }
-  },
-  beforeCreated() {
-    var now = new Date();
-    var hour = now.getHours();
-    // 5時〜18時の間はお昼モード
-    console.log("hour is ", hour)
-    var firstActive = hour >= 5 && hour < 18 ? false : true;
-    this.active = firstActive
   },
   mounted() {
     Typekit.load({async: true})
