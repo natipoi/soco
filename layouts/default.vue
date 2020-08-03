@@ -143,6 +143,11 @@ export default {
       active: firstActive
     }
   },
+  asyncData() {
+    return {
+      active: this.active
+    }
+  },
   mounted() {
     Typekit.load({async: true})
   },

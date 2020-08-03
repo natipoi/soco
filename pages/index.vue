@@ -440,16 +440,11 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
   const client = createClient()
 
   export default {
-    props: {
-        active: {
-            type: Boolean,
-            default: true
-        }
-    },
     components: {
       Stories
     },
-    asyncData ({env}) {
+    asyncData ({env, active}) {
+      console
       return Promise.all([
         // fetch the owner of the blog
         client.getEntries({
