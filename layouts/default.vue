@@ -10,6 +10,7 @@
         <span :class="{ 'day-and-night-btn night-btn': true, 'switch-selected': active }" @click="onClick" style="padding-right: 5px;">夜</span>
       </div>
     </div>
+    <p>{{ hour }}時</p>
     
 </div>
   </div>
@@ -136,6 +137,7 @@ export default {
     }
     console.log(firstActive)
     return {
+      hour: hour,
       active: firstActive
     }
   },
