@@ -10,39 +10,39 @@
       </div>
       <div class="main-visuals">
         <div class="main-visual-wrap">
-          <picture class="main-visual img">
+          <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
-            <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
+            <img src="~/assets/main_pc.jpg" class="main-img" alt="メインビジュアル">
           </picture>
         </div>
 
         <div class="main-visual-wrap">
-          <picture class="main-visual img">
-            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
-            <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
+          <picture class="main-visual">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp2.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc2.jpg">
+            <img src="~/assets/main_pc2.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
         <div class="main-visual-wrap">
-          <picture class="main-visual img">
-            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
-            <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
+          <picture class="main-visual">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp3.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc3.jpg">
+            <img src="~/assets/main_pc3.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
         <div class="main-visual-wrap">
-          <picture class="main-visual img">
-            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
-            <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
+          <picture class="main-visual">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp4.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc4.jpg">
+            <img src="~/assets/main_pc4.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
         <div class="main-visual-wrap">
-          <picture class="main-visual img">
+          <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
-            <img src="~/assets/main_pc.jpg" alt="メインビジュアル">
+            <img src="~/assets/main_pc.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
       </div>
@@ -308,7 +308,10 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
     }
 }
 .main-visual-wrap {position: relative; width: 100%; height: calc(100vw * 0.6);flex-shrink: 0;flex-grow: 0;}
-
+.main-img { width: 100%;position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateX(-50%);}
 .slide-dots {position: absolute; bottom: 10px; left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%); -ms-transform: translateX(-50%);z-index:10;}
 
 .slide-dot {display: inline-block;width: 8px;height: 8px; background: #FFF;border-radius: 50%;margin-right:8px;}

@@ -103,7 +103,13 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: [
+    'nuxt-basic-auth-module'
+  ],
+  basic: {
+    name: 'soco',
+    pass: '0816'
+  },
 
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
