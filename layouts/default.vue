@@ -6,8 +6,8 @@
     <div class="day-and-night-switch-wrap">
       <div class="day-and-night-switch">
         <span id="swith-selected-bg" :class="{ 'change-switch': active }"></span>
-        <span :class="{ 'day-and-night-btn': true, 'switch-selected': !night }" @click="onClick" style="padding-left: 5px;">昼</span>
-        <span :class="{ 'day-and-night-btn': true, 'switch-selected': night }" @click="onClick" style="padding-right: 5px;">夜</span>
+        <span :class="{ 'day-and-night-btn day-btn': true, 'switch-selected': !active }" @click="onClick" style="padding-left: 5px;">昼</span>
+        <span :class="{ 'day-and-night-btn night-btn': true, 'switch-selected': active }" @click="onClick" style="padding-right: 5px;">夜</span>
       </div>
     </div>
     
@@ -20,11 +20,12 @@
 
 .day-and-night-switch-wrap {position:fixed; bottom: 10px; right: 10px;z-index: 1000;}
 .day-and-night-switch {position: relative; height: 45px; background: #000; border-radius: 50px;border: solid 3px #000;overflow:hidden; box-shadow: -2px -2px 10px rgba(0,0,0,0.2);z-index: 10000;}
-.day-and-night-btn {position:relative; color: #fff;font-size: 1.3rem; display: inline-block; width: 50px;height: 39px;line-height: 42px;text-align: center;border-radius: 50px;z-index: 100;}
+.day-and-night-btn {position:relative;font-size: 1.3rem; display: inline-block; width: 50px;height: 39px;line-height: 42px;text-align: center;border-radius: 50px;z-index: 100;}
 .day-and-night-btn:hover {cursor: pointer;}
-.switch-selected {color: #000;}
+.day-btn {color: #000;}
+.night-btn {color: #fff;}
 #swith-selected-bg {position: absolute; background: #fff; height: 39px;width: 55px; top: 0;border-radius: 50px; transition: transform .3s; transform: translateX(0px)}
-.change-switch {transform: translateX(50px) !important;}
+.change-switch {transform: translateX(50px) !important;background: #000; transition: all 0.2s;}
 
 
 
@@ -64,26 +65,25 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
 .sp-br {display: block;}
 
 
-.dark_mode, .dark_mode,.change-switch, .dark_mode header  {background: #000 !important; transition: all 0.2s;}
+.dark_mode, .dark_mode, .dark_mode header  {background: #000 !important; transition: all 0.2s;}
 .dark_mode p, .dark_mode a, .dark_mode li, .dark_mode .h3, .dark_mode td {color: #fff; transition: all 0.2s;}
 .dark_mode a {color: #fff !important; border-color: #fff !important; transition: all 0.2s;}
 .dark_mode #header-background, .dark_mode #sp-modal-menu-wrap {background: #000 !important; transition: all 0.2s;}
 .dark_mode .logo-svg {fill: #fff; transition: fill 0.2s;}
 .dark_mode .hamburger-bar {background: #fff !important; transition: all 0.2s;}
 .dark_mode footer {background: #fff !important; transition: all 0.2s;}
-.dark_mode footer p, .dark_mode .day-and-night-btn {color: #000 !important; transition: all 0.2s;}
+.dark_mode footer p {color: #000 !important; transition: all 0.2s;}
 .dark_mode footer .logo-svg {fill: #000; transition: all 0.2s;}
 .dark_mode .selected:before, .dark_mode .day-and-night-switch {background: #fff !important; transition: all 0.2s;}
 .dark_mode .day-and-night-switch {border-color: #fff;}
-.dark_mode .switch-selected {color: #fff !important; transition: all 0.2s;}
 .dark_mode .kitchen-bar-h1:before {content: "Bar"}
 .dark_mode .only-night {display: inline-block !important;}
 .dark_mode .only-day {display: none;}
 .dark_mode .navi li:last-child, .navi li:nth-child(6) {border-color: #fff; transition: all 0.2s;}
 .dark_mode .navi-wrap {box-shadow: 2px 0 10px rgba(255,255,255,0.5);}
 
-p, a, li, .h3, td, .switch-selected, footer p, .day-and-night-btn  {transition: all 0.2s;}
-#header-background, #sp-modal-menu-wrap, .hamburger-bar, footer, .selected:before, .day-and-night-switch, .change-switch, header { transition: all 0.2s;}
+p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
+#header-background, #sp-modal-menu-wrap, .hamburger-bar, footer, .selected:before, .day-and-night-switch, header { transition: all 0.2s;}
 .logo-svg {transition: all 0.2s;}
 
 
@@ -132,8 +132,7 @@ export default {
     }
     console.log(firstActive)
     return {
-      active: firstActive,
-      night: firstActive
+      active: firstActive
     }
   },
   mounted() {
@@ -143,7 +142,6 @@ export default {
   methods: {
     onClick() {
       this.active = !this.active
-      this.night = !this.active
       if (process.client) {
         var path = location.pathname;
         path = path.split("/");
