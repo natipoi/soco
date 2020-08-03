@@ -15,7 +15,7 @@
 .story-heading  { font-size: 0.9rem; font-weight: 400;text-align: center; margin-top: 40px; margin-bottom: 0; }
 .story-h1 { font-weight: 900;font-size: 1.2rem;line-height: 1.0;margin-top: 0;margin-bottom: 30px;text-align: center;}
 .hero-image img {width: 100%;}
-.story-main-body {margin: 30px 0;}
+.story-main-body {margin: 30px 0;text-align:left;}
 .story-main-body p {line-height:2.3;}
 .createdat {color: #969594; font-size: 1.0rem; text-align: right;margin-bottom: 5px;}
 h2 {margin-bottom: 20px;margin-top: 30px;}
