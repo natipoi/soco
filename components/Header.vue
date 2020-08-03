@@ -63,7 +63,7 @@
     #header-menu-sns li a {font-family: "Font Awesome 5 Brands"; font-weight: 900; display: block;text-align: center; color: #000;}
     #header-menu-sns { margin: auto 0 auto 20px;}
 
-    .floor-not-yet:before {width: 100px;}
+    header .floor-not-yet:before {width: 100px;}
     .no-link {color: #E5E5E5 !important;}
 
     .insta::before {content: '\f16d'; }
@@ -95,6 +95,7 @@
       
       .hamburger-bar-wrap {transition: all 0.3s;}
       @media screen and (min-width: 820px){
+        header .floor-not-yet:before {width: 90% !important;}
         header {position: relative;}
         #header-background {display: none;}
         #sp-modal-menu-wrap {display: none;}
