@@ -443,7 +443,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
     props: {
         active: {
             type: Boolean,
-            default: false
+            default: true
         }
     },
     components: {
