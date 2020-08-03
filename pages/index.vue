@@ -474,6 +474,13 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
   $(function(){
 
+    $("#navi-access").on("click", function() {
+      console.log("navi-access")
+       $('input[id="click-hamburger"]').prop("checked", false);
+    });
+
+    
+
     $('.floor-content-images-wrap').each(function(i, elem){
         var $images = $(this).children(".floor-content-images");
         var imageNum = $images.children().length
