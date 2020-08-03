@@ -145,19 +145,7 @@ export default {
   },
   mounted() {
     Typekit.load({async: true})
-    var firstActive = true;
-  　var path = this.$route.path;
-    path = path.split("/");
-    if (process.client) {
-      if (path[1] !== "bar" && path[1] !== "kitchen") {
-        const japanStandardTime = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
-        const hour = new Date(japanStandardTime).getHours();
-        // 5時〜18時の間はお昼モード
-        if ( parseInt(hour) >= 5 && parseInt(hour) < 18 ) {
-          this.active = false
-        }
-      }
-    }
+
   },
   methods: {
     onClick() {
