@@ -145,6 +145,14 @@ export default {
   },
   mounted() {
     Typekit.load({async: true})
+    if (process.client) {
+      const japanStandardTime = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
+      const hour = new Date(japanStandardTime).getHours();
+      // 5時〜18時の間はお昼モード
+      if ( hour >= 5 && hour < 18 ) {
+        this.active =  false
+      }
+    }
   },
   methods: {
     onClick() {
