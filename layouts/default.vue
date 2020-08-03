@@ -127,15 +127,16 @@ export default {
 
   　var path = this.$route.path;
     path = path.split("/");
+    console.log("path[1]", path[1])
     if (path[1] === "bar") {
       firstActive = true;
     } else if (path[1] === "kitchen") {
       firstActive = false;
-    } else {
+    } else if (path[1] === "") {
+
       var now = new Date();
       var hour = now.getHours();
       // 5時〜18時の間はお昼モード
-      console.log("hour is ", hour)
       firstActive = hour >= 5 && hour < 18 ? false : true;
     }
     console.log(firstActive)
