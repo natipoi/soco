@@ -124,7 +124,7 @@ export default {
         .then(entries => {
           return entries.items.map(entry => {
             return {
-              route: `posts/${entry.fields.slug}`,
+              route: `stories/${entry.fields.slug}`,
               payload: entry
             };
           });

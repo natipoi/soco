@@ -55,7 +55,6 @@
 
 .map-image {width: 65%;height:350px;margin-right: 20px;}
 .address-hours {flex: 1;}
-
 .business-hours-table {border-collapse: collapse;font-size: 0.9rem;}
 .address, .business-hours {text-align: left;}
 .business-hours-table th {text-align: left;}

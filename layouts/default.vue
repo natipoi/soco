@@ -52,8 +52,12 @@ p {margin-bottom: 0;font-weight: 400; font-size: 1.0rem; line-height: 2.0;}
 table {text-align: left;border-collapse:separate;border-spacing: 10px}
 .box {padding: 30px 0;}
 .positive-button {margin: 0 auto;text-align: center;}
+
 .positive-button a {position: relative; display: inline-block; background: #F2CB0C; color: #fff; padding: 10px 25px; border-radius: 10px; font-weight: 900; }
 .positive-button a:after {content:"\f105";font-family: "Font Awesome 5 Free"; font-weight: 900; margin-left: 10px; }
+
+.floor-not-yet { position: relative;color: #A2A2A2 !important;text-align: center;}
+.floor-not-yet:before {content: "COMING SOON"; font-size: 0.5rem; color: #fff; font-weight: 900; position: absolute; width: 120%; padding: 5px 0; line-height: 1.2; background: rgba(162, 162, 162, 0.6); top: 50%; left:50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
 
 .only-pc {display: none;}
 .sp-br {display: block;}
@@ -85,7 +89,6 @@ p, a, li, .h3, td, .switch-selected, footer p, .day-and-night-btn  {transition: 
 @media screen and (min-width: 820px){
   .container {padding-top: 0;}
   .main {height: 450px;}
-
   p, li {font-size: 0.9rem}
   .only-pc {display: block;}
   .only-sp {display: none;}
@@ -94,8 +97,11 @@ p, a, li, .h3, td, .switch-selected, footer p, .day-and-night-btn  {transition: 
   .section {max-width: 800px;    margin: 0 auto 120px !important;}
   .day-and-night-switch-wrap {bottom: 20px;right: 20px;zoom: 1.2;}
   .positive-button a {padding: 10px 30px;}
+  .positive-button .floor-not-yet:before {width: 120%; padding: 20px 0; font-size: 1.0rem;}
+
+  .floor-not-yet:before {width:90%;}
   .place {display: flex; align-items: end;}
-  .map-image {width: 65%;height:350px;margin-right: 20px;}
+  
   .address-hours {flex: 1;}
 
   .business-hours-table {border-collapse: collapse;font-size: 0.9rem;}

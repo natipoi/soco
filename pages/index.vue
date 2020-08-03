@@ -117,7 +117,7 @@
               <p class="floor-content-text-detail gray only-night">OPEN 18:00 | CLOSE 24:00 (L.O. 23:30)<br>
               ※18:00までは「<span class="text-yellow">soco kitchen</span>」として営業しています。。</p>
             </div>
-            <div class="floor-content-button">
+            <div class="floor-content-button positive-button">
               <a href="/kitchen/" class="only-day">Kitchenを覗く</a>
               <a href="/bar/" class="only-night">Barを覗く</a>
             </div>
@@ -160,8 +160,8 @@
               そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。
             </p>
             <p class="floor-content-text-detail gray">OPEN 9:00 | CLOSE 18:00</p>
-            <div class="floor-content-button">
-              <a href="">Laboを覗く</a>
+            <div class="floor-content-button positive-button">
+              <a href="javascript:void(0)"　class="floor-not-yet">Laboを覗く</a>
             </div>
           </div>
         </div>
@@ -206,8 +206,8 @@
               そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。
             </p>
             <p class="floor-content-text-detail gray">1泊 6500円〜 (税抜)</p>
-            <div class="floor-content-button">
-              <a href="">Roomsを覗く</a>
+            <div class="floor-content-button positive-button">
+              <a href="javascript:void(0)"　class="floor-not-yet">Roomsを覗く</a>
             </div>
           </div>
         </div>
@@ -234,22 +234,18 @@
       <h2 class="h2 side-space gray">socoのニュース</h2>
       <p :class="{ 'catch-phrase side-space': true }">日々、形作られていく、<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。</p>
     <div class="blogs side-space">
-    <div class="blog" v-for="post in posts">
-      <nuxt-link :to="`/posts/${post.fields.slug}`">
-        <div class="blog-img">
-        <img :src="post.fields.heroImage.fields.file.url" :alt="post.fields.heroImage.fields.description" class="img">
-        </div>
-        <div class="blog-text">
-          <p :class="{ 'blog-heading': true }">{{ post.fields.title }}</p>
-          <p class="blog-date gray">{{ post.fields.publishDate }}</p>
-        </div>
-      </nuxt-link>
-    </div>
-
-
+    <Stories
+      v-for="post in posts"
+      :title="post.fields.title"
+      :id="post.sys.id"
+      :publish="post.fields.publishDate"
+      :slug="post.fields.slug"
+      :image="post.fields.heroImage.fields.file.url"
+      :alt="post.fields.heroImage.fields.description"
+    />
     </div>
     <div class="section-bottom-button">
-      <a href="">ニュースをもっと見る</a>
+      <a href="/stories/">ニュースをもっと見る</a>
     </div>
     </section>
 
@@ -257,10 +253,11 @@
     <section class="section">
       <h2 class="h2 side-space gray">socoの場所</h2>
       <p :class="{ 'catch-phrase side-space': true }">京都の<ruby><rb>soco</rb>
-<rp>（</rp>
-<rt>ソコ</rt>
-<rp>）</rp>
-</ruby>まで。</p>
+        <rp>（</rp>
+        <rt>ソコ</rt>
+        <rp>）</rp>
+        </ruby>まで。
+      </p>
       <Map />
       
     </section>
@@ -354,8 +351,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 #floor-navi li {position: relative; width: 15vw; font-size: 1.2rem; padding: 5px 0;}
 
 .selected:before {content: "";position: absolute; width: 100%;height: 2px; background: #000; bottom: 0;left: 0; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); border-radius: 10px;}
-.floor-not-yet {color: #A2A2A2 !important;}
-.floor-not-yet:before {content: "COMING SOON"; font-size: 0.5rem; color: #fff; font-weight: 900; position: absolute; width: 120%; padding: 5px 0; line-height: 1.2; background: rgba(162, 162, 162, 0.4); top: 50%; left:50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
+
 
 .construction {margin-bottom: 50px}
 .construction img {width: 100%;} 
@@ -400,17 +396,11 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 .floor-content-text-detail {text-align: right; font-size: 0.9rem;margin-bottom: 0px;}
 .bar-kitchen-text-detail {text-align: right;}
 .floor-content-button {text-align: center;margin-top: 30px;}
-.floor-content-button a {position: relative; display: inline-block; color: #fff; background: #F2CB0C;padding: 15px 25px; border-radius: 10px; font-weight: 900;}
-.floor-content-button a:after {content:"\f105";font-family: "Font Awesome 5 Free"; font-weight: 900; margin-left: 10px; }
 
 .section-bottom-button a {display: inline-block; padding: 10px 15px; border-bottom: solid 2px #000; color: #000;}
 .section-bottom-button a:after {content:"\f105";font-family: "Font Awesome 5 Free"; font-weight: 900; margin-left: 10px; }
 
-.blog { margin-bottom: 50px; }
-.blog a {display: block; color: #000;}
-.blog-img {position: relative; width: 100%;height: calc(100vw * 0.6);overflow:hidden;margin-bottom: 10px;}
-.blog-heading {text-align:left;font-size: 1.1rem;margin-bottom: 5px; }
-.blog-date {text-align: right; font-size:0.9rem;}
+
 
 @media screen and (min-width: 820px){
   .main {margin-bottom: 80px;}
@@ -428,8 +418,6 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
   .floor-content-image img {height: 100%; height: 300px;}
   .floor-content-bottom {flex: 1; margin-left: 20px !important;}
   .floor-content-text {font-size: 0.9rem;padding: 0 0 10px;line-height: 2.0;}
-
-  .floor-content-button a {padding: 10px 30px;}
   
   .blogs {display:flex;flex-wrap: wrap;justify-content: flex-start; }
   .blog {width: 30%; margin-right: 5%;}
@@ -443,11 +431,15 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 </style>
 
 <script>
+  import Stories from '~/components/Stories.vue'
   import {createClient} from '~/plugins/contentful.js'
 
   const client = createClient()
 
   export default {
+    components: {
+      Stories
+    },
     asyncData ({env}) {
       return Promise.all([
         // fetch the owner of the blog
@@ -472,9 +464,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
         }
         return {
           person: entries.items[0],
-          posts: posts.items,
-          
-
+          posts: posts.items
         }
       }).catch(console.error)
     }

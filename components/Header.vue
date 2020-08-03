@@ -11,9 +11,9 @@
         <ul class="header-menu only-pc" id="header-menu-left">
             <li class="only-day"><a href="/kitchen/">Kitchen</a></li>
             <li class="only-night"><a href="/bar/">Bar</a></li>
-            <li><a href="javascript:void(0)" class="no-link">Works</a></li>
-            <li><a href="javascript:void(0)" class="no-link">Rooms</a></li>
-            <li><a href="javascript:void(0)" class="no-link">Access</a></li>
+            <li class="floor-not-yet"><a href="javascript:void(0)">Works</a></li>
+            <li class="floor-not-yet"><a href="javascript:void(0)">Rooms</a></li>
+            <li class="floor-not-yet"><a href="javascript:void(0)">Access</a></li>
         </ul>
         <ul class="header-menu only-pc" id="header-menu-sns">
             <li><a href="" class="fb"></a></li>
@@ -33,9 +33,9 @@
                 <ul id="sp-modal-menu">
                     <li class="only-day"><a href="/kitchen/" :class="{ 'sp-modal-menu-a': true }">Kitchen</a></li>
                     <li class="only-night"><a href="/bar/" :class="{ 'sp-modal-menu-a': true }">Bar</a></li>
-                    <li><a href="" :class="{ 'sp-modal-menu-a': true }">Labo</a></li>
-                    <li><a href="" :class="{ 'sp-modal-menu-a': true }">Rooms</a></li>
-                    <li><a href="" :class="{ 'sp-modal-menu-a': true }">Access</a></li>
+                    <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a floor-not-yet': true }">Labo</a></li>
+                    <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a floor-not-yet': true }">Rooms</a></li>
+                    <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a floor-not-yet': true }">Access</a></li>
                 </ul>
                 <!--<div class="change-lang">
                 <p><span class="selected-lang">日本語</span> / <span class="noselected-lang">English</span></p>
@@ -63,7 +63,7 @@
     #header-menu-sns li a {font-family: "Font Awesome 5 Brands"; font-weight: 900; display: block;text-align: center; color: #000;}
     #header-menu-sns { margin: auto 0 auto 20px;}
 
-
+    .floor-not-yet:before {width: 100px;}
     .no-link {color: #E5E5E5 !important;}
 
     .insta::before {content: '\f16d'; }

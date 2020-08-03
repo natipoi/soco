@@ -8,6 +8,7 @@ var firstActive = hour >= 5 && hour < 18 ? false : true;
 
 
 
+
 // var path = global.module.paths;
 
 // if (path.indexOf("kitchen") > -1) {
@@ -24,4 +25,8 @@ export var active = function(value) {
 // injectを利用して、関数hogeを"hoge"という名前で共通化
 export default ({ app }, inject) => {
     inject("active", active);
+    
 };
+
+
+
