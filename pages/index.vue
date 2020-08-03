@@ -487,11 +487,17 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
       console.log("☀️")
       if ( status ){
           $("#wrap").removeClass("dark_mode");
+          $(".night-btn").removeClass("switch-selected")
+          $(".day-btn").addClass("switch-selected")
+          $("#switch-selected-bg").removeClass("change-switch")
       } 
     } else {
       console.log("🌕")
       if ( !status ){
           $("#wrap").addClass("dark_mode");
+          $(".day-btn").removeClass("switch-selected")
+          $(".night-btn").addClass("switch-selected")
+          $("#switch-selected-bg").addClass("change-switch")
       } 
     }
 
