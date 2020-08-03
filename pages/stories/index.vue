@@ -73,4 +73,30 @@
       }).catch(console.error)
     }
   }
+  if (process.client) {
+
+      $(function(){
+    　　const japanStandardTime = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
+        const hour = new Date(japanStandardTime).getHours();
+        const status = $("#wrap").hasClass("dark_mode");
+        // 5時〜18時の間はお昼モード
+        if ( parseInt(hour) >= 5 && parseInt(hour) < 18 ) {
+          console.log("☀️")
+          if ( status ){
+              $("#wrap").removeClass("dark_mode");
+              $(".night-btn").removeClass("switch-selected")
+              $(".day-btn").addClass("switch-selected")
+              $("#switch-selected-bg").removeClass("change-switch")
+          } 
+        } else {
+          console.log("🌕")
+          if ( !status ){
+              $("#wrap").addClass("dark_mode");
+              $(".day-btn").removeClass("switch-selected")
+              $(".night-btn").addClass("switch-selected")
+              $("#switch-selected-bg").addClass("change-switch")
+          } 
+        }
+      });
+  }
 </script>
