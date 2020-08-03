@@ -483,7 +483,7 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
     const hour = new Date(japanStandardTime).getHours();
     const status = $("#wrap").hasClass("dark_mode");
     // 5時〜18時の間はお昼モード
-    if ( parseInt(hour) >= 6 && parseInt(hour) < 18 ) {
+    if ( parseInt(hour) >= 5 && parseInt(hour) < 18 ) {
       console.log("☀️")
       if ( status ){
           $("#wrap").removeClass("dark_mode");
