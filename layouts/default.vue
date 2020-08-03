@@ -137,37 +137,13 @@ export default {
       var now = new Date();
       var hour = now.getHours();
       // 5時〜18時の間はお昼モード
-      firstActive = true;
+      firstActive = hour >= 5 && hour < 18 ? false : true;
     }
     console.log(firstActive)
     return {
       active: firstActive
     }
-  },
-  asyncData() {
-    return {
-      active: this.active
-    }
-  },
-  mounted() {
-    this.$nextTick(function () {
-      var firstActive = true
-
-      　var path = this.$route.path;
-        path = path.split("/");
-        if (path[1] === "bar") {
-          this.active = true;
-        } else if (path[1] === "kitchen") {
-          this.active = false;
-        } else {
-          var now = new Date();
-          var hour = now.getHours();
-          // 5時〜18時の間はお昼モード
-          console.log("hour is ", hour)
-          this.active = hour >= 5 && hour < 18 ? false : true;
-        }
-    })
-  },
+  },　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　mhbf
   mounted() {
     Typekit.load({async: true})
   },
