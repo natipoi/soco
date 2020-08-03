@@ -23,7 +23,7 @@
 </template>
 
 <style>
-.h1 { font-size: 0.9rem; margin-bottom: 0; font-weight: 400;text-align: center;}
+.h1 { font-size: 0.9rem; margin-top: 40px; margin-bottom: 0; font-weight: 400;text-align: center;}
 .catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 1.0; margin-bottom: 30px; text-align: center;}
 .story-image {position: relative;overflow:hidden; height:calc(100vw * 0.6);margin-bottom: 10px;}
 

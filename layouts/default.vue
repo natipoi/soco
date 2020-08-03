@@ -81,6 +81,7 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
 .dark_mode .only-day {display: none;}
 .dark_mode .navi li:last-child, .navi li:nth-child(6) {border-color: #fff; transition: all 0.2s;}
 .dark_mode .navi-wrap {box-shadow: 2px 0 10px rgba(255,255,255,0.5);}
+.dark_mode .story-main-body, .dark_mode .story-h1 {color: #fff;}
 
 p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
 #header-background, #sp-modal-menu-wrap, .hamburger-bar, footer, .selected:before, .day-and-night-switch, header { transition: all 0.2s;}
