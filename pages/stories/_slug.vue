@@ -6,7 +6,7 @@
     <div class="hero-image">
     <img :src="post.fields.heroImage.fields.file.url" :alt="post.fields.heroImage.fields.description">
     </div>
-    <div v-html="mkbody" class="story-main-body" />
+    <div v-html="toHtmlString(post.fields.body)"></div>
   </section>
 </div>
 </template>
@@ -30,6 +30,7 @@ h3 {margin-bottom: 10px;margin-top: 20px;}
 
 <script>
 import { createClient } from '~/plugins/contentful.js'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import marked from 'marked';
 
 const client = createClient()
@@ -59,18 +60,10 @@ export default {
             ]
         }
     },
-    computed: {
-        mkbody() {
-        return marked(this.post.fields.body);
-        }
-    },
-    created() {
-        marked.setOptions({
-        langPrefix: '',
-        highlight: function(code, lang) {
-            return hljs.highlightAuto(code, [lang]).value
-        }
-        })
+    methods: {
+      toHtmlString(obj) {
+        return documentToHtmlString(obj)
+      }
     }
 }
  if (process.client) {
