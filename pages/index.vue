@@ -234,7 +234,7 @@
       <h2 class="h2 side-space gray">socoのニュース</h2>
       <p :class="{ 'catch-phrase side-space': true }">日々、形作られていく、<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。</p>
     <div class="blogs side-space">
-    <Stories
+    <News
       v-for="post in posts"
       :title="post.fields.title"
       :id="post.sys.id"
@@ -434,14 +434,14 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 </style>
 
 <script>
-  import Stories from '~/components/Stories.vue'
+  import News from '~/components/News.vue'
   import {createClient} from '~/plugins/contentful.js'
 
   const client = createClient()
 
   export default {
     components: {
-      Stories
+      News
     },
     asyncData ({env, active}) {
       console
