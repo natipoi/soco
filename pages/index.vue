@@ -245,7 +245,7 @@
     />
     </div>
     <div class="section-bottom-button">
-      <a href="/stories/">ニュースをもっと見る</a>
+      <a href="/news/">ニュースをもっと見る</a>
     </div>
     </section>
 

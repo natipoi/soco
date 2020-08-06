@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h1 class="h1 side-space gray">SOCOのストーリー</h1>
+        <h1 class="h1 side-space gray">SOCOのニュース</h1>
         <p :class="{ 'catch-phrase side-space': true }">
             日々、形作られていく、
             <ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。
@@ -52,7 +52,7 @@
         }),
         // fetch all blog posts sorted by creation date
         client.getEntries({
-          'content_type': 'story',
+          'content_type': 'blogPost',
           order: '-sys.createdAt'
         })
       ]).then(([entries, posts]) => {

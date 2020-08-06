@@ -39,7 +39,7 @@ export default {
         if(payload) return {post: payload}
         return client
             .getEntries({
-                'content_type': "story",
+                'content_type': "blogPost",
                 'fields.slug': params.slug
             })
             .then(entries => {

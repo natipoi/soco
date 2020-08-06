@@ -231,13 +231,33 @@
 </style>
 
 <script>
+import {createClient} from '~/plugins/contentful.js'
+
+const client = createClient()
 export default {
     props: {
         products: {
             type: Array,
             default: []
         }
-  }
+    },
+    asyncData ({env, active}) {
+      
+      return Promise.all([
+        // fetch the owner of the blog
+        client.getEntries({
+          'sys.id': env.CTF_PERSON_ID
+        }),
+        // fetch all blog posts sorted by creation date
+        client.getEntries({
+          'content_type': 'story'
+        })
+      ]).then(([entries, stories]) => {
+        return {
+          stories: products.items,
+        }
+      }).catch(console.log("errorororo"))
+    }
 }
 
 if (process.client) {

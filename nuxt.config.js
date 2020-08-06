@@ -127,18 +127,32 @@ export default {
     base: "/"
   },
   generate: {
-    routes() {
-      return client
-        .getEntries({
-          content_type: config.CTF_BLOG_POST_TYPE_ID
-        })
-        .then(entries => {
-          return entries.items.map(entry => {
-            return {
-              route: `stories/${entry.fields.slug}`,
-              payload: entry
-            };
-          });
+    routes: function() {
+      let stories = client.getEntries({
+              content_type: 'story'
+            })
+            .then((entries) => {
+                return entries.items.map((entry) => {
+                    return {
+                        route: `stories/${entry.fields.slug}`,
+                        payload: entry
+                    }
+                })
+            }
+          )
+      let products = client.getEntries({
+              content_type: 'blogPost'
+            })
+            .then((entries) => {
+                return entries.items.map((entry) => {
+                    return {
+                        route: `news/${entry.fields.slug}`,
+                    }
+                })
+            }
+        )
+        return Promise.all([stories, products]).then(values => {
+          return [...values[0], values[1]];
         });
     }
   },
