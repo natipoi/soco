@@ -199,7 +199,6 @@
     .main {margin-bottom: 0;}
     .h3 {margin-bottom: 0; font-size: 1.2rem;}
     .catch-phrase {font-size: 1.5rem; margin-bottom: 30px;}
-
     .navi-wrap {box-shadow: 2px 0 10px rgba(0,0,0,0.1); margin-bottom: 80px;}
     .navi {display: flex; flex-wrap: nowrap; justify-content:space-between; max-width: 800px; margin: 0 auto;}
     .navi li { margin: 20px 0px; width: 120px; text-align: center; max-width: calc(100vw / 6);}
