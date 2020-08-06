@@ -9,7 +9,6 @@
   import {createClient} from '~/plugins/contentful.js'
 
   const client = createClient()
-  console.log("okokokokokokok")
   export default {
     components: {
       Kitchenbar
@@ -26,11 +25,10 @@
           'content_type': 'menu'
         })
       ]).then(([entries, products]) => {
-        console.log("productsproductsproductsproductsproducts", products.items)
         return {
           products: products.items,
         }
-      }).catch(console.log("errorororo"))
+      }).catch(e => console.log("err", e))
     }
   }
 </script>

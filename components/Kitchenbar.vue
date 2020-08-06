@@ -86,7 +86,7 @@
                         Socoオーナーのケイちゃんがインドネシアの土壌を再生させたその土地で育てたバニラビーンズ。森林伐採で深刻な問題を抱えていたインドネシアの土地の再生と共に成長したこのバニラビーンズは。。。
                         </p>
                         <div class="positive-button">
-                            <a href="javascript:void(0)">続きを読む</a>
+                            <a href="/stories/stroy1">続きを読む</a>
                         </div>
                     </div>
                 </div>
@@ -97,6 +97,7 @@
                     <p class="story-order gray">1ST STORY</p>
                     <h3 class="h3">インドネシア土壌再生の象徴、バニラビーンズ</h3>
                 </div>
+
                 <div class="strory-detail">
                     <div class="story-image">
                         <img src="~/assets/kitchen/item.jpg" class="img">
@@ -108,11 +109,13 @@
                         Socoオーナーのケイちゃんがインドネシアの土壌を再生させたその土地で育てたバニラビーンズ。森林伐採で深刻な問題を抱えていたインドネシアの土地の再生と共に成長したこのバニラビーンズは。。。
                         </p>
                         <div class="positive-button">
-                            <a href="javascript:void(0)">続きを読む</a>
+                            <a href="/stories/stroy2">続きを読む</a>
                         </div>
                     </div>
                 </div>
             </div>
+
+
 
 
         </div>
@@ -232,7 +235,6 @@
 
 <script>
 import {createClient} from '~/plugins/contentful.js'
-
 const client = createClient()
 export default {
     props: {
@@ -240,31 +242,7 @@ export default {
             type: Array,
             default: []
         }
-    },
-    asyncData ({env, active}) {
-      
-      return Promise.all([
-        // fetch the owner of the blog
-        client.getEntries({
-          'sys.id': env.CTF_PERSON_ID
-        }),
-        // fetch all blog posts sorted by creation date
-        client.getEntries({
-          'content_type': 'story'
-        })
-      ]).then(([entries, stories]) => {
-        return {
-          stories: products.items,
-        }
-      }).catch(console.log("errorororo"))
     }
 }
 
-if (process.client) {
-
-$(function(){
-
-})
-
-}
 </script>
