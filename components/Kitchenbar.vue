@@ -43,102 +43,17 @@
             <ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>に。
         </p>
         <div class="items side-space">
-            <div class="item">
+            <div class="item" v-for="product in products">
                 <div class="item-image">
-                    <img src="~/assets/kitchen/item.jpg" class="img">
+                    <img :src="product.fields.image.fields.file.url" :alt="product.fields.image.fields.description" class="img">
                 </div>
                 <div class="item-text">
                     <div class="item-intro">
-                        <h3 class="h3 item-name">ホットサンド</h3>
-                        <p class="gray item-price">550円（税抜）</p>
+                        <h3 class="h3 item-name">{{ product.fields.name }}</h3>
+                        <p class="gray item-price">{{ product.fields.price }}円（税抜）</p>
                     </div>
                     <p class="only-pc item-detail">
-                        ビーフ、キャベツ、トマト、アボカド、特製ソースをサンドしたsoco kitchen特製ホットサンド。一口食べたら止まらない。
-                    </p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-image">
-                    <img src="~/assets/kitchen/item.jpg" class="img">
-                </div>
-                <div class="item-text">
-                    <div class="item-intro">
-                        <h3 class="h3 item-name">ホットサンド</h3>
-                        <p class="gray item-price">550円（税抜）</p>
-                    </div>
-                    <p class="only-pc item-detail">
-                        ビーフ、キャベツ、トマト、アボカド、特製ソースをサンドしたsoco kitchen特製ホットサンド。一口食べたら止まらない。
-                    </p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-image">
-                    <img src="~/assets/kitchen/item.jpg" class="img">
-                </div>
-                <div class="item-text">
-                    <div class="item-intro">
-                        <h3 class="h3 item-name">ホットサンド</h3>
-                        <p class="gray item-price">550円（税抜）</p>
-                    </div>
-                    <p class="only-pc item-detail">
-                        ビーフ、キャベツ、トマト、アボカド、特製ソースをサンドしたsoco kitchen特製ホットサンド。一口食べたら止まらない。
-                    </p>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="item-image">
-                    <img src="~/assets/kitchen/item.jpg" class="img">
-                </div>
-                <div class="item-text">
-                    <div class="item-intro">
-                        <h3 class="h3 item-name">ホットサンド</h3>
-                        <p class="gray item-price">550円（税抜）</p>
-                    </div>
-                    <p class="only-pc item-detail">
-                        ビーフ、キャベツ、トマト、アボカド、特製ソースをサンドしたsoco kitchen特製ホットサンド。一口食べたら止まらない。
-                    </p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-image">
-                    <img src="~/assets/kitchen/item.jpg" class="img">
-                </div>
-                <div class="item-text">
-                    <div class="item-intro">
-                        <h3 class="h3 item-name">ホットサンド</h3>
-                        <p class="gray item-price">550円（税抜）</p>
-                    </div>
-                    <p class="only-pc item-detail">
-                        ビーフ、キャベツ、トマト、アボカド、特製ソースをサンドしたsoco kitchen特製ホットサンド。一口食べたら止まらない。
-                    </p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-image">
-                    <img src="~/assets/kitchen/item.jpg" class="img">
-                </div>
-                <div class="item-text">
-                    <div class="item-intro">
-                        <h3 class="h3 item-name">ホットサンド</h3>
-                        <p class="gray item-price">550円（税抜）</p>
-                    </div>
-                    <p class="only-pc item-detail">
-                        ビーフ、キャベツ、トマト、アボカド、特製ソースをサンドしたsoco kitchen特製ホットサンド。一口食べたら止まらない。
-                    </p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-image">
-                    <img src="~/assets/kitchen/item.jpg" class="img">
-                </div>
-                <div class="item-text">
-                    <div class="item-intro">
-                        <h3 class="h3 item-name">ホットサンド</h3>
-                        <p class="gray item-price">550円（税抜）</p>
-                    </div>
-                    <p class="only-pc item-detail">
-                        ビーフ、キャベツ、トマト、アボカド、特製ソースをサンドしたsoco kitchen特製ホットサンド。一口食べたら止まらない。
+                        {{ product.fields.detail }}
                     </p>
                 </div>
             </div>
@@ -252,7 +167,6 @@
 
 
 <style>
-
 .h2 { font-size: 0.9rem; margin-bottom: 10px; font-weight: 400;}
 .catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 1; margin-bottom: 30px;}
 .h3 {font-weight: 400;font-size: 1.0rem;margin-bottom: 5px;}
@@ -266,7 +180,7 @@
 
 .item {display: flex; flex-wrap: nowrap; align-items: center; margin-bottom: 20px;}
 .item-image {position: relative; width: 30%; height: calc(100vw * 0.15); overflow: hidden;}
-.item-image img {width: auto;height: 100%;}
+
 .item-text {flex: 1;margin-left: 20px;}
 
 .person-hours {display: none;}
@@ -318,12 +232,20 @@
 </style>
 
 <script>
-
-  if (process.client) {
-
-    $(function(){
-
-    })
-
+export default {
+    props: {
+        products: {
+            type: Array,
+            default: []
+        }
   }
+}
+
+if (process.client) {
+
+$(function(){
+
+})
+
+}
 </script>

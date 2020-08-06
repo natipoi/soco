@@ -79,7 +79,12 @@ export default {
       {
         rel: "stylesheet",
         href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-      }
+      },
+      {
+        rel: "canonical",
+        href: "https://yuki-muscle.com"
+      },
+      
     ]
   },
   /*
