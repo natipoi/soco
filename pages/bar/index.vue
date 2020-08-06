@@ -1,6 +1,7 @@
 <template>
 <Kitchenbar 
     :products="products"
+    :stories="stories"
 />
 </template>
 
@@ -23,10 +24,14 @@
         // fetch all blog posts sorted by creation date
         client.getEntries({
           'content_type': 'menu'
+        }),
+        client.getEntries({
+          'content_type': 'story'
         })
-      ]).then(([entries, products]) => {
+      ]).then(([entries, products, stories]) => {
         return {
           products: products.items,
+          stories: stories.items
         }
       }).catch(e => console.log("err", e))
     }

@@ -69,15 +69,16 @@
         </p>
 
         <div class="stories side-space">
-            <div href="" class="story">
+
+            <div href="" class="story" v-for="story in stories">
                 <div class="strory-heading">
                     <p class="story-order gray">1ST STORY</p>
-                    <h3 class="h3">インドネシア土壌再生の象徴、バニラビーンズ</h3>
+                    <h3 class="h3">{{ story.fields.title }}</h3>
                 </div>
 
                 <div class="strory-detail">
                     <div class="story-image">
-                        <img src="~/assets/kitchen/item.jpg" class="img">
+                        <img :src="story.fields.heroImage.fields.file.url" :alt="story.fields.heroImage.fields.description" class="img">
                     </div>
 
                     <div class="story-content">
@@ -86,30 +87,9 @@
                         Socoオーナーのケイちゃんがインドネシアの土壌を再生させたその土地で育てたバニラビーンズ。森林伐採で深刻な問題を抱えていたインドネシアの土地の再生と共に成長したこのバニラビーンズは。。。
                         </p>
                         <div class="positive-button">
-                            <a href="/stories/stroy1">続きを読む</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div href="" class="story">
-                <div class="strory-heading">
-                    <p class="story-order gray">1ST STORY</p>
-                    <h3 class="h3">インドネシア土壌再生の象徴、バニラビーンズ</h3>
-                </div>
-
-                <div class="strory-detail">
-                    <div class="story-image">
-                        <img src="~/assets/kitchen/item.jpg" class="img">
-                    </div>
-
-                    <div class="story-content">
-                        <p class="strory-body">
-                        Socoオーナーのケイちゃんがインドネシアの土壌を再生させたその土地で育てたバニラビーンズ。森林伐採で深刻な問題を抱えていたインドネシアの土地の再生と共に成長したこのバニラビーンズは。。。<br>
-                        Socoオーナーのケイちゃんがインドネシアの土壌を再生させたその土地で育てたバニラビーンズ。森林伐採で深刻な問題を抱えていたインドネシアの土地の再生と共に成長したこのバニラビーンズは。。。
-                        </p>
-                        <div class="positive-button">
-                            <a href="/stories/stroy2">続きを読む</a>
+                        <nuxt-link 
+                            :to="`/stories/${story.fields.slug}`">続きを読む
+                            </nuxt-link>
                         </div>
                     </div>
                 </div>
@@ -239,6 +219,10 @@ const client = createClient()
 export default {
     props: {
         products: {
+            type: Array,
+            default: []
+        },
+        stories: {
             type: Array,
             default: []
         }
