@@ -471,6 +471,11 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
           posts: posts.items,
         }
       }).catch(console.error)
+    },
+    head () {
+        return {
+            title: "soco",
+        }
     }
   }
 
