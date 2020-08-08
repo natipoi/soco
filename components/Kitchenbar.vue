@@ -194,7 +194,7 @@
     .navi li:hover {cursor: pointer;}
 
     .item {margin-bottom: 30px;}
-    .item-intro {display: flex; flex-wrap: nowrap; align-items: center; margin-bottom: 10px;}
+    .item-intro {display: flex; flex-wrap: nowrap; align-items: center; margin-bottom: 10px;align-items: baseline;}
     .item-price {margin-left: 20px;flex: 1;}
     .item-image {height: 100px; width: 150px;}
     .item-image img {width: 100%; height: auto;}
