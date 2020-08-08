@@ -83,8 +83,7 @@
 
                     <div class="story-content">
                         <p class="strory-body">
-                        Socoオーナーのケイちゃんがインドネシアの土壌を再生させたその土地で育てたバニラビーンズ。森林伐採で深刻な問題を抱えていたインドネシアの土地の再生と共に成長したこのバニラビーンズは。。。<br>
-                        Socoオーナーのケイちゃんがインドネシアの土壌を再生させたその土地で育てたバニラビーンズ。森林伐採で深刻な問題を抱えていたインドネシアの土地の再生と共に成長したこのバニラビーンズは。。。
+                        {{ story.fields.description }}
                         </p>
                         <div class="positive-button">
                         <nuxt-link 
@@ -109,8 +108,9 @@
         </p>
         
 
-        <Person />
-        <Person />
+        <People 
+          :people="people"
+        />
 
 
     </section>
@@ -171,7 +171,9 @@
 .story {display: block;margin-bottom: 50px;}
 .story-order {font-size: 0.8rem;text-align:center;margin-bottom: 10px;}
 .story-image {position: relative;overflow:hidden; height:calc(100vw * 0.6);margin-bottom: 10px;}
-.strory-body {font-size: 0.9rem; margin-bottom: 30px;}
+.strory-body {font-size: 0.9rem; margin-bottom: 30px; display: -webkit-box; -webkit-line-clamp: 7;
+	-webkit-box-orient: vertical;
+	overflow: hidden;}
 .reservation-text {font-size: 0.9rem;margin-bottom: 30px;}
 .reservation-info {display: flex; flex-wrap: nowrap; align-items: center;}
 .tel-button {}
@@ -180,6 +182,7 @@
 
 @media screen and (min-width: 820px){
     .main {margin-bottom: 0;}
+    
     .h3 {margin-bottom: 0; font-size: 1.2rem;}
     .catch-phrase {font-size: 1.5rem; margin-bottom: 30px;}
     .navi-wrap {box-shadow: 2px 0 10px rgba(0,0,0,0.1); margin-bottom: 80px;}
@@ -214,15 +217,22 @@
 </style>
 
 <script>
-import {createClient} from '~/plugins/contentful.js'
-const client = createClient()
+import People from '~/components/People.vue'
+
 export default {
+    components: {
+      People
+    },
     props: {
         products: {
             type: Array,
             default: []
         },
         stories: {
+            type: Array,
+            default: []
+        },
+        people: {
             type: Array,
             default: []
         }

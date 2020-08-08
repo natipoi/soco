@@ -1,16 +1,17 @@
 <template>
-<div class="person-introduction side-space">
+<div>
+<div class="person-introduction side-space" v-for="person in people">
     <div class="person-image">
-        <img class="img" src="~/assets/top/person.png">
+        <img :src="person.fields.image.fields.file.url" :alt="person.fields.image.fields.description" class="img">
     </div>
     <div class="person-text">
-        <p :class="{ 'person-name': true }">ケイちゃん</p>
-        <p class="person-hours gray">出没時間：主に夜</p>
+        <p :class="{ 'person-name': true }">{{ person.fields.name }}</p>
+        <p class="person-hours gray">出没時間: {{ person.fields.time }}</p>
         <p :class="{ 'person-description': true }">
-        さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
-        生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。
+            {{ person.fields.shortBio }}
         </p>
     </div>
+</div>
 </div>
 </template>
 
@@ -28,3 +29,14 @@
 
 }
 </style>
+
+<script>
+export default {
+    props: {
+        people: {
+            type: Array,
+            default: []
+        }
+    }
+}
+</script>

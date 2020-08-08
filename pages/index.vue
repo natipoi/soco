@@ -217,14 +217,9 @@
     <section class="section">
       <h2 class="h2 side-space gray">socoの仲間たち</h2>
       <p :class="{ 'catch-phrase side-space': true }">いつでも<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>に。</p>
-      <Person />
-
-      <Person />
-
-      <Person />
-
-      <Person />
-
+      <People
+        :people="people"
+      />
       <div class="section-bottom-button" style="display:none;">
         <a href="">スタッフ募集中</a>
       </div>
@@ -235,7 +230,7 @@
       <p :class="{ 'catch-phrase side-space': true }">日々、形作られていく、<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。</p>
     <div class="blogs side-space">
     <News
-      v-for="post in posts"
+      v-for="post in news"
       :title="post.fields.title"
       :id="post.sys.id"
       :publish="post.fields.publishDate"
@@ -435,30 +430,33 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
 <script>
   import News from '~/components/News.vue'
+  import People from '~/components/People.vue'
   import {createClient} from '~/plugins/contentful.js'
 
   const client = createClient()
 
   export default {
     components: {
-      News
+      News,
+      People
     },
     asyncData ({env, active}) {
       console
       return Promise.all([
-        // fetch the owner of the blog
         client.getEntries({
           'sys.id': env.CTF_PERSON_ID
         }),
-        // fetch all blog posts sorted by creation date
         client.getEntries({
-          'content_type': env.CTF_BLOG_POST_TYPE_ID,
+          'content_type': "blogPost",
           order: '-sys.createdAt'
+        }),
+        client.getEntries({
+          'content_type': "person"
         })
-      ]).then(([entries, posts]) => {
+      ]).then(([entries, news, people]) => {
         // return data that should be available
         // in the template
-        for (var post of posts.items) {
+        for (var post of news.items) {
         　var date = new Date(post.fields.publishDate);
           var year = date.getFullYear();
           var month = date.getMonth() + 1;
@@ -467,8 +465,8 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
         }
         return {
-          person: entries.items[0],
-          posts: posts.items,
+          news: news.items,
+          people: people.items
         }
       }).catch(console.error)
     },

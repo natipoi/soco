@@ -2,6 +2,7 @@
 <Kitchenbar 
     :products="products"
     :stories="stories"
+    :people="people"
 />
 </template>
 
@@ -27,11 +28,16 @@
         }),
         client.getEntries({
           'content_type': 'story'
+        }),
+        client.getEntries({
+          'content_type': 'person',
+          'fields.tag': 'kitchen'
         })
-      ]).then(([entries, products, stories]) => {
+      ]).then(([entries, products, stories, people]) => {
         return {
           products: products.items,
-          stories: stories.items
+          stories: stories.items,
+          people: people.items
         }
       }).catch(e => console.log("err", e))
     }
