@@ -6,11 +6,11 @@
     <div class="address-hours">
         <div class="address">
         <p :class="{ 'address-name': true }">soco Kyoto</p>
-        <p :class="{ 'address-text': true }">〒602-0862 京都府上京区出水町260</p>
+        <p :class="{ 'address-text': true }">〒602-0862<br>京都市上京区河原町通丸太町上出水町260</p>
         <ul class="how-to-way">
-            <li>神宮丸太町駅から徒歩5分</li>
-            <li>神宮丸太町駅から徒歩5分</li>
-            <li>神宮丸太町駅から徒歩5分</li>
+            <li>市バス河原町丸太町下車すぐ</li>
+            <li>京阪神宮丸太町から徒歩5分</li>
+            <li>お車でお越しの方は近隣のコインパーキングをご利用ください。</li>
         </ul>
         </div>
         <div class="business-hours">
@@ -18,20 +18,20 @@
             <table class="business-hours-table">
             <tr>
                 <th class="gray">soco Kitchen</th>
-                <td>18:00 〜 24:00</td>
+                <td>11:00 〜 17:00</td>
             </tr>
             <tr>
                 <th class="gray">soco Bar</th>
-                <td>9:00 〜 18:00</td>
+                <td>18:00 〜 Late</td>
             </tr>
-            <tr>
+            <!--<tr>
                 <th class="gray">soco Labo</th>
                 <td>9:00 〜 18:00</td>
             </tr>
             <tr>
                 <th class="gray">soco Rooms</th>
                 <td>9:00 〜 24:00</td>
-            </tr>
+            </tr>-->
             </table>
         </div>
     </div>

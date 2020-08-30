@@ -51,10 +51,10 @@
     <section class="section">
       <h2 class="h2 side-space gray">socoのコンセプト</h2>
       <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>にいけば何かある。<span class="sp-br"></span>だからちょっと<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>まで。</p>
-      <p :class="{ 'sub-text side-space': true }">さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。</p>
+      <p :class="{ 'sub-text side-space': true }">さまざまな人や文化がつながり、新しいものや価値をつむぎ出し、それを発信する。そんな「場」がsocoです。</p>
       <p :class="{ 'sub-text side-space': true }">生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。</p>
       <p :class="{ 'sub-text side-space': true }">socoにいけば誰かいる、何かがある。だからちょっとsocoまで。</p>
-      <p :class="{ 'sub-text side-space': true }">そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。</p>
+      <p :class="{ 'sub-text side-space': true }">私たちの日常に溶け込んだ空間と時間が、socoにあります。</p>
     </section>
 
     <section class="section">
@@ -105,17 +105,28 @@
             <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
           </div>
           <div class="floor-content-bottom side-space">
-            <p :class="{ 'floor-content-text': true }">
-              さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
-              生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。<br>
-              socoにいけば誰かいる、何かがある。だからちょっとsocoまで。<br>
-              そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。
+            <p :class="{ 'floor-content-text only-day': true }">
+              さまざまな人や文化がつながり、新しいものや価値をつむぎ出し、それを発信する。そんな「場」がsocoです。<br>
+生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。<br>
+socoにいけば誰かいる、何かがある。だからちょっとsocoまで。
+私たちの日常に溶け込んだ空間と時間が、socoにあります。
             </p>
+
+            <p :class="{ 'floor-content-text only-night': true }">
+              ポップ＆クールな空間で、クラシックなバーメニューと心温まるもてなしを。クラフトビール、安くてうまいウィスキー＆スピリッツ、オリジナルカクテルに店主気まぐれのアテと〆のメシ！
+            </p>
+
             <div class="bar-kitchen-text-detail">
-              <p class="floor-content-text-detail gray only-day">OPEN 9:00 | CLOSE 18:00 (L.O. 17:30)<br>
-              ※18:00以降は「<span class="text-yellow">soco bar</span>」として営業しています。</p>
-              <p class="floor-content-text-detail gray only-night">OPEN 18:00 | CLOSE 24:00 (L.O. 23:30)<br>
-              ※18:00までは「<span class="text-yellow">soco kitchen</span>」として営業しています。。</p>
+
+              <p class="floor-content-text-detail gray only-day">OPEN 11:00 | CLOSE 17:00 (L.O. 16:30)<br>
+              ※18:00以降は「<span class="text-yellow">soco bar</span>」として営業しています。。
+              </p>
+
+              <p class="floor-content-text-detail gray only-night">OPEN 18:00 〜 Late<br>
+              ※17:00までは「<span class="text-yellow">soco kitchen</span>」として営業しています。
+              </p>
+
+              
             </div>
             <div class="floor-content-button positive-button">
               <a href="/kitchen/" class="only-day">Kitchenを覗く</a>
@@ -128,7 +139,7 @@
       <div class="floor-content">
         <div :class="{ 'floor-heading side-space': true }">
           <Logo />
-          <h3 :class="{ 'h3': true }">Labo<span class="gray sub-h3">1階</span></h3>
+          <h3 :class="{ 'h3': true }">Space<span class="gray sub-h3">1階</span></h3>
         </div>
         <div class="floor-content-detail">
           <div class="floor-content-images-wrap only-sp">
@@ -154,14 +165,11 @@
           </div>
           <div class="floor-content-bottom side-space">
             <p :class="{ 'floor-content-text': true }">
-              さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
-              生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。<br>
-              socoにいけば誰かいる、何かがある。だからちょっとsocoまで。<br>
-              そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。
+              ドロップインのパーソナルオフィス、ミーティングからセミナー、ギャラリー、上映会、アコースティックライブまで、あらゆるイベントニーズに対応可能な変幻自在の空間です。
             </p>
-            <p class="floor-content-text-detail gray">OPEN 9:00 | CLOSE 18:00</p>
+            <p class="floor-content-text-detail gray">OPEN 11:00 | CLOSE 18:00</p>
             <div class="floor-content-button positive-button">
-              <a href="javascript:void(0)"　class="floor-not-yet">Laboを覗く</a>
+              <a href="javascript:void(0)"　class="floor-not-yet">spaceを覗く</a>
             </div>
           </div>
         </div>
@@ -200,10 +208,7 @@
           </div>
           <div class="floor-content-bottom side-space">
             <p :class="{ 'floor-content-text': true }">
-              さまざまな人や文化がつながり、新しいものをつむぎ出し、それを人びとにつたえる。そんな「場」がsocoです。<br>
-              生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。<br>
-              socoにいけば誰かいる、何かがある。だからちょっとsocoまで。<br>
-              そんな人びとの日常に溶け込んだ空間と時間が、socoにあります。
+              
             </p>
             <p class="floor-content-text-detail gray">1泊 6500円〜 (税抜)</p>
             <div class="floor-content-button positive-button">
@@ -410,12 +415,12 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
   .catch-phrase {font-size: 1.5rem}
   #floor-navi li {width: 80px; font-size: 1.5rem;}
   .floor-content-detail {display: flex; align-items: end;}
-  .floor-content-text-detail {font-size: 0.8rem;}
+  .floor-content-text-detail {font-size: 0.8rem;min-height: 40px;}
   .floor-content-detail .side-space {margin-left: 0;margin-right: 0;}
   .floor-content-image {width: 50%; height: 300px;}
   .floor-content-image img {height: 100%; height: 300px;}
   .floor-content-bottom {flex: 1; margin-left: 20px !important;}
-  .floor-content-text {font-size: 0.9rem;padding: 0 0 10px;line-height: 2.0;}
+  .floor-content-text {font-size: 0.9rem;padding: 0 0 10px;line-height: 2.0; min-height: 180px;}
   
   .blogs {display:flex;flex-wrap: wrap;justify-content: flex-start; }
   .blog {width: 30%; margin-right: 5%;}

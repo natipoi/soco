@@ -7,7 +7,7 @@
             <Logo />
             </a>
         </div>
-        <div id="header-catch" class="only-pc"><p>京都のXXXX</p></div>
+        <div id="header-catch" class="only-pc"><p>京都・河原町のキッチン・バー＆イベント</p></div>
         <ul class="header-menu only-pc" id="header-menu-left">
             <li class="only-day"><a href="/kitchen/">Kitchen</a></li>
             <li class="only-night"><a href="/bar/">Bar</a></li>
