@@ -72,7 +72,6 @@
 
             <div href="" class="story" v-for="story in stories">
                 <div class="strory-heading">
-                    <p class="story-order gray">1ST STORY</p>
                     <h3 class="h3">{{ story.fields.title }}</h3>
                 </div>
 

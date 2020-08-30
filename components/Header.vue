@@ -11,7 +11,7 @@
         <ul class="header-menu only-pc" id="header-menu-left">
             <li class="only-day"><a href="/kitchen/">Kitchen</a></li>
             <li class="only-night"><a href="/bar/">Bar</a></li>
-            <li><a href="javascript:void(0)" class="no-link">Works</a></li>
+            <li><a href="javascript:void(0)" class="no-link">Space</a></li>
             <li><a href="javascript:void(0)" class="no-link">Rooms</a></li>
             <li><nuxt-link v-scroll-to="'#map'" to>Access</nuxt-link></li>
         </ul>
