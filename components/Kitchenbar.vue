@@ -4,9 +4,9 @@
         <div class="main-text">
             <h1 class="kitchen-bar-h1"></h1>
             <p class="main-heading">
-                <span class="only-day">OPEN 9:00 | CLOSE 18:00 (L.O. 17:30)</span>
-                <span class="only-night">OPEN 18:00 | CLOSE 24:00 (L.O. 23:30)</span>
-                <br>Tel: 070-xxxx-xxxx
+                <span class="only-day">OPEN 11:00 | CLOSE 17:00 (L.O. 16:30)</span>
+                <span class="only-night">OPEN 18:00 | CLOSE late</span>
+                <br>Tel: 070-6548-8399
             </p>
         </div>
         <div class="main-visual-wrap">
