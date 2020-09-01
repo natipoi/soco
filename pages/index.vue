@@ -119,7 +119,7 @@ socoにいけば誰かいる、何かがある。<br>だからちょっとsoco�
             <div class="bar-kitchen-text-detail">
 
               <p class="floor-content-text-detail gray only-day">OPEN 11:00 | CLOSE 17:00 (L.O. 16:30)<br>
-              ※18:00以降は「<span class="text-yellow">soco bar</span>」として営業しています。。
+              ※18:00以降は「<span class="text-yellow">soco bar</span>」として営業しています。
               </p>
 
               <p class="floor-content-text-detail gray only-night">OPEN 18:00 〜 Late<br>

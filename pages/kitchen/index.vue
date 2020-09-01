@@ -1,5 +1,5 @@
 <template>
-<Kitchenbar 
+<Kitchen 
     :products="products"
     :stories="stories"
     :people="people"
@@ -7,13 +7,13 @@
 </template>
 
 <script>
-  import Kitchenbar from '~/components/Kitchenbar.vue'
+  import Kitchen from '~/components/Kitchen.vue'
   import {createClient} from '~/plugins/contentful.js'
 
   const client = createClient()
   export default {
     components: {
-      Kitchenbar
+      Kitchen
     },
     asyncData ({env, active}) {
       

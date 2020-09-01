@@ -6,7 +6,7 @@
             <p class="main-heading">
                 <span class="only-day">OPEN 11:00 | CLOSE 17:00 (L.O. 16:30)</span>
                 <span class="only-night">OPEN 18:00 | CLOSE late</span>
-                <br>Tel: 070-6548-8399
+                <br>Tel: 075-285-4385
                 
             </p>
         </div>

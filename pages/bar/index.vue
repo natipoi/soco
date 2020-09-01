@@ -1,5 +1,5 @@
 <template>
-<Kitchenbar 
+<Bar 
     :products="products"
     :stories="stories"
     :people="people"
@@ -7,13 +7,13 @@
 </template>
 
 <script>
-  import Kitchenbar from '~/components/Kitchenbar.vue'
+  import Bar from '~/components/Bar.vue'
   import {createClient} from '~/plugins/contentful.js'
 
   const client = createClient()
   export default {
     components: {
-      Kitchenbar
+      Bar
     },
     asyncData ({env, active}) {
       
@@ -24,14 +24,13 @@
         }),
         // fetch all blog posts sorted by creation date
         client.getEntries({
-          'content_type': 'menu'
+          'content_type': 'barMenu'
         }),
         client.getEntries({
           'content_type': 'story'
         }),
         client.getEntries({
-          'content_type': 'person',
-          'fields.tag': 'kitchen'
+          'content_type': 'person'
         })
       ]).then(([entries, products, stories, people]) => {
         return {

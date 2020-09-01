@@ -8,7 +8,7 @@
 
         <div class="footer-info">
             <p :class="{ 'footer-addres': true }">〒602-0862 京都市上京区河原町通丸太町上出水町260</p>
-            <p :class="{ 'footer-tel': true }">Tel: 070-6548-8399</p>
+            <p :class="{ 'footer-tel': true }">Tel: 075-285-4385</p>
             <!--<p :class="{ 'footer-email': true }">Email: support@soco-kyoto.com</p>-->
         </div>
 
