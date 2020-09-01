@@ -159,7 +159,7 @@
                 </div>
             </div>
             <div class="reservation-tel">
-                <p class="">070-6548-8399<br>受付時間 9:00 ~ 18:00</p>
+                <p class="">075-285-4385<br>受付時間 9:00 ~ 18:00</p>
             </div>
         </div>
     </section>
