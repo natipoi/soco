@@ -126,9 +126,7 @@ export default {
     var firstActive = true;
   　var path = this.$route.path;
     path = path.split("/");
-    console.log("path is "+ path )
     if (path[1] === "bar") {
-    console.log("this is "+ path )
       firstActive = true;
     } else if (path[1] === "kitchen") {
       firstActive = false;

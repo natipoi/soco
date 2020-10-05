@@ -49,15 +49,6 @@
     </section>
 
     <section class="section">
-      <h2 class="h2 side-space gray">socoのコンセプト</h2>
-      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>にいけば何かある。<span class="sp-br"></span>だからちょっと<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>まで。</p>
-      <p :class="{ 'sub-text side-space': true }">さまざまな人や文化がつながり、新しいものや価値をつむぎ出し、それを発信する。そんな「場」がsocoです。</p>
-      <p :class="{ 'sub-text side-space': true }">生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。</p>
-      <p :class="{ 'sub-text side-space': true }">socoにいけば誰かいる、何かがある。だからちょっとsocoまで。</p>
-      <p :class="{ 'sub-text side-space': true }">私たちの日常に溶け込んだ空間と時間が、socoにあります。</p>
-    </section>
-
-    <section class="section">
       <h2 class="h2 side-space gray">socoの空間</h2>
       <p :class="{ 'catch-phrase side-space': true }">倉庫。いや、<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。</p>
       <ul id="floor-navi" class="side-space">
@@ -106,10 +97,7 @@
           </div>
           <div class="floor-content-bottom side-space">
             <p :class="{ 'floor-content-text only-day': true }">
-              さまざまな人や文化がつながり、新しいものや価値をつむぎ出し、それを発信する。<br>そんな「場」がsocoです。<br>
-生まれたばかりのsocoは、ただのハコ。<br>そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。<br>
-socoにいけば誰かいる、何かがある。<br>だからちょっとsocoまで。
-私たちの日常に溶け込んだ空間と時間が、socoにあります。
+              さまざまな人や文化がつながり、新しいものや価値をつむぎ出し、それを発信する。<br>そんな「場」がsocoです。<br>生まれたばかりのsocoは、ただのハコ。<br>そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。<br>socoにいけば誰かいる、何かがある。<br>だからちょっとsocoまで。私たちの日常に溶け込んだ空間と時間が、socoにあります。
             </p>
 
             <p :class="{ 'floor-content-text only-night': true }">
@@ -218,6 +206,17 @@ socoにいけば誰かいる、何かがある。<br>だからちょっとsoco�
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <h2 class="h2 side-space gray">socoのコンセプト</h2>
+      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>にいけば何かある。<span class="sp-br"></span>だからちょっと<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>まで。</p>
+      <p :class="{ 'sub-text side-space': true }">さまざまな人や文化がつながり、新しいものや価値をつむぎ出し、それを発信する。そんな「場」がsocoです。</p>
+      <p :class="{ 'sub-text side-space': true }">生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。</p>
+      <p :class="{ 'sub-text side-space': true }">socoにいけば誰かいる、何かがある。だからちょっとsocoまで。</p>
+      <p :class="{ 'sub-text side-space': true }">私たちの日常に溶け込んだ空間と時間が、socoにあります。</p>
+    </section>
+
+    
 
     <section class="section">
       <h2 class="h2 side-space gray">socoの仲間たち</h2>
