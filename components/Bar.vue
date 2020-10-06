@@ -270,16 +270,28 @@ if (process.client) {
   $(function(){
     $(".js-item-menu").each(function(index){
         const menuH = $(this).height()
-        const imgW = $(this).prev().width()
+
+        
         if ( menuH > 150 ) {
             $(this).prev().height(menuH)
-            if ( menuH > imgW ){
-                 $(this).prev().children().css({
-                 "height": "100%",
-                 "width": "auto"
-                 });
-            }
         }
+        const imgWrapW = $(this).prev().width()
+        const imgWrapH = $(this).prev().height()
+        const imgW = $(this).prev().children().children().width()
+        const imgH = $(this).prev().children().children().height()
+        var scaleImgH = imgWrapH * imgW  / imgWrapW
+        if (scaleImgH > imgH) {
+            $(this).prev().children().css({
+                "height": "100%",
+                "width": "auto"
+            });
+            $(this).prev().children().children().css({
+                "height": "100%",
+                "width": "auto"
+            })
+        }
+        
+
     })
 
     $(".item-pulldown").on("click", function(e){
