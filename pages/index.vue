@@ -49,7 +49,7 @@
     </section>
 
     <section class="section">
-      <h2 class="h2 side-space gray">socoの空間</h2>
+      <!--<h2 class="h2 side-space gray">socoの空間</h2>-->
       <p :class="{ 'catch-phrase side-space': true }">倉庫。いや、<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。</p>
       <ul id="floor-navi" class="side-space">
         <li :class="{ 'selected': true }">1階</li>
@@ -208,10 +208,12 @@
     </section>
 
     <section class="section">
-      <h2 class="h2 side-space gray">socoのコンセプト</h2>
+      <!--<h2 class="h2 side-space gray">socoのコンセプト</h2>-->
       <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>にいけば何かある。<span class="sp-br"></span>だからちょっと<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>まで。</p>
-      <p :class="{ 'sub-text side-space': true }">さまざまな人や文化が出会い、新しいものや価値を生み出し、それを発信する。そんな「場」がsocoです。</p>
-      <p :class="{ 'sub-text side-space': true }">生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。</p>
+      <p :class="{ 'sub-text side-space': true }">さまざまな人や文化が出会い、新しいものや価値を生み出し、それを発信する。</p>
+      <p :class="{ 'sub-text side-space': true }">そんな「場」がsocoです。</p>
+      <p :class="{ 'sub-text side-space': true }">生まれたばかりのsocoは、ただのハコ。</p>
+      <p :class="{ 'sub-text side-space': true }">そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。</p>
       <p :class="{ 'sub-text side-space': true }">socoにいけば誰かとつながる、何かがはじまる。だからちょっとsocoまで。</p>
       <p :class="{ 'sub-text side-space': true }">私たちの日常に溶け込んだ空間と時間が、socoにあります。</p>
     </section>
@@ -219,8 +221,8 @@
     
 
     <section class="section">
-      <h2 class="h2 side-space gray">socoの仲間たち</h2>
-      <p :class="{ 'catch-phrase side-space': true }">いつでも<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>に。</p>
+      <!--<h2 class="h2 side-space gray">socoの仲間たち</h2>-->
+      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>の仲間たち</p>
       <People
         :people="people"
       />
@@ -230,8 +232,8 @@
     </section>
 
     <section class="section">
-      <h2 class="h2 side-space gray">socoのニュース</h2>
-      <p :class="{ 'catch-phrase side-space': true }">日々、形作られていく、<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。</p>
+      <!--<h2 class="h2 side-space gray">socoのニュース</h2>-->
+      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>のニュース</p>
     <div class="blogs side-space">
     <News
       v-for="post in news"
@@ -250,12 +252,13 @@
 
 
     <section class="section">
-      <h2 class="h2 side-space gray">socoの場所</h2>
-      <p :class="{ 'catch-phrase side-space': true }">京都の<ruby><rb>soco</rb>
+      <!--<h2 class="h2 side-space gray">socoの場所</h2>-->
+      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb>
         <rp>（</rp>
         <rt>ソコ</rt>
         <rp>）</rp>
-        </ruby>まで。
+        </ruby>
+        ってdoco?
       </p>
       <Map />
       
