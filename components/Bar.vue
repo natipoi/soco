@@ -81,7 +81,7 @@
     </section>
 
     <!-- blog-->
-    <section class="section" id="story-section">
+    <!--<section class="section" id="story-section">
         <h2 class="h2 side-space gray">STORIES</h2>
         <p :class="{ 'catch-phrase side-space': true }">
             <ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>
@@ -112,27 +112,19 @@
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
-    </section>
+    </section>-->
 
-    <section class="section" id="chef-section">
+    <!--<section class="section" id="chef-section">
         <h2 class="h2 side-space gray">CHFES</h2>
         <p :class="{ 'catch-phrase side-space': true }">
             いつでも
             <ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>に。
         </p>
-        
-
         <People 
           :people="people"
         />
-
-
-    </section>
+    </section>-->
 
     <section class="section" id="info-section">
         <h2 class="h2 side-space gray">INFO</h2>

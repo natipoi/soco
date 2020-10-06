@@ -97,7 +97,7 @@
           </div>
           <div class="floor-content-bottom side-space">
             <p :class="{ 'floor-content-text only-day': true }">
-              さまざまな人や文化がつながり、新しいものや価値をつむぎ出し、それを発信する。<br>そんな「場」がsocoです。<br>生まれたばかりのsocoは、ただのハコ。<br>そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。<br>socoにいけば誰かいる、何かがある。<br>だからちょっとsocoまで。私たちの日常に溶け込んだ空間と時間が、socoにあります。
+              10種類以上のスパイスを組み合わせて丹精込めてつくった北インド風カレー、御所近くの名井から汲んだ水で8時間かけて淹れたコールドブリューコーヒーなど、シンプルだけどこだわりの詰まったメニュー。週末はブランチメニューも！バーカウンターで、テーブルで、ソファーで、思い思いのランチ～カフェタイムを。水曜定休ですが臨時で休むこともあるのでインスタをチェックしてね！
             </p>
 
             <p :class="{ 'floor-content-text only-night': true }">
@@ -106,12 +106,12 @@
 
             <div class="bar-kitchen-text-detail">
 
-              <p class="floor-content-text-detail gray only-day">OPEN 11:00 | CLOSE 17:00 (L.O. 16:30)<br>
+              <p class="floor-content-text-detail gray only-day">OPEN 11:00 | CLOSE 15:00<br>
               ※18:00以降は「<span class="text-yellow">soco bar</span>」として営業しています。
               </p>
 
-              <p class="floor-content-text-detail gray only-night">OPEN 18:00 〜 Late<br>
-              ※17:00までは「<span class="text-yellow">soco kitchen</span>」として営業しています。
+              <p class="floor-content-text-detail gray only-night">OPEN 18:00 - Late<br>
+              ※15:00までは「<span class="text-yellow">soco kitchen</span>」として営業しています。
               </p>
 
               
@@ -210,9 +210,9 @@
     <section class="section">
       <h2 class="h2 side-space gray">socoのコンセプト</h2>
       <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>にいけば何かある。<span class="sp-br"></span>だからちょっと<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>まで。</p>
-      <p :class="{ 'sub-text side-space': true }">さまざまな人や文化がつながり、新しいものや価値をつむぎ出し、それを発信する。そんな「場」がsocoです。</p>
+      <p :class="{ 'sub-text side-space': true }">さまざまな人や文化が出会い、新しいものや価値を生み出し、それを発信する。そんな「場」がsocoです。</p>
       <p :class="{ 'sub-text side-space': true }">生まれたばかりのsocoは、ただのハコ。そこにいのちを吹き込み、かたちを創っていくのは、socoにつどう人びと。</p>
-      <p :class="{ 'sub-text side-space': true }">socoにいけば誰かいる、何かがある。だからちょっとsocoまで。</p>
+      <p :class="{ 'sub-text side-space': true }">socoにいけば誰かとつながる、何かがはじまる。だからちょっとsocoまで。</p>
       <p :class="{ 'sub-text side-space': true }">私たちの日常に溶け込んだ空間と時間が、socoにあります。</p>
     </section>
 
@@ -260,7 +260,6 @@
       <Map />
       
     </section>
-
   </div>
 </template>
 
@@ -420,14 +419,12 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
   .floor-content-image img {height: 100%; height: 300px;}
   .floor-content-bottom {flex: 1; margin-left: 20px !important;}
   .floor-content-text {font-size: 0.9rem;padding: 0 0 10px;line-height: 2.0; min-height: 180px;}
-  
   .blogs {display:flex;flex-wrap: wrap;justify-content: flex-start; }
   .blog {width: 30%; margin-right: 5%;}
   .blog:nth-child(3n){margin-right:0;}
   .blog-img {height: 150px;}
   .blog-heading {line-height: 1.5;font-size: 0.9rem;}
   .blog-date {font-size:0.8rem;}
-
 }
 
 </style>
@@ -499,7 +496,6 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
           $("#switch-selected-bg").removeClass("change-switch")
       } 
     } else {
-      console.log("🌕")
       if ( !status ){
           $("#wrap").addClass("dark_mode");
           $(".day-btn").removeClass("switch-selected")
@@ -633,8 +629,6 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
             $selectedDot.removeClass('selected-dot');
             if (attr === "right"){
                 now = now + 1;
-                
-                
                 $selectedDot.next().addClass('selected-dot');
                 if ( now === imageNum ) {
                     $(this).addClass("hidden-arrow");
@@ -654,10 +648,6 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
             }
             
         }
-        
-        
-        
-
     })
   })
   }

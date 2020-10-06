@@ -152,9 +152,9 @@ export default {
         var path = location.pathname;
         path = path.split("/");
         if (path[1] === "bar") {
-          history.replaceState('','','kitchen/');
+          window.location.href = "https://soco-kyoto.com/kitchen/"
         } else if (path[1] === "kitchen") {
-          history.replaceState('','','bar/');
+          window.location.href = "https://soco-kyoto.com/bar/"
         }
       }
       

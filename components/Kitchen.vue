@@ -4,7 +4,7 @@
         <div class="main-text">
             <h1 class="kitchen-bar-h1"></h1>
             <p class="main-heading">
-                <span class="only-day">OPEN 11:00 | CLOSE 17:00 (L.O. 16:30)</span>
+                <span class="only-day">OPEN 11:00 | CLOSE 15:00</span>
                 <span class="only-night">OPEN 18:00 | CLOSE late</span>
                 <br>Tel: 075-285-4385
                 
@@ -62,7 +62,7 @@
     </section>
 
     <!-- blog-->
-    <section class="section" id="story-section">
+    <!--<section class="section" id="story-section">
         <h2 class="h2 side-space gray">STORIES</h2>
         <p :class="{ 'catch-phrase side-space': true }">
             <ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>
@@ -98,9 +98,9 @@
 
 
         </div>
-    </section>
+    </section>-->
 
-    <section class="section" id="chef-section">
+    <!--<section class="section" id="chef-section">
         <h2 class="h2 side-space gray">CHFES</h2>
         <p :class="{ 'catch-phrase side-space': true }">
             いつでも
@@ -113,7 +113,7 @@
         />
 
 
-    </section>
+    </section>-->
 
     <section class="section" id="info-section">
         <h2 class="h2 side-space gray">INFO</h2>

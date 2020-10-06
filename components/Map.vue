@@ -6,7 +6,7 @@
     <div class="address-hours">
         <div class="address">
         <p :class="{ 'address-name': true }">soco Kyoto</p>
-        <p :class="{ 'address-text': true }">〒602-0862<br>京都市上京区河原町通丸太町上出水町260</p>
+        <p :class="{ 'address-text': true }">〒602-0862<br>京都市上京区河原町通丸太町上る出水町260</p>
         <ul class="how-to-way">
             <li>市バス河原町丸太町下車すぐ</li>
             <li>京阪神宮丸太町から徒歩5分</li>
