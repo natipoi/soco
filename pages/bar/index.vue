@@ -33,6 +33,7 @@
           'content_type': 'person'
         })
       ]).then(([entries, products, stories, people]) => {
+       console.log(typeof(products));
         return {
           products: products.items,
           stories: stories.items,

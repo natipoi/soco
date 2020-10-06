@@ -46,16 +46,18 @@
         <div class="bar-items side-space">
             <div class="bar-item"　v-for="product in products">
                 <div class="bar-item-category">
-                    <p class="bar-item-category-name">{{ product.fields.category }}</p>
-                    <p class="bar-item-price">{{ product.fields.price }}</p>
+                    <p class="bar-item-category-name" v-if="product.fields.category">{{ product.fields.category }}</p>
+                    <p class="bar-item-price" v-if="product.fields.price">{{ product.fields.price }}</p>
                     <span class="item-pulldown only-sp" data="wisky1"></span>
                 </div>
                 <div pulldown="wisky1" class="bar-item-category-wrap">
                     <div class="bar-item-category-menu">
                         <div class="bar-item-image">
-                            <img :src="product.fields.categoryImage.fields.file.url" :alt="product.fields.categoryImage.fields.title">
+                            <div v-if="product.fields.categoryImage">
+                                <img :src="product.fields.categoryImage.fields.file.url">
+                            </div>
                         </div>
-                        <div class="bar-item-menu js-item-menu">
+                        <div class="bar-item-menu js-item-menu" v-if="product.fields">
                             <p class="bar-item-name">{{ product.fields.product1 }}</p>
                             <p class="bar-item-name">{{ product.fields.product2 }}</p>
                             <p class="bar-item-name">{{ product.fields.product3 }}</p>
@@ -214,7 +216,7 @@
     
     .navi li:hover {cursor: pointer;}
 
-    .bar-items { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap;-webkit-flex-direction: column;flex-direction: column;max-height: 1000px;}
+    .bar-items { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap;-webkit-flex-direction: column;flex-direction: column;}
     .bar-item {width: 43%; }
     .bar-item-category-name {font-size: 1.4rem;}
     .bar-item-category-wrap {display: block;}
@@ -294,11 +296,10 @@ if (process.client) {
     })
     var categoryH = 0
     $(".bar-item").each(function(){
-
         categoryH += $(this).height()
     })
     console.log("categoryH is " + categoryH)
-    $(".bar-items").height(categoryH / 1.5 )
+    $(".bar-items").height(categoryH / 1.4 )
   })
 }
 
