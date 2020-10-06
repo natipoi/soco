@@ -18,7 +18,7 @@
             <table class="business-hours-table">
             <tr>
                 <th class="gray">soco Kitchen</th>
-                <td>11:00 〜 17:00</td>
+                <td>11:00 〜 15:00</td>
             </tr>
             <tr>
                 <th class="gray">soco Bar</th>
