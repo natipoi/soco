@@ -39,7 +39,6 @@
         if( item1.fields.order > item2.fields.order ) return 1;
         return 0;
     });
-
         return {
           products: products.items,
           stories: stories.items,

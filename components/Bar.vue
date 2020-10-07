@@ -48,9 +48,9 @@
                 <div class="bar-item-category">
                     <p class="bar-item-category-name" v-if="product.fields.category">{{ product.fields.category }}</p>
                     <p class="bar-item-price" v-if="product.fields.price">{{ product.fields.price }}</p>
-                    <span class="item-pulldown only-sp" data="{{ product.fields.category }}"></span>
+                    <span class="item-pulldown only-sp" :data="product.fields.category"></span>
                 </div>
-                <div pulldown="{{ product.fields.category }}" class="bar-item-category-wrap">
+                <div :pulldown="product.fields.category" class="bar-item-category-wrap">
                     <div class="bar-item-category-menu">
                         <div class="bar-item-image">
                             <div v-if="product.fields.categoryImage">
@@ -217,7 +217,7 @@
     .navi li:hover {cursor: pointer;}
 
     .bar-items { display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap;-webkit-flex-direction: column;flex-direction: column;}
-    .bar-item {width: 43%; }
+    .bar-item {width: 44%; }
     .bar-item-category-name {font-size: 1.4rem;}
     .bar-item-category-wrap {display: block;}
     .only-sp {display: none;}
@@ -288,7 +288,6 @@ if (process.client) {
                 "width": "auto"
             })
         }
-    
     })
 
     $(".item-pulldown").on("click", function(e){
@@ -303,12 +302,48 @@ if (process.client) {
         }
         
     })
-    var categoryH = 0
-    $(".bar-item").each(function(){
-        categoryH += $(this).height()
+
+    var now = window.innerWidth;
+    $(window).resize(function(){
+        if (now < 820 && window.innerWidth >= 820) {
+        changeMenuHeight()
+        }
+        if (now >= 820 &&  window.innerWidth < 820 ){
+        $(".bar-items").height("auto");
+        }
+        console.log("now is " + now)
+        now = window.innerWidth
     })
-    console.log("categoryH is " + categoryH)
-    $(".bar-items").height(categoryH / 1.4 )
+
+    function changeMenuHeight(){
+        if (window.innerWidth >= 820 ){
+            var categoryH = 0
+            $(".bar-item").each(function(){
+                categoryH += $(this).height()
+            })
+            console.log("categoryH is " + categoryH)
+            var scale = 2.0;
+            var cnt = 1
+            while(cnt <= 20) {
+                $(".bar-items").height(categoryH / scale )
+                const lastItemLeft = $(".bar-item").last().position().left;
+                const menuWidth = $(".bar-item-category-menu").last().width();
+                const lastItemRight = lastItemLeft + menuWidth;
+                const barItemsWidth = $(".bar-items").position().left + $(".bar-items").width();
+                console.log("barItemsWidth is " + barItemsWidth)
+                console.log("lastItemRight is " + lastItemRight)
+                if (barItemsWidth < lastItemRight) {
+                    scale -= 0.1
+                    cnt ++;
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+    changeMenuHeight()
+    
+    
   })
 }
 
