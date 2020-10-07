@@ -48,9 +48,9 @@
                 <div class="bar-item-category">
                     <p class="bar-item-category-name" v-if="product.fields.category">{{ product.fields.category }}</p>
                     <p class="bar-item-price" v-if="product.fields.price">{{ product.fields.price }}</p>
-                    <span class="item-pulldown only-sp" :data="product.fields.category"></span>
+                    <span class="item-pulldown only-sp" :data="product.sys.id"></span>
                 </div>
-                <div :pulldown="product.fields.category" class="bar-item-category-wrap">
+                <div :pulldown="product.sys.id" class="bar-item-category-wrap">
                     <div class="bar-item-category-menu">
                         <div class="bar-item-image">
                             <div v-if="product.fields.categoryImage">
@@ -268,27 +268,7 @@ export default {
 if (process.client) {
 
   $(function(){
-    $(".js-item-menu").each(function(index){
-        const menuH = $(this).height()
-        if ( menuH > 150 ) {
-            $(this).prev().height(menuH)
-        }
-        const imgWrapW = $(this).prev().width()
-        const imgWrapH = $(this).prev().height()
-        const imgW = $(this).prev().children().children().width()
-        const imgH = $(this).prev().children().children().height()
-        var scaleImgH = imgWrapH * imgW  / imgWrapW
-        if (scaleImgH > imgH) {
-            $(this).prev().children().css({
-                "height": "100%",
-                "width": "auto"
-            });
-            $(this).prev().children().children().css({
-                "height": "100%",
-                "width": "auto"
-            })
-        }
-    })
+    
 
     $(".item-pulldown").on("click", function(e){
         const data = $(this).attr("data");
@@ -300,7 +280,6 @@ if (process.client) {
             showPulldown.slideUp()
             $(this).removeClass("item-show-pulldown")
         }
-        
     })
 
     var now = window.innerWidth;
@@ -310,13 +289,36 @@ if (process.client) {
         }
         if (now >= 820 &&  window.innerWidth < 820 ){
         $(".bar-items").height("auto");
+
         }
         console.log("now is " + now)
         now = window.innerWidth
     })
 
     function changeMenuHeight(){
+        $(".js-item-menu").each(function(index){
+                const menuH = $(this).height()
+                if ( menuH > 150 ) {
+                    $(this).prev().height(menuH)
+                }
+                const imgWrapW = $(this).prev().width()
+                const imgWrapH = $(this).prev().height()
+                const imgW = $(this).prev().children().children().width()
+                const imgH = $(this).prev().children().children().height()
+                var scaleImgH = imgWrapH * imgW  / imgWrapW
+                if (scaleImgH > imgH) {
+                    $(this).prev().children().css({
+                        "height": "100%",
+                        "width": "auto"
+                    });
+                    $(this).prev().children().children().css({
+                        "height": "100%",
+                        "width": "auto"
+                    })
+                }
+        })
         if (window.innerWidth >= 820 ){
+            
             var categoryH = 0
             $(".bar-item").each(function(){
                 categoryH += $(this).height()
