@@ -35,7 +35,7 @@ html { color: #000001; font-size: 14px;}
 body {margin: 0 auto; font-family: heisei-maru-gothic-std, sans-serif; -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;}
 body * {margin: 0; padding: 0; box-sizing: border-box;}
-.main {position: relative; height: calc(100vw * 0.6); overflow: hidden;margin-bottom: 80px;}
+.main {position: relative; height: calc(100vw * 0.5); overflow: hidden;margin-bottom: 30px;}
 .img {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
 rt { margin-bottom: 0px; transform: translateY(0%); -webkit-transform: translateY(50%); -ms-transform: translateY(0%);}
 .side-space {margin-left: 8vw;margin-right: 8vw; }
@@ -45,8 +45,11 @@ h1 {margin: 40px 0; font-size: 1.4rem;}
 h4 {margin-bottom: 10px;font-weight: 400;font-size: 1.0rem;}
 .section {margin-bottom: 100px;}
 p {margin-bottom: 0;font-weight: 400; font-size: 1.0rem; line-height: 2.0;}
-.only-night {display: none !important;}
+.only-night,.only-night-flex {display: none !important;}
+
+
 .only-day {display: inline-block;}
+.only-day-flex {display: flex;}
 .gray {color: #A2A2A2 !important;}
 .p1 {font-size: 0.9rem;}
 .p1-m0 {font-size: 1.1rem; margin:0}
@@ -80,7 +83,8 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
 .dark_mode .day-and-night-switch {border-color: #fff;}
 .dark_mode .kitchen-bar-h1:before {content: "Bar"}
 .dark_mode .only-night {display: inline-block !important;}
-.dark_mode .only-day {display: none;}
+.dark_mode .only-night-flex {display: flex !important;}
+.dark_mode .only-day, .dark_mode .only-day-flex {display: none;}
 .dark_mode .navi li:last-child, .navi li:nth-child(6) {border-color: #fff; transition: all 0.2s;}
 .dark_mode .navi-wrap {box-shadow: 2px 0 10px rgba(255,255,255,0.5);}
 .dark_mode .story-main-body, .dark_mode .story-h1 {color: #fff;}
@@ -93,7 +97,6 @@ p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
 
 @media screen and (min-width: 820px){
   .container {padding-top: 0;}
-
   .logo-svg{max-width: 100px; min-width:90px;display: block;}
   .logo-svg a, .logo-svg svg {display:inherit !important;}
   p, li {font-size: 0.9rem}
@@ -115,7 +118,7 @@ p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
   .business-hours-table th {text-align: left;}
   .business-hours-table tr {height: 30px;}
    .day-and-night-btn {line-height: 1.2;padding: 4px 0;}
-  .day-and-night-btn:after {content: "のsoco"; display: block;font-size: 0.7rem;}
+  .day-and-night-btn:after {content: "soco"; display: block;font-size: 0.7rem;}
 
 }
 </style>

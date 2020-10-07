@@ -10,7 +10,12 @@
       </div>
       <div class="main-visuals">
         <div class="main-visual-wrap">
-          <picture class="main-visual">
+          <picture class="main-visual only-day-flex">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
+            <img src="~/assets/main_pc.jpg" class="main-img" alt="メインビジュアル">
+          </picture>
+          <picture class="main-visual only-night-flex">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
             <img src="~/assets/main_pc.jpg" class="main-img" alt="メインビジュアル">
@@ -18,38 +23,80 @@
         </div>
 
         <div class="main-visual-wrap">
-          <picture class="main-visual">
+          <picture class="main-visual only-day-flex">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp2.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc2.jpg">
             <img src="~/assets/main_pc2.jpg" alt="メインビジュアル" class="main-img">
           </picture>
-        </div>
-        <div class="main-visual-wrap">
-          <picture class="main-visual">
-            <source media="(max-width: 820px)" srcset="~/assets/main_sp3.jpg">
-            <source media="(min-width: 821px)" srcset="~/assets/main_pc3.jpg">
-            <img src="~/assets/main_pc3.jpg" alt="メインビジュアル" class="main-img">
+          <picture class="main-visual only-night-flex">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp2_night.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc2_night.jpg">
+            <img src="~/assets/main_pc2.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
+
         <div class="main-visual-wrap">
-          <picture class="main-visual">
+          <picture class="main-visual only-day-flex">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp4.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc4.jpg">
             <img src="~/assets/main_pc4.jpg" alt="メインビジュアル" class="main-img">
           </picture>
+          <picture class="main-visual only-night-flex">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp3_night.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc3_night.jpg">
+            <img src="~/assets/main_pc3.jpg" alt="メインビジュアル" class="main-img">
+          </picture>
         </div>
+
         <div class="main-visual-wrap">
-          <picture class="main-visual">
+          <picture class="main-visual only-day-flex">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp5.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc5.jpg">
+            <img src="~/assets/main_pc.jpg" alt="メインビジュアル" class="main-img">
+          </picture>
+          <picture class="main-visual only-night-flex">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp4_night.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc4_night.jpg">
+            <img src="~/assets/main_pc4.jpg" alt="メインビジュアル" class="main-img">
+          </picture>
+        </div>
+
+        <div class="main-visual-wrap">
+          <picture class="main-visual only-day-flex">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp3.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc3.jpg">
+            <img src="~/assets/main_pc3.jpg" alt="メインビジュアル" class="main-img">
+          </picture>
+          <div class="main-visual-wrap">
+          <picture class="main-visual only-night-flex">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
             <img src="~/assets/main_pc.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <!--<h2 class="h2 side-space gray">socoの空間</h2>-->
+      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>のニュース</p>
+    <div class="blogs side-space">
+    <News
+      v-for="post in news"
+      :title="post.fields.title"
+      :id="post.sys.id"
+      :publish="post.fields.publishDate"
+      :slug="post.fields.slug"
+      :image="post.fields.heroImage.fields.file.url"
+      :alt="post.fields.heroImage.fields.description"
+    />
+    </div>
+    <div class="section-bottom-button">
+      <a href="/news/">ニュースをもっと見る</a>
+    </div>
+    </section>
+
+    <!--<section class="section">
       <p :class="{ 'catch-phrase side-space': true }">倉庫。いや、<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。</p>
       <ul id="floor-navi" class="side-space">
         <li :class="{ 'selected': true }">1階</li>
@@ -94,7 +141,8 @@
             </div>
           </div>
           <div class="floor-content-image only-pc">
-            <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
+            <img class="img only-day" src="~/assets/top/kitchen.jpg" alt="キッチン">
+            <img class="img only-night" src="~/assets/top/bar.jpg" alt="キッチン">
           </div>
           <div class="floor-content-bottom side-space">
             <p :class="{ 'floor-content-text only-day': true }">
@@ -206,7 +254,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 
     <section class="section">
       <!--<h2 class="h2 side-space gray">socoのコンセプト</h2>-->
@@ -232,24 +280,7 @@
       </div>
     </section>
 
-    <section class="section">
-      <!--<h2 class="h2 side-space gray">socoのニュース</h2>-->
-      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>のニュース</p>
-    <div class="blogs side-space">
-    <News
-      v-for="post in news"
-      :title="post.fields.title"
-      :id="post.sys.id"
-      :publish="post.fields.publishDate"
-      :slug="post.fields.slug"
-      :image="post.fields.heroImage.fields.file.url"
-      :alt="post.fields.heroImage.fields.description"
-    />
-    </div>
-    <div class="section-bottom-button">
-      <a href="/news/">ニュースをもっと見る</a>
-    </div>
-    </section>
+    
 
 
     <section class="section">
@@ -408,10 +439,9 @@ position: absolute;
 .section-bottom-button a:after {content:"\f105";font-family: "Font Awesome 5 Free"; font-weight: 900; margin-left: 10px; }
 
 
-
 @media screen and (min-width: 820px){
   .main {margin-bottom: 50px;}
-  .main, .main-visual-wrap {height: 400px;}
+  .main, .main-visual-wrap {height: 500px;}
   .h3 .sub-h3 {margin-left: 100px;}
   .h3 .sub-h3:before {left: -50px;}
   .floor-heading {margin-bottom: 35px;}
@@ -492,7 +522,6 @@ position: absolute;
   if (process.client) {
 
   $(function(){
-
     
 　　const japanStandardTime = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
     const hour = new Date(japanStandardTime).getHours();
@@ -520,7 +549,6 @@ position: absolute;
     });
 
     
-
     $('.floor-content-images-wrap').each(function(i, elem){
         var $images = $(this).children(".floor-content-images");
         var imageNum = $images.children().length
@@ -589,7 +617,6 @@ position: absolute;
           flg = false;
         },600);
        }
-
         // kitchen or labo or rooms
           var data = $(this).attr("data")
         // left or right

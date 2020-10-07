@@ -27,8 +27,6 @@
         <div class="navi-wrap">
             <ul class="navi">
                 <li><nuxt-link v-scroll-to="'#menu-section'" to>MENU</nuxt-link></li>
-                <li><nuxt-link v-scroll-to="'#story-section'" to>STORIES</nuxt-link></li>
-                <li><nuxt-link v-scroll-to="'#chef-section'" to>CHEFS</nuxt-link></li>
                 <li><nuxt-link v-scroll-to="'#info-section'" to>INFO</nuxt-link></li>
                 <li><nuxt-link v-scroll-to="'#reservation-section'" to>RESERVATIONS</nuxt-link></li>
                 <li class="only-day"><a href="/bar/">BAR</a></li>

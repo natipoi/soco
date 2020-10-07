@@ -9,15 +9,15 @@
         </div>
         <div id="header-catch" class="only-pc"><p>京都・河原町のキッチン・バー＆イベント</p></div>
         <ul class="header-menu only-pc" id="header-menu-left">
-            <li class="only-day"><a href="/kitchen/">Kitchen</a></li>
-            <li class="only-night"><a href="/bar/">Bar</a></li>
+            <li><a href="/kitchen/">Kitchen</a></li>
+            <li><a href="/bar/">Bar</a></li>
             <li><a href="javascript:void(0)" class="no-link">Space</a></li>
             <li><a href="javascript:void(0)" class="no-link">Rooms</a></li>
             <li><nuxt-link v-scroll-to="'#map'" to>Access</nuxt-link></li>
         </ul>
         <ul class="header-menu only-pc" id="header-menu-sns">
-            <li><a href="" class="fb"></a></li>
-            <li><a href="" class="insta"></a></li>
+            <li><a href="https://www.facebook.com/socokyoto/" class="fb"></a></li>
+            <li><a href="https://www.instagram.com/socokyoto/" class="insta"></a></li>
         </ul>
         <div class="only-sp" id="header-sp-menu">
             <input type="checkbox" name="click-hamburger" id="click-hamburger">
