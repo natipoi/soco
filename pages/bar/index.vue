@@ -33,7 +33,13 @@
           'content_type': 'person'
         })
       ]).then(([entries, products, stories, people]) => {
-       console.log(typeof(products));
+    console.log(products.items)
+    products.items.sort(function(item1,item2){
+        if( item1.fields.order < item2.fields.order ) return -1;
+        if( item1.fields.order > item2.fields.order ) return 1;
+        return 0;
+    });
+
         return {
           products: products.items,
           stories: stories.items,
