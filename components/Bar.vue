@@ -48,9 +48,9 @@
                 <div class="bar-item-category">
                     <p class="bar-item-category-name" v-if="product.fields.category">{{ product.fields.category }}</p>
                     <p class="bar-item-price" v-if="product.fields.price">{{ product.fields.price }}</p>
-                    <span class="item-pulldown only-sp" data="wisky1"></span>
+                    <span class="item-pulldown only-sp" data="{{ product.fields.category }}"></span>
                 </div>
-                <div pulldown="wisky1" class="bar-item-category-wrap">
+                <div pulldown="{{ product.fields.category }}" class="bar-item-category-wrap">
                     <div class="bar-item-category-menu">
                         <div class="bar-item-image">
                             <div v-if="product.fields.categoryImage">
@@ -270,8 +270,6 @@ if (process.client) {
   $(function(){
     $(".js-item-menu").each(function(index){
         const menuH = $(this).height()
-
-        
         if ( menuH > 150 ) {
             $(this).prev().height(menuH)
         }
@@ -290,8 +288,7 @@ if (process.client) {
                 "width": "auto"
             })
         }
-        
-
+    
     })
 
     $(".item-pulldown").on("click", function(e){
