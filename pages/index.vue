@@ -310,10 +310,12 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
     }
 }
 .main-visual-wrap {position: relative; width: 100%; height: calc(100vw * 0.6);flex-shrink: 0;flex-grow: 0;}
-.main-img { width: 100%;position: absolute;
+.main-img { width: 100%;
+position: absolute;
     left: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateX(-50%);}
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);}
 .slide-dots {position: absolute; bottom: 10px; left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%); -ms-transform: translateX(-50%);z-index:10;}
 
 .slide-dot {display: inline-block;width: 8px;height: 8px; background: #FFF;border-radius: 50%;margin-right:8px;}
@@ -408,7 +410,8 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
 
 
 @media screen and (min-width: 820px){
-  .main {margin-bottom: 80px;}
+  .main {margin-bottom: 50px;}
+  .main, .main-visual-wrap {height: 400px;}
   .h3 .sub-h3 {margin-left: 100px;}
   .h3 .sub-h3:before {left: -50px;}
   .floor-heading {margin-bottom: 35px;}
@@ -429,6 +432,10 @@ animation: slide 25s ease-out 0s infinite normal backwards running;
   .blog-img {height: 150px;}
   .blog-heading {line-height: 1.5;font-size: 0.9rem;}
   .blog-date {font-size:0.8rem;}
+}
+
+@media screen and (min-width: 1000px){
+.main, .main-visual-wrap {height: 550px;}
 }
 
 </style>

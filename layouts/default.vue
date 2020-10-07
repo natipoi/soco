@@ -93,7 +93,7 @@ p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
 
 @media screen and (min-width: 820px){
   .container {padding-top: 0;}
-  .main {height: 450px;}
+
   .logo-svg{max-width: 100px; min-width:90px;display: block;}
   .logo-svg a, .logo-svg svg {display:inherit !important;}
   p, li {font-size: 0.9rem}
