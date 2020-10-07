@@ -7,15 +7,14 @@
         <span class="slide-dot"></span>
         <span class="slide-dot"></span>
         <span class="slide-dot"></span>
+        <span class="slide-dot"></span>
+        <span class="slide-dot"></span>
+        <span class="slide-dot"></span>
       </div>
       <div class="main-visuals">
-        <div class="main-visual-wrap">
-          <picture class="main-visual only-day-flex">
-            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
-            <img src="~/assets/main_pc.jpg" class="main-img" alt="メインビジュアル">
-          </picture>
-          <picture class="main-visual only-night-flex">
+
+      <div class="main-visual-wrap">
+          <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
             <img src="~/assets/main_pc.jpg" class="main-img" alt="メインビジュアル">
@@ -23,12 +22,39 @@
         </div>
 
         <div class="main-visual-wrap">
-          <picture class="main-visual only-day-flex">
+          <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp2.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc2.jpg">
             <img src="~/assets/main_pc2.jpg" alt="メインビジュアル" class="main-img">
           </picture>
-          <picture class="main-visual only-night-flex">
+        </div>
+
+        <div class="main-visual-wrap">
+          <picture class="main-visual">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp4.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc4.jpg">
+            <img src="~/assets/main_pc4.jpg" alt="メインビジュアル" class="main-img">
+          </picture>
+        </div>
+
+        <div class="main-visual-wrap">
+          <picture class="main-visual">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp5.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc5.jpg">
+            <img src="~/assets/main_pc.jpg" alt="メインビジュアル" class="main-img">
+          </picture>
+        </div>
+
+        <div class="main-visual-wrap">
+          <picture class="main-visual">
+            <source media="(max-width: 820px)" srcset="~/assets/main_sp3.jpg">
+            <source media="(min-width: 821px)" srcset="~/assets/main_pc3.jpg">
+            <img src="~/assets/main_pc3.jpg" alt="メインビジュアル" class="main-img">
+          </picture>
+        </div>
+
+        <div class="main-visual-wrap">
+          <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp2_night.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc2_night.jpg">
             <img src="~/assets/main_pc2.jpg" alt="メインビジュアル" class="main-img">
@@ -36,12 +62,7 @@
         </div>
 
         <div class="main-visual-wrap">
-          <picture class="main-visual only-day-flex">
-            <source media="(max-width: 820px)" srcset="~/assets/main_sp4.jpg">
-            <source media="(min-width: 821px)" srcset="~/assets/main_pc4.jpg">
-            <img src="~/assets/main_pc4.jpg" alt="メインビジュアル" class="main-img">
-          </picture>
-          <picture class="main-visual only-night-flex">
+          <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp3_night.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc3_night.jpg">
             <img src="~/assets/main_pc3.jpg" alt="メインビジュアル" class="main-img">
@@ -49,32 +70,15 @@
         </div>
 
         <div class="main-visual-wrap">
-          <picture class="main-visual only-day-flex">
-            <source media="(max-width: 820px)" srcset="~/assets/main_sp5.jpg">
-            <source media="(min-width: 821px)" srcset="~/assets/main_pc5.jpg">
-            <img src="~/assets/main_pc.jpg" alt="メインビジュアル" class="main-img">
-          </picture>
-          <picture class="main-visual only-night-flex">
+          <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp4_night.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc4_night.jpg">
             <img src="~/assets/main_pc4.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
 
-        <div class="main-visual-wrap">
-          <picture class="main-visual only-day-flex">
-            <source media="(max-width: 820px)" srcset="~/assets/main_sp3.jpg">
-            <source media="(min-width: 821px)" srcset="~/assets/main_pc3.jpg">
-            <img src="~/assets/main_pc3.jpg" alt="メインビジュアル" class="main-img">
-          </picture>
-          <div class="main-visual-wrap">
-          <picture class="main-visual only-night-flex">
-            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
-            <img src="~/assets/main_pc.jpg" alt="メインビジュアル" class="main-img">
-          </picture>
-        </div>
-        </div>
+        
+
       </div>
     </section>
 
@@ -96,18 +100,18 @@
     </div>
     </section>
 
-    <!--<section class="section">
+    <section class="section">
       <p :class="{ 'catch-phrase side-space': true }">倉庫。いや、<ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。</p>
-      <ul id="floor-navi" class="side-space">
+      <!--<ul id="floor-navi" class="side-space">
         <li :class="{ 'selected': true }">1階</li>
         <li :class="{ 'floor-not-yet': true }">2階</li>
         <li :class="{ 'floor-not-yet': true }">3階</li>
-      </ul>
+      </ul>-->
       
-      <div class="construction side-space">
+      <!--<div class="construction side-space">
         <img src="~/assets/madori_black.png" class="only-day">
         <img src="~/assets/madori_white.png" class="only-night">
-      </div>
+      </div>-->
 
       <div class="floor-content">
         <div :class="{ 'floor-heading side-space': true }">
@@ -115,7 +119,7 @@
           <h3 :class="{ 'h3': true }">
             <span class="only-day">Kitchen</span>
             <span class="only-night">Bar</span>
-            <span class="gray sub-h3">1階</span>
+            <!--<span class="gray sub-h3">1階</span>-->
           </h3>
         </div>
         <div class="floor-content-detail">
@@ -173,7 +177,7 @@
         </div>
       </div>
 
-      <div class="floor-content">
+      <!--<div class="floor-content">
         <div :class="{ 'floor-heading side-space': true }">
           <Logo />
           <h3 :class="{ 'h3': true }">Space<span class="gray sub-h3">1階</span></h3>
@@ -210,9 +214,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
 
-      <div class="floor-content">
+      <!--<div class="floor-content">
         <div :class="{ 'floor-heading side-space': true }">
           <Logo />
           <h3 :class="{ 'h3': true }">Rooms<span class="gray sub-h3">2階, 3階</span></h3>
@@ -253,8 +257,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>-->
+      </div>-->
+    </section>
 
     <section class="section">
       <!--<h2 class="h2 side-space gray">socoのコンセプト</h2>-->
@@ -305,39 +309,57 @@
 
 .text-yellow {color: #F2CB0C;}
 .main-visuals {display: flex; position: relative;height: calc(100vw * 0.6); flex-wrap: nowrap; transform: translateX(0%);
-animation: slide 25s ease-out 0s infinite normal backwards running;
+animation: slide 40s ease-out 0s infinite normal backwards running;
 }
 
 @keyframes slide {
     0% {
         transform: translateX(0%);
     }
-    17% {
+    10% {
         transform: translateX(0%);
     }
-    20% {
+    12.5% {
         transform: translateX(-100%);
     }
-    37% {
+    23% {
         transform: translateX(-100%);
     }
-    40% {
+    25% {
         transform: translateX(-200%);
     }
-    57% {
+    35.5% {
         transform: translateX(-200%);
     }
-    60% {
+    37.5% {
         transform: translateX(-300%);
     }
-    77% {
+    48% {
         transform: translateX(-300%);
     }
-    80% {
+    50% {
         transform: translateX(-400%);
     }
-    97% {
+    60.5% {
         transform: translateX(-400%);
+    }
+    62.5% {
+        transform: translateX(-500%);
+    }
+    73% {
+        transform: translateX(-500%);
+    }
+    75% {
+        transform: translateX(-600%);
+    }
+    85.5% {
+        transform: translateX(-600%);
+    }
+    87.5% {
+        transform: translateX(-700%);
+    }
+    98% {
+        transform: translateX(-700%);
     }
 }
 .main-visual-wrap {position: relative; width: 100%; height: calc(100vw * 0.6);flex-shrink: 0;flex-grow: 0;}
@@ -350,12 +372,15 @@ position: absolute;
 .slide-dots {position: absolute; bottom: 10px; left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%); -ms-transform: translateX(-50%);z-index:10;}
 
 .slide-dot {display: inline-block;width: 8px;height: 8px; background: #FFF;border-radius: 50%;margin-right:8px;}
-.main-slide-dots .slide-dot { animation: dots 25s backwards 0s infinite normal running;}
+.main-slide-dots .slide-dot { animation: dots 40s backwards 0s infinite normal running;}
 .main-slide-dots .main-slide-dots.slide-dot:first-child {animation-delay: 0s;}
 .main-slide-dots .slide-dot:nth-child(2) {animation-delay: 5s;}
 .main-slide-dots .slide-dot:nth-child(3) {animation-delay: 10s;}
 .main-slide-dots .slide-dot:nth-child(4) {animation-delay: 15s;}
-.main-slide-dots .slide-dot:last-child {margin-right:0; animation-delay: 20s;}
+.main-slide-dots .slide-dot:nth-child(5) {animation-delay: 20s;}
+.main-slide-dots .slide-dot:nth-child(6) {animation-delay: 25s;}
+.main-slide-dots .slide-dot:nth-child(7) {animation-delay: 30s;}
+.main-slide-dots .slide-dot:last-child {margin-right:0; animation-delay: 35s;}
 .selected-dot {background: #F2CB0C;}
 
 @keyframes dots {
@@ -365,10 +390,10 @@ position: absolute;
     1% {
         background: #F2CB0C;
     }
-    19% {
+    10% {
         background: #F2CB0C;
     }
-    20% {
+    13% {
         background: #FFF;
     }
     100% {
