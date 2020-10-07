@@ -58,7 +58,8 @@
       </ul>
       
       <div class="construction side-space">
-        <img src="~/assets/construction_1f.png">
+        <img src="~/assets/madori_black.png" class="only-day">
+        <img src="~/assets/madori_white.png" class="only-night">
       </div>
 
       <div class="floor-content">
