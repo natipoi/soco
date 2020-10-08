@@ -31,8 +31,8 @@
             </label>
             <div id="sp-modal-menu-wrap">
                 <ul id="sp-modal-menu">
-                    <li class="only-day"><a href="/kitchen/" :class="{ 'sp-modal-menu-a': true }">Kitchen</a></li>
-                    <li class="only-night"><a href="/bar/" :class="{ 'sp-modal-menu-a': true }">Bar</a></li>
+                    <li><a href="/kitchen/" :class="{ 'sp-modal-menu-a': true }">Kitchen</a></li>
+                    <li><a href="/bar/" :class="{ 'sp-modal-menu-a': true }">Bar</a></li>
                     <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a no-link': true }">Labo</a></li>
                     <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a no-link': true }">Rooms</a></li>
                     <li><nuxt-link v-scroll-to="'#map'" class="sp-modal-menu-a" id="navi-access"　to>Access</nuxt-link></li>

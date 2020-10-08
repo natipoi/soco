@@ -521,7 +521,6 @@ position: absolute;
       People
     },
     asyncData ({env, active}) {
-      console
       return Promise.all([
         client.getEntries({
           'sys.id': env.CTF_PERSON_ID
@@ -639,7 +638,6 @@ position: absolute;
 
     $(".day-and-night-btn").on("click", function(){
       if ($(".only-day").css("display") == "inline-block" ) {
-        console.log("お昼だよ");
         if (didSlide) {
           now = 1
           didSlide = false
@@ -652,7 +650,6 @@ position: absolute;
           })
         }
       } else {
-        console.log("夜だよ");
         if (didSlide) {
           now = 1
           didSlide = false
