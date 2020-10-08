@@ -129,20 +129,33 @@
             </div>
             <span attr="left" class="floor-content-images-arrow arrow-left tap-arrow hidden-arrow" data="kitchen"></span>
             <span attr="right" class="floor-content-images-arrow arrow-right tap-arrow" data="kitchen"></span>
-            <div class="floor-content-images" id="kitchen-images">
+            <div class="floor-content-images day-images" id="kitchen-images">
               <div class="floor-content-image">
-                  <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
+                  <img class="img only-day" src="~/assets/top/kitchen.jpg" alt="キッチン">
+                  <img class="img only-night" src="~/assets/main_sp4_night.jpg" alt="キッチン">
               </div>
               <div class="floor-content-image">
-                  <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
+                  <img class="img only-day" src="~/assets/top/kitchen2.jpg" alt="キッチン">
+                  <img class="img only-night" src="~/assets/main_sp2_night.jpg" alt="キッチン">
               </div>
               <div class="floor-content-image">
-                  <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
+                  <img class="img only-day" src="~/assets/top/kitchen3.jpg" alt="キッチン">
+                  <img class="img only-night" src="~/assets/main_sp3_night.jpg" alt="キッチン">
               </div>
-              <div class="floor-content-image">
-                  <img class="img" src="~/assets/top/kitchen.jpg" alt="キッチン">
+              <div class="floor-content-image only-day">
+                  <img class="img" src="~/assets/top/kitchen4.jpg" alt="キッチン">
+              </div>
+              <div class="floor-content-image only-day">
+                  <img class="img" src="~/assets/top/kitchen5.jpg" alt="キッチン">
+              </div>
+              <div class="floor-content-image only-day">
+                  <img class="img" src="~/assets/main_sp2.jpg" alt="キッチン">
+              </div>
+              <div class="floor-content-image only-day">
+                  <img class="img" src="~/assets/main_sp5.jpg" alt="キッチン">
               </div>
             </div>
+
           </div>
           <div class="floor-content-image only-pc">
             <img class="img only-day" src="~/assets/top/kitchen.jpg" alt="キッチン">
@@ -573,19 +586,26 @@ position: absolute;
        $('input[id="click-hamburger"]').prop("checked", false);
     });
 
-    
     $('.floor-content-images-wrap').each(function(i, elem){
-        var $images = $(this).children(".floor-content-images");
-        var imageNum = $images.children().length
-        var $dotsBox = $(this).children(".floor-slide-dots");
-        var dotHtml = "<span class='slide-dot'></span>".repeat(imageNum - 1);
-        $dotsBox.append(dotHtml)
+          var $images = $(this).find(".only-day");
+          var imageNum = $images.length
+          var $dotsBox = $(this).children(".floor-slide-dots");
+          var dotHtml = "<span class='slide-dot only-day'></span>".repeat(imageNum - 1);
+          $dotsBox.append(dotHtml)
+
+          var $images = $(this).find(".only-night");
+          var imageNum = $images.length
+          var $dotsBox = $(this).children(".floor-slide-dots");
+          var dotHtml = "<span class='slide-dot only-night'></span>".repeat(imageNum - 1);
+          $dotsBox.append(dotHtml)
     })
+    
 
     var $kitchen = $("#kitchen-images");
     var $labo = $("#labo-images");
     var $rooms = $("#rooms-images");
-    const kitchenImageNum = $kitchen.children().length;
+    const kitchenImageNum = $kitchen.find(".only-day").length;
+    const barImageNum = $kitchen.find(".only-night").length;
     const laboImageNum = $labo.children().length;
     const roomsImageNum = $rooms.children().length;
     var windowWidth = $(window).width();
@@ -617,6 +637,38 @@ position: absolute;
         }
     })
 
+    $(".day-and-night-btn").on("click", function(){
+      if ($(".only-day").css("display") == "inline-block" ) {
+        console.log("お昼だよ");
+        if (didSlide) {
+          now = 1
+          didSlide = false
+          $select.css("transform", firstX);
+          $('.arrow-left').addClass("hidden-arrow");
+          $('.arrow-right').removeClass("hidden-arrow");
+          $('.floor-slide-dots').each(function(i, elem){
+              $(this).children(".selected-dot").removeClass("selected-dot")
+              $(this).children().eq(0).addClass("selected-dot")
+          })
+        }
+      } else {
+        console.log("夜だよ");
+        if (didSlide) {
+          now = 1
+          didSlide = false
+          $select.css("transform", firstX);
+          $('.arrow-left').addClass("hidden-arrow");
+          $('.arrow-right').removeClass("hidden-arrow");
+          $('.floor-slide-dots').each(function(i, elem){
+              $(this).children(".selected-dot").removeClass("selected-dot")
+              $(this).children().eq(0).addClass("selected-dot")
+          })
+        }
+      }
+    })
+
+
+
     $(window).resize(function(){
         if (didSlide) {
           now = 1
@@ -633,7 +685,6 @@ position: absolute;
     var flg = false
 
     $(".tap-arrow").on("click", function(e){
-
        if (flg) {
         return false;
        } else {
@@ -643,16 +694,20 @@ position: absolute;
         },600);
        }
         // kitchen or labo or rooms
-          var data = $(this).attr("data")
+        var data = $(this).attr("data")
         // left or right
         var attr = $(this).attr("attr")
         if (!didSlide) {
           
           if ( data === "kitchen" ){
-              $select = $kitchen
               
+              $select = $kitchen
               now = nows[0]
-              imageNum = kitchenImageNum
+              if ($(".only-day").css("display") == "inline-block" ) {
+                imageNum = kitchenImageNum
+              } else {
+                imageNum = barImageNum
+              }
           } else if ( data === "labo" ) {
               $select = $labo
               now = nows[1]
