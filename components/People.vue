@@ -6,7 +6,7 @@
     </div>
     <div class="person-text">
         <p :class="{ 'person-name': true }">{{ person.fields.name }}</p>
-        <p class="person-hours gray">出没時間: {{ person.fields.time }}</p>
+        <!--<p class="person-hours gray">出没時間: {{ person.fields.time }}</p>-->
         <p :class="{ 'person-description': true }">
             {{ person.fields.shortBio }}
         </p>
