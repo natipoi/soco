@@ -41,7 +41,7 @@
           <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp5.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc5.jpg">
-            <img src="~/assets/main_pc.jpg" alt="メインビジュアル" class="main-img">
+            <img src="~/assets/main_pc5.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
 
@@ -57,7 +57,7 @@
           <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp2_night.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc2_night.jpg">
-            <img src="~/assets/main_pc2.jpg" alt="メインビジュアル" class="main-img">
+            <img src="~/assets/main_pc2_night.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
 
@@ -65,7 +65,7 @@
           <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp3_night.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc3_night.jpg">
-            <img src="~/assets/main_pc3.jpg" alt="メインビジュアル" class="main-img">
+            <img src="~/assets/main_pc3_night.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
 
@@ -73,7 +73,7 @@
           <picture class="main-visual">
             <source media="(max-width: 820px)" srcset="~/assets/main_sp4_night.jpg">
             <source media="(min-width: 821px)" srcset="~/assets/main_pc4_night.jpg">
-            <img src="~/assets/main_pc4.jpg" alt="メインビジュアル" class="main-img">
+            <img src="~/assets/main_pc4_night.jpg" alt="メインビジュアル" class="main-img">
           </picture>
         </div>
 
