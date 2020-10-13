@@ -9,17 +9,9 @@
         <span class="slide-dot"></span>
         <span class="slide-dot"></span>
         <span class="slide-dot"></span>
-        <span class="slide-dot"></span>
+
       </div>
       <div class="main-visuals">
-
-      <div class="main-visual-wrap">
-          <picture class="main-visual">
-            <source media="(max-width: 820px)" srcset="~/assets/main_sp.jpg">
-            <source media="(min-width: 821px)" srcset="~/assets/main_pc.jpg">
-            <img src="~/assets/main_pc.jpg" class="main-img" alt="メインビジュアル">
-          </picture>
-        </div>
 
         <div class="main-visual-wrap">
           <picture class="main-visual">
@@ -322,57 +314,51 @@
 
 .text-yellow {color: #F2CB0C;}
 .main-visuals {display: flex; position: relative;height: calc(100vw * 0.6); flex-wrap: nowrap; transform: translateX(0%);
-animation: slide 40s ease-out 0s infinite normal backwards running;
+animation: slide 35s ease-out 0s infinite normal backwards running;
 }
 
 @keyframes slide {
     0% {
         transform: translateX(0%);
     }
-    10% {
+    12.3% {
         transform: translateX(0%);
     }
-    12.5% {
+    14.3% {
         transform: translateX(-100%);
     }
-    23% {
+    26.6% {
         transform: translateX(-100%);
     }
-    25% {
+    28.6% {
         transform: translateX(-200%);
     }
-    35.5% {
+    40.9% {
         transform: translateX(-200%);
     }
-    37.5% {
+    42.9% {
         transform: translateX(-300%);
     }
-    48% {
+    55.1% {
         transform: translateX(-300%);
     }
-    50% {
+    57.1% {
         transform: translateX(-400%);
     }
-    60.5% {
+    69.4% {
         transform: translateX(-400%);
     }
-    62.5% {
+    71.4% {
         transform: translateX(-500%);
     }
-    73% {
+    83.7% {
         transform: translateX(-500%);
     }
-    75% {
+    85.7% {
         transform: translateX(-600%);
-    }
-    85.5% {
-        transform: translateX(-600%);
-    }
-    87.5% {
-        transform: translateX(-700%);
     }
     98% {
-        transform: translateX(-700%);
+        transform: translateX(-600%);
     }
 }
 .main-visual-wrap {position: relative; width: 100%; height: calc(100vw * 0.6);flex-shrink: 0;flex-grow: 0;}
@@ -385,15 +371,14 @@ position: absolute;
 .slide-dots {position: absolute; bottom: 10px; left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%); -ms-transform: translateX(-50%);z-index:10;}
 
 .slide-dot {display: inline-block;width: 8px;height: 8px; background: #FFF;border-radius: 50%;margin-right:8px;}
-.main-slide-dots .slide-dot { animation: dots 40s backwards 0s infinite normal running;}
+.main-slide-dots .slide-dot { animation: dots 35s backwards 0s infinite normal running;}
 .main-slide-dots .main-slide-dots.slide-dot:first-child {animation-delay: 0s;}
 .main-slide-dots .slide-dot:nth-child(2) {animation-delay: 5s;}
 .main-slide-dots .slide-dot:nth-child(3) {animation-delay: 10s;}
 .main-slide-dots .slide-dot:nth-child(4) {animation-delay: 15s;}
 .main-slide-dots .slide-dot:nth-child(5) {animation-delay: 20s;}
 .main-slide-dots .slide-dot:nth-child(6) {animation-delay: 25s;}
-.main-slide-dots .slide-dot:nth-child(7) {animation-delay: 30s;}
-.main-slide-dots .slide-dot:last-child {margin-right:0; animation-delay: 35s;}
+.main-slide-dots .slide-dot:last-child {margin-right:0; animation-delay: 30s;}
 .selected-dot {background: #F2CB0C;}
 
 @keyframes dots {
