@@ -71,7 +71,7 @@ export default {
       { src: "https://use.typekit.net/fzc8ycq.js" }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: `/${season}-favicon.ico` },
+      { rel: "shortcut icon", type: "image/x-icon", href: `/${season}-favicon.ico` },
       {
         rel: "stylesheet",
         href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css"
@@ -79,11 +79,6 @@ export default {
       {
         rel: "canonical",
         href: "https://soco-kyoto.com"
-      },
-      {
-        ref: "shortcut icon",
-        href: `/${season}.png`,
-        type: "image/x-icon"
       }
     ]
   },
