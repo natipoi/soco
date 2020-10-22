@@ -82,9 +82,9 @@ export default {
       },
       {
         ref: "shortcut icon",
-        href: `/${season}.png`
+        href: `/${season}.png`,
+        type: "image/x-icon"
       }
-      
     ]
   },
   /*
