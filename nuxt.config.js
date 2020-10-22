@@ -57,7 +57,7 @@ export default {
       { hid: "og:type", property: "og:type", content: "website" },
       { hid: "og:url", property: "og:url", content: "https://soco-kyoto.com" },
       { hid: "og:title", property: "og:title", content: "Soco" },
-      { hid: 'og:image', property: 'og:image', content: `/${season}-favicon.ico` },
+      { hid: 'og:image', property: 'og:image', content: `/${season}.png` },
       {
         hid: "og:description",
         property: "og:description",
