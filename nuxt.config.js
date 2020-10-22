@@ -62,11 +62,6 @@ export default {
         hid: "og:description",
         property: "og:description",
         content: "soco"
-      },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content: "~/assets/pc_main.jpg"
       }
     ],
     script: [
