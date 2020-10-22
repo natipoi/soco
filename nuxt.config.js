@@ -80,6 +80,10 @@ export default {
         rel: "canonical",
         href: "https://soco-kyoto.com"
       },
+      {
+        ref: "shortcut icon",
+        href: `/${season}.png`
+      }
       
     ]
   },
