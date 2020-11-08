@@ -1,4 +1,8 @@
 
+
+
+
+
 require("dotenv").config();
 const config = require("./.contentful.json");
 const contentful = require("contentful");
