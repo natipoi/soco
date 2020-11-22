@@ -71,6 +71,19 @@
           posts: posts.items
         }
       }).catch(console.error)
+    },
+    head () {
+        return {
+            title: "socoのニュース｜soco",
+            meta: [
+                { hid: 'og:title', property: 'og:title', content: "socoのニュース｜soco" },
+                { hid: 'og:url', property: 'og:url', content: `https://soco-kyoto.com/news/` },
+                // { hid: 'og:image', property: 'og:image', content: this.post.fields.heroImage.fields.file.url },
+            ],
+            link: [
+                { hid:"canonical", rel: "canonical", href: `https://soco-kyoto.com/news/` }
+            ]
+        }
     }
   }
   if (process.client) {

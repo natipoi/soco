@@ -47,43 +47,25 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-
-      {
-        hid: "description",
-        name: "description",
-        content: "soco"
-      },
-      {
-        hid: "og:site_name",
-        property: "og:site_name",
-        content: "soco"
-      },
+      { hid: "description", name: "description",content: "京都・河原町のキッチン・バー＆イベント"},
+      { hid: "og:site_name",property: "og:site_name",content: "soco"},
       { hid: "og:type", property: "og:type", content: "website" },
       { hid: "og:url", property: "og:url", content: "https://soco-kyoto.com" },
-      { hid: "og:title", property: "og:title", content: "Soco" },
+      { hid: "og:title", property: "og:title", content: "socoソコにいけば何かある。だからちょっとsocoソコまで。| soco" },
+      { hid: "og:description", property: "og:description", content: "京都・河原町のキッチン・バー＆イベント"},
       { hid: 'og:image', property: 'og:image', content: `/${season}.png` },
-      {
-        hid: "og:description",
-        property: "og:description",
-        content: "soco"
-      }
+      { property: "og:locale",content: "ja_JP"},
+      { name: "twitter:card", content: "summary_large_image"}
+
     ],
     script: [
-      {
-        src: "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-      },
+      { src: "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"},
       { src: "https://use.typekit.net/fzc8ycq.js" }
     ],
     link: [
       { rel: "shortcut icon", type: "image/x-icon", href: `/${season}-favicon.ico` },
-      {
-        rel: "stylesheet",
-        href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-      },
-      {
-        rel: "canonical",
-        href: "https://soco-kyoto.com"
-      }
+      { rel: "stylesheet",href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css"},
+      { hid: 'canonical', rel: "canonical", href: "https://soco-kyoto.com"}
     ]
   },
   /*

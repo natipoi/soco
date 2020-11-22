@@ -45,6 +45,19 @@
           people: people.items
         }
       }).catch(e => console.log("err", e))
+    },
+    head () {
+        return {
+            title: "socoのバー｜soco",
+            meta: [
+                { hid: 'og:title', property: 'og:title', content: "socoのバー｜soco" },
+                { hid: 'og:url', property: 'og:url', content: `https://soco-kyoto.com/bar/` },
+                // { hid: 'og:image', property: 'og:image', content: this.post.fields.heroImage.fields.file.url },
+            ],
+            link: [
+                { hid:"canonical", rel: "canonical", href: `https://soco-kyoto.com/bar/` }
+            ]
+        }
     }
   }
 </script>

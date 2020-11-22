@@ -40,6 +40,19 @@
           people: people.items
         }
       }).catch(e => console.log("err", e))
+    },
+    head () {
+        return {
+            title: "socoのキッチン｜soco",
+            meta: [
+                { hid: 'og:title', property: 'og:title', content: "socoのキッチン｜soco" },
+                { hid: 'og:url', property: 'og:url', content: `https://soco-kyoto.com/kitchen/` },
+                // { hid: 'og:image', property: 'og:image', content: this.post.fields.heroImage.fields.file.url },
+            ],
+            link: [
+                { hid:"canonical", rel: "canonical", href: `https://soco-kyoto.com/kitchen/` }
+            ]
+        }
     }
   }
 </script>

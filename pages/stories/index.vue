@@ -71,6 +71,19 @@
           posts: posts.items
         }
       }).catch(console.error)
+    },
+    head () {
+        return {
+            title: "socoのストーリー｜soco",
+            meta: [
+                { hid: 'og:title', property: 'og:title', content: "socoのストーリー｜soco" },
+                { hid: 'og:url', property: 'og:url', content: `https://soco-kyoto.com/stories/` },
+                // { hid: 'og:image', property: 'og:image', content: this.post.fields.heroImage.fields.file.url },
+            ],
+            link: [
+                { hid:"canonical", rel: "canonical", href: `https://soco-kyoto.com/stories/` }
+            ]
+        }
     }
   }
   if (process.client) {
