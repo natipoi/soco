@@ -153,7 +153,8 @@ export default {
         return Promise.all([stories, products]).then(values => {
           return [...values[0], values[1]];
         });
-    }
+    },
+    fallback: true
   },
   /*
    ** Build configuration
