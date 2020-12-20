@@ -35,13 +35,13 @@
                 <span>{{ day.date }}</span>
                 <div class="event-box">
                     <ul>
-                        <li v-if="Math.random() > 0.9" class="calendar-event event-color-red">event1</li>
-                        <li v-if="Math.random() > 0.9" class="calendar-event event-color-blue">event2</li>
-                        <li v-if="Math.random() > 0.9" class="calendar-event event-color-green">event3</li>
-                        <li v-if="Math.random() > 0.9" class="calendar-event event-color-red">event4</li>
-                        <li v-if="Math.random() > 0.9" class="calendar-event event-color-red">event5</li>
-                        <li v-if="Math.random() > 0.9" class="calendar-event event-color-red">event6</li>
-                        <li v-if="Math.random() > 0.9" class="calendar-event event-color-red">event7</li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red">event1</li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-blue">event2</li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-green">event3</li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red">event4</li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red">event5</li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red">event6</li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red">event7</li>
                     </ul>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                 :key="index2"
                 class="calendar-each-box week-each-box"
             >
-                <div v-if="Math.random() > 0.9" class="week-event week-event-330 event-color-red">イベント</div>
+                <div v-show="Math.random() > 0.9" class="week-event week-event-330 event-color-red">イベント</div>
             </div>
         </div>
 
@@ -158,7 +158,7 @@ export default {
         return {
           posts: posts.items
         }
-      }).catch("eerrrrrrooor is " +console.error)
+      }).catch("console.error")
     },
     methods: {
         
