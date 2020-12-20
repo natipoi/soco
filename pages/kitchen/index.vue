@@ -1,19 +1,27 @@
 <template>
+<div class="container">
+<ContentsMV />
+<ContentsNavi />
 <Kitchen 
     :products="products"
     :stories="stories"
     :people="people"
 />
+</div>
 </template>
 
 <script>
-  import Kitchen from '~/components/Kitchen.vue'
-  import {createClient} from '~/plugins/contentful.js'
+import ContentsMV from '~/components/ContentsMV.vue'
+import ContentsNavi from '~/components/ContentsNavi.vue'
+import Kitchen from '~/components/Kitchen.vue'
+import {createClient} from '~/plugins/contentful.js'
 
   const client = createClient()
   export default {
     components: {
-      Kitchen
+      Kitchen,
+      ContentsNavi,
+      ContentsMV
     },
     asyncData ({env, active}) {
       

@@ -1,19 +1,27 @@
 <template>
-<Bar 
+<div class="container">
+<ContentsMV />
+<ContentsNavi />
+<Bar
     :products="products"
     :stories="stories"
     :people="people"
 />
+</div>
 </template>
 
 <script>
   import Bar from '~/components/Bar.vue'
+  import ContentsMV from '~/components/ContentsMV.vue'
+import ContentsNavi from '~/components/ContentsNavi.vue'
   import {createClient} from '~/plugins/contentful.js'
 
   const client = createClient()
   export default {
     components: {
-      Bar
+      Bar,
+      ContentsNavi,
+      ContentsMV
     },
     asyncData ({env, active}) {
       

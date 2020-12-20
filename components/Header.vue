@@ -21,7 +21,7 @@
         </ul>
         <div class="only-sp" id="header-sp-menu">
             <input type="checkbox" name="click-hamburger" id="click-hamburger">
-            <label id="header-hamburger" for="click-hamburger"　onclick="">
+            <label id="header-hamburger" for="click-hamburger" onclick="">
                 <span class="hamburger-bar-wrap">
                     <span id="hamburger-bar-top" :class="{'hamburger-bar': true }"></span>
                 </span>
@@ -35,7 +35,7 @@
                     <li><a href="/bar/" :class="{ 'sp-modal-menu-a': true }">Bar</a></li>
                     <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a no-link': true }">Labo</a></li>
                     <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a no-link': true }">Rooms</a></li>
-                    <li><nuxt-link v-scroll-to="'#map'" class="sp-modal-menu-a" id="navi-access"　to>Access</nuxt-link></li>
+                    <li><nuxt-link v-scroll-to="'#map'" class="sp-modal-menu-a" id="navi-access" to>Access</nuxt-link></li>
                 </ul>
                 <!--<div class="change-lang">
                 <p><span class="selected-lang">日本語</span> / <span class="noselected-lang">English</span></p>

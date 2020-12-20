@@ -83,8 +83,8 @@
 .calendar {overflow: hidden;margin: 0px auto 30px; }
 .calender-hidden {display: none;}
 .calendar-sapn {font-weight:900;font-size:1.2rem;}
-.calendar-btn {border: none;appearance: none;background: transparent;}
-.calendar-btn:hover, .calendar-btn:focus {outline: none;cursor: pointer;}
+/* .calendar-btn {border: none;appearance: none;background: transparent;}
+.calendar-btn:hover, .calendar-btn:focus {outline: none;cursor: pointer;} */
 .calendar-title {display: flex;justify-content: center;position:relative;    margin-bottom: 10px;}
 .calendar-wrap {border: solid 2px rgba(0,0,0,0.1);color:#a2a2a2;border-radius: 10px;}
 .calendar-row {display:flex;}
@@ -153,8 +153,7 @@ export default {
           post.fields.publishDate = `${year}/${month}/${day}`
 
         }
-        console.log("event is")
-        console.log(posts.items)
+
         return {
           posts: posts.items
         }

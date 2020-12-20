@@ -111,31 +111,45 @@ export default {
   generate: {
     routes: function() {
       let stories = client.getEntries({
-              content_type: 'story'
-            })
-            .then((entries) => {
-                return entries.items.map((entry) => {
-                    return {
-                        route: `stories/${entry.fields.slug}`,
-                        payload: entry
-                    }
-                })
-            }
-          )
-      let products = client.getEntries({
-              content_type: 'blogPost'
-            })
-            .then((entries) => {
-                return entries.items.map((entry) => {
-                    return {
-                        route: `news/${entry.fields.slug}`,
-                    }
-                })
-            }
+            content_type: 'story'
+          })
+          .then((entries) => {
+              return entries.items.map((entry) => {
+                  return {
+                      route: `stories/${entry.fields.slug}`,
+                      payload: entry
+                  }
+              })
+          }
         )
-        return Promise.all([stories, products]).then(values => {
-          return [...values[0], values[1]];
-        });
+      let products = client.getEntries({
+            content_type: 'blogPost'
+          })
+          .then((entries) => {
+              return entries.items.map((entry) => {
+                  return {
+                      route: `news/${entry.fields.slug}`,
+                  }
+              })
+          }
+      )
+
+      let events = client.getEntries({
+          content_type: 'event'
+        })
+        .then((entries) => {
+            return entries.items.map((entry) => {
+                return {
+                    route: `events/${entry.fields.slug}`,
+                    payload: entry
+                }
+            })
+        }
+      )
+
+      return Promise.all([stories, products, events]).then(values => {
+        return [...values[0], values[1], values[2]];
+      });
     },
     fallback: true
   },

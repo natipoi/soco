@@ -6,7 +6,7 @@
             <ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>。
         </p>
         <section class="section">
-               <div class="blogs side-space">
+               <div class="atrticles-box1 side-space">
                     <Stories
                     v-for="(post, key) in posts"
                     :key="key"

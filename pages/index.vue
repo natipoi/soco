@@ -82,15 +82,18 @@
     </section>
 
     <section class="section">
-      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>のニュース</p>
+      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>のイベント</p>
     <div class="side-space">
     <Calendar />
+    </div>
+    <div class="section-bottom-button">
+      <a href="/event/">イベントの詳細、主催をもっと見る</a>
     </div>
     </section>
 
     <section class="section">
-      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>のイベント</p>
-    <div class="blogs side-space">
+      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>のニュース</p>
+    <div class="atrticles-box1 side-space">
     <News
       v-for="(post, key) in news"
       :key="key"
@@ -494,12 +497,7 @@ position: absolute;
   .floor-content-image img {height: 100%; height: 300px;}
   .floor-content-bottom {flex: 1; margin-left: 20px !important;}
   .floor-content-text {font-size: 0.9rem;padding: 0 0 10px;line-height: 2.0; min-height: 180px;}
-  .blogs {display:flex;flex-wrap: wrap;justify-content: flex-start; }
-  .blog {width: 30%; margin-right: 5%;}
-  .blog:nth-child(3n){margin-right:0;}
-  .blog-img {height: 150px;}
-  .blog-heading {line-height: 1.5;font-size: 0.9rem;}
-  .blog-date {font-size:0.8rem;}
+
 }
 
 @media screen and (min-width: 1000px){

@@ -34,6 +34,8 @@ html { color: #000001; font-size: 14px;}
 body {margin: 0 auto; font-family: heisei-maru-gothic-std, sans-serif; -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;}
 body * {margin: 0; padding: 0; box-sizing: border-box;}
+button {outline: none;border: none;background: transparent;appearance: none;}
+button:hover, button:focus {outline: none;}
 .main {position: relative; height: calc(100vw * 0.5); overflow: hidden;margin-bottom: 30px;}
 .img {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);}
 rt { margin-bottom: 0px; transform: translateY(0%) !important; -webkit-transform: translateY(50%); -ms-transform: translateY(0%);}
@@ -80,12 +82,12 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
 .dark_mode footer .logo-svg {fill: #000; transition: all 0.2s;}
 .dark_mode .selected:before, .dark_mode .day-and-night-switch {background: #fff !important; transition: all 0.2s;}
 .dark_mode .day-and-night-switch {border-color: #fff;}
-.dark_mode .kitchen-bar-h1:before {content: "Bar"}
+.dark_mode .contents-mv-h1:before {content: "Bar"}
 .dark_mode .only-night {display: inline-block !important;}
 .dark_mode .only-night-flex {display: flex !important;}
 .dark_mode .only-day, .dark_mode .only-day-flex {display: none;}
-.dark_mode .navi li:last-child, .navi li:nth-child(6) {border-color: #fff; transition: all 0.2s;}
-.dark_mode .navi-wrap {box-shadow: 2px 0 10px rgba(255,255,255,0.5);}
+.dark_mode .contents-navi li:last-child, .contents-navi li:nth-child(6) {border-color: #fff; transition: all 0.2s;}
+.dark_mode .contents-navi-wrap {box-shadow: 2px 0 10px rgba(255,255,255,0.5);}
 .dark_mode .story-main-body, .dark_mode .story-h1 {color: #fff;}
 .dark_mode  a.no-link {color: rgba(229, 229, 229, 0.3) !important;}
 
@@ -119,6 +121,46 @@ p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
    .day-and-night-btn {line-height: 1.2;padding: 4px 0;}
   .day-and-night-btn:after {content: "soco"; display: block;font-size: 0.7rem;}
 
+}
+
+/* article design */
+.atrticle-box1 { margin-bottom: 50px; }
+.atrticle-box1 a {display: block; color: #000;}
+.atrticle-box1-img {position: relative; width: 100%;height: calc(100vw * 0.6);overflow:hidden;margin-bottom: 10px;}
+.atrticle-box1-heading {text-align:left;font-size: 1.1rem;margin-bottom: 5px; }
+.atrticle-box1-date {text-align: right; font-size:0.9rem;}
+
+@media screen and (min-width: 820px){
+  .atrticles-box1 {display:flex;flex-wrap: wrap;justify-content: flex-start; }
+  .atrticle-box1 {width: 30%; margin-right: 5%;}
+  .atrticle-box1:nth-child(3n){margin-right:0;}
+  .atrticle-box1-img {height: 150px;}
+  .atrticle-box1-heading {line-height: 1.5;font-size: 0.9rem;}
+  .atrticle-box1-date {font-size:0.8rem;}
+}
+
+/* contents page main visual design */
+.contents-mv {position: relative; height: calc(100vw * 0.5); overflow: hidden;margin-bottom: 30px;}
+.contents-mv-text {position: absolute; width: 100%; text-align: center; top: 50%; left: 50%; transform: translate(-50%, -30%);-webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); z-index: 2;}
+.contents-mv-h1 {position: relative; color: #00BFFF; margin-top: 0; margin-bottom: 0px;font-weight: 900; font-size: 3.0rem;text-shadow: 0px 0px 10px rgba(0,0,0,0.8);}
+.contents-mv-h1:before {content: "Kitchen"}
+.contents-mv-heading {color: #fff; font-size: 0.9rem;line-height: 1.7;    text-shadow: 0px 0px 2px rgba(0,0,0,0.8);font-weight: 900;}
+.contents-mv-image-wrap {position: relative; z-index: 1; height: 100%;width: 100%;}
+
+
+@media screen and (min-width: 820px){
+    .contents-mv {margin-bottom: 0;}
+}
+
+/* contents navi */
+@media screen and (min-width: 820px){
+
+    .contents-navi-wrap {box-shadow: 2px 0 10px rgba(0,0,0,0.1); margin-bottom: 80px;}
+    .contents-navi {display: flex; flex-wrap: nowrap; justify-content:space-between; max-width: 800px; margin: 0 auto;}
+    .contents-navi li { margin: 20px 0px; width: 120px; text-align: center; max-width: calc(100vw / 6);}
+    .contents-navi li a {color: #000;}
+    .contents-navi li:last-child, .navi li:nth-child(6) {border-left: solid 1px #000;}
+    .contents-navi li:hover {cursor: pointer;}
 }
 </style>
 
