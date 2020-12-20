@@ -75,10 +75,25 @@
     </section>
 
     <section class="section">
+      <p :class="{ 'catch-phrase side-space': true }">あなたはdocoに？</p>
+    <div class="side-space">
+    <MainMenu />
+    </div>
+    </section>
+
+    <section class="section">
       <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>のニュース</p>
+    <div class="side-space">
+    <Calendar />
+    </div>
+    </section>
+
+    <section class="section">
+      <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>のイベント</p>
     <div class="blogs side-space">
     <News
-      v-for="post in news"
+      v-for="(post, key) in news"
+      :key="key"
       :title="post.fields.title"
       :id="post.sys.id"
       :publish="post.fields.publishDate"
@@ -583,8 +598,7 @@ position: absolute;
           var dotHtml = "<span class='slide-dot only-night'></span>".repeat(imageNum - 1);
           $dotsBox.append(dotHtml)
     })
-    
-
+  
     var $kitchen = $("#kitchen-images");
     var $labo = $("#labo-images");
     var $rooms = $("#rooms-images");

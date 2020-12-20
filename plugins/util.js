@@ -3,7 +3,6 @@
 var now = new Date();
 var hour = now.getHours();
 // 5時〜18時の間はお昼モード
-console.log("hour is ", hour)
 var firstActive = hour >= 5 && hour < 18 ? false : true;
 
 

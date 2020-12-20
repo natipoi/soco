@@ -8,7 +8,8 @@
         <section class="section">
                <div class="blogs side-space">
                     <Stories
-                    v-for="post in posts"
+                    v-for="(post, key) in posts"
+                    :key="key"
                     :title="post.fields.title"
                     :id="post.sys.id"
                     :publish="post.fields.publishDate"
@@ -94,7 +95,6 @@
         const status = $("#wrap").hasClass("dark_mode");
         // 5時〜18時の間はお昼モード
         if ( parseInt(hour) >= 5 && parseInt(hour) < 18 ) {
-          console.log("☀️")
           if ( status ){
               $("#wrap").removeClass("dark_mode");
               $(".night-btn").removeClass("switch-selected")
@@ -102,7 +102,6 @@
               $("#switch-selected-bg").removeClass("change-switch")
           } 
         } else {
-          console.log("🌕")
           if ( !status ){
               $("#wrap").addClass("dark_mode");
               $(".day-btn").removeClass("switch-selected")

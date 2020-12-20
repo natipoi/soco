@@ -8,7 +8,8 @@
         <section class="section">
                <div class="blogs side-space">
                     <Stories
-                    v-for="post in posts"
+                    v-for="(post, key) in posts"
+                    :key="key"
                     :title="post.fields.title"
                     :id="post.sys.id"
                     :publish="post.fields.publishDate"

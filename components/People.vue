@@ -1,6 +1,6 @@
 <template>
 <div>
-<div class="person-introduction side-space" v-for="person in people">
+<div class="person-introduction side-space" v-for="(person, key) in people" :key="key">
     <div class="person-image">
         <img :src="person.fields.image.fields.file.url" :alt="person.fields.image.fields.description" class="img">
     </div>

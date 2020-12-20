@@ -90,7 +90,8 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    'nuxt-basic-auth-module'
+    'nuxt-basic-auth-module',
+    'nuxt-moment'
   ],
   basic: {
     name: 'soco',
