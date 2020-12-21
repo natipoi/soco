@@ -481,7 +481,7 @@ position: absolute;
 @media screen and (min-width: 820px){
   .main {margin-bottom: 50px;}
   .main, .main-visual-wrap {height: 500px;}
-  .main-contents-section {max-width:1000px;}
+  .main-contents-section {max-width:1200px;}
   .h3 .sub-h3 {margin-left: 100px;}
   .h3 .sub-h3:before {left: -50px;}
   .floor-heading {margin-bottom: 35px;}
