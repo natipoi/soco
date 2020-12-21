@@ -41,23 +41,23 @@
 <style>
 .map-image {position: relative;height: calc(100vw * 0.6); overflow: hidden;margin-bottom: 20px;}
 
-.address {text-align: center; margin-bottom: 30px;}
+.address {text-align: left; margin-bottom: 30px;}
 .address-name {font-weight: 900; font-size: 1.1rem; margin-bottom: 10px;}
 .address-text {margin-bottom: 10px;}
 
-.business-hours {text-align: center;}
-.business-hours-table {table-layout: fixed;width: 100%;}
-.business-hours-table th { text-align: center;font-weight: 400;}
+.business-hours {text-align: left;}
+.business-hours-table {table-layout: fixed;width: 100%;border-spacing: 0;}
+.business-hours-table th {text-align: left;}
 .business-hours-table tr {padding: 10px 0}
 
 @media screen and (min-width: 820px){
 .container {padding-top: 0;}
-
+.address {text-align: center;}
 .map-image {width: 65%;height:350px;margin-right: 20px;}
 .address-hours {flex: 1;}
+.business-hours {text-align: center;}
 .business-hours-table {border-collapse: collapse;font-size: 0.9rem;}
 .address, .business-hours {text-align: left;}
-.business-hours-table th {text-align: left;}
 .business-hours-table tr {height: 30px;}
 
 }

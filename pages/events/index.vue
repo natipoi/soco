@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
     <section class="contents-mv">
         <div class="contents-mv-text">
             <h1 class="contents-mv-h1"></h1>
@@ -65,9 +65,7 @@
                     <img :src="event.fields.image.fields.file.url" :alt="event.fields.image.fields.description" class="img">
                 </div>
                 <div class="atrticle-box1-text">
-                <p 
-                    :class="{ 'atrticle-box1-heading': true }"
-                >
+                <p :class="{ 'atrticle-box1-heading': true }">
                     {{ event.fields.title }}
                 </p>
                 <p class="atrticle-box1-date gray">{{ event.fields.event_start_time }}〜{{ event.fields.event_end_time}}</p>
@@ -118,14 +116,18 @@
 #event-section { margin-top: 30px !important;}
 .h2 { font-size: .9rem;margin-bottom: 10px;font-weight: 400;}
 .catch-phrase { font-weight: 900;font-size: 1.5rem;line-height: 1;margin-bottom: 30px;}
-.event-date {font-weight:900;font-size: 1.2rem;}
-.event-box {display: flex; flex-wrap: nowrap;align-items: flex-start;margin-bottom: 20px;color: #000;}
-.reservation-image-wrap {width: 100%;height: 400px; background: #e5e5e5;margin-bottom: 30px;}
-.event-image { position: relative; width: 25%; height: 12vw;overflow: hidden;}
-.event-text {flex: 1; margin-left: 20px;}
+.event-date {font-weight:900;font-size: 0.9rem;}
+.event-box {display: block;margin-bottom: 20px;color: #000;}
+.event-image { position: relative; width: 100%; height: 50vw;overflow: hidden;}
+.event-title-wrap {display: block;}
 .event-title {font-weight:900;font-size: 1.2rem;}
-.event-title-wrap {display: flex;align-items: center;}
-.event-price {margin-left: 30px;color:#a2a2a2}
+.event-price {color:#a2a2a2}
+.reservation-image-wrap {width: 100%;height: 400px; background: #e5e5e5;margin-bottom: 30px;}
+
+
+
+
+
 .contact-btn-wrap {margin-top: 30px;}
 .contact-btn {background: #f2cb0c;color: #fff;border-radius: 5px;font-weight:900;padding: 10px 20px;font-size: 1.2rem;}
 
@@ -133,6 +135,15 @@
     .contents-navi li:last-child, .navi li:nth-child(6) {
         border-left: none;
     }
+    .event-date {font-weight:900;font-size: 1.2rem;}
+    .event-box {display: flex; flex-wrap: nowrap;align-items: flex-start;}
+    .event-image {width: 25%; height: 12vw;}
+    .event-title-wrap {display: flex;align-items: center;}
+    .event-text {flex: 1; margin-left: 20px;}
+    .event-price {margin-left: 30px;color:#a2a2a2}
+}
+@media screen and (max-width: 819px) {
+    .contents-mv-h1 {font-size: 2.0rem;}
 }
 
 </style>
@@ -167,7 +178,7 @@
             var start_date = moment(e.fields.event_start_time);
             console.log(start_date)
             var end_date = moment(e.fields.event_end_time);
-            e.fields.event_start_time = start_date.format("YYYY年MM月DD日 h:mm a");
+            e.fields.event_start_time = start_date.format("YYYY/MM/DD h:mm a");
             e.fields.event_end_time = end_date.format("h:mm a");
         }
         for ( var e of past_event.items) {

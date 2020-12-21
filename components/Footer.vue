@@ -26,12 +26,10 @@
       .footer-logo {text-align: center; margin-bottom: 20px;}
       .footer-logo .logo-svg {fill: #fff; height: 30px !important;    margin: 0 auto;}
       .logo-bottom-text {font-size: 0.8rem; margin-top: -5px;}
-
-      .footer-info {margin-bottom: 20px;}
-
+      .footer-info {text-align: left;margin: 10px 20px;}
       .copyright {text-align: center;padding: 20px 0;}
 
       @media screen and (min-width: 820px){
-
+          .footer-info {margin-bottom: 20px;text-align: center;}
       }
 </style>

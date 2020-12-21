@@ -74,7 +74,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section main-contents-section">
       <p :class="{ 'catch-phrase side-space': true }">あなたはdocoに？</p>
     <div class="side-space">
     <MainMenu />
@@ -87,7 +87,7 @@
     <Calendar />
     </div>
     <div class="section-bottom-button">
-      <a href="/event/">イベントの詳細、主催をもっと見る</a>
+      <a href="/events/">イベントの詳細、主催をもっと見る</a>
     </div>
     </section>
 
@@ -329,7 +329,6 @@
 <style>
 
 .overlay:before { content: ""; position:fixed; top:0; left:0; right:0;bottom:0; z-index: 1000;}
-
 .text-yellow {color: #F2CB0C;}
 .main-visuals {display: flex; position: relative;height: calc(100vw * 0.6); flex-wrap: nowrap; transform: translateX(0%);
 animation: slide 35s ease-out 0s infinite normal backwards running;
@@ -387,7 +386,6 @@ position: absolute;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);}
 .slide-dots {position: absolute; bottom: 10px; left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%); -ms-transform: translateX(-50%);z-index:10;}
-
 .slide-dot {display: inline-block;width: 8px;height: 8px; background: #FFF;border-radius: 50%;margin-right:8px;}
 .main-slide-dots .slide-dot { animation: dots 35s backwards 0s infinite normal running;}
 .main-slide-dots .main-slide-dots.slide-dot:first-child {animation-delay: 0s;}
@@ -483,6 +481,7 @@ position: absolute;
 @media screen and (min-width: 820px){
   .main {margin-bottom: 50px;}
   .main, .main-visual-wrap {height: 500px;}
+  .main-contents-section {max-width:1000px;}
   .h3 .sub-h3 {margin-left: 100px;}
   .h3 .sub-h3:before {left: -50px;}
   .floor-heading {margin-bottom: 35px;}

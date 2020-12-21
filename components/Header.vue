@@ -11,8 +11,9 @@
         <ul class="header-menu only-pc" id="header-menu-left">
             <li><a href="/kitchen/">Kitchen</a></li>
             <li><a href="/bar/">Bar</a></li>
-            <li><a href="javascript:void(0)" class="no-link">Space</a></li>
-            <li><a href="javascript:void(0)" class="no-link">Rooms</a></li>
+            <li><a href="/events/">Live/Talk/Gallery</a></li>
+            <!-- <li><a href="javascript:void(0)" class="no-link">Space</a></li>
+            <li><a href="javascript:void(0)" class="no-link">Rooms</a></li> -->
             <li><nuxt-link v-scroll-to="'#map'" to>Access</nuxt-link></li>
         </ul>
         <ul class="header-menu only-pc" id="header-menu-sns">
@@ -33,8 +34,9 @@
                 <ul id="sp-modal-menu">
                     <li><a href="/kitchen/" :class="{ 'sp-modal-menu-a': true }">Kitchen</a></li>
                     <li><a href="/bar/" :class="{ 'sp-modal-menu-a': true }">Bar</a></li>
-                    <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a no-link': true }">Labo</a></li>
-                    <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a no-link': true }">Rooms</a></li>
+                    <li><a href="/events/" :class="{ 'sp-modal-menu-a': true }">Live/Talk/Gallery</a></li>
+                    <!-- <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a no-link': true }">Labo</a></li>
+                    <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a no-link': true }">Rooms</a></li> -->
                     <li><nuxt-link v-scroll-to="'#map'" class="sp-modal-menu-a" id="navi-access" to>Access</nuxt-link></li>
                 </ul>
                 <!--<div class="change-lang">

@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <section class="section side-space">
-    <p class="story-heading gray">SOCOのBlog</p>
+    <p class="story-heading gray">SOCOのLive/Talk/Gallery</p>
     <h1 class="story-h1">{{ event.fields.title }}</h1>
     <div class="hero-image">
         <img :src="event.fields.image.fields.file.url" :alt="event.fields.image.fields.description" class="img">
@@ -14,8 +14,7 @@
 <style>
 .story-heading  { font-size: 0.9rem; font-weight: 400;text-align: center; margin-top: 40px; margin-bottom: 0; }
 .story-h1 { font-weight: 900;font-size: 1.2rem;line-height: 1.0;margin-top: 0;margin-bottom: 30px;text-align: center;}
-.hero-image {position:relative;overflow: hidden;height: 300px;}
-.hero-image img {width: 100%;}
+.hero-image {position:relative;overflow: hidden;height: 180px;}
 .story-main-body {margin: 30px 0;text-align:left;}
 .story-main-body p {line-height:2.3;}
 .createdat {color: #969594; font-size: 1.0rem; text-align: right;margin-bottom: 5px;}
@@ -23,6 +22,7 @@ h2 {margin-bottom: 20px;margin-top: 30px;}
 h3 {margin-bottom: 10px;margin-top: 20px;}
  @media screen and (min-width: 820px) {
     .story-heading {margin-bottom: 20px;}
+    .hero-image {height: 400px;}
     .story-h1 {font-size: 1.5rem;margin-bottom: 30px;}
 
 }
