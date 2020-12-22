@@ -76,7 +76,7 @@
 
     <section class="section main-contents-section">
       <p :class="{ 'catch-phrase side-space': true }">あなたはdocoに？</p>
-    <div class="side-space">
+    <div class="side-space main-side-space">
     <MainMenu />
     </div>
     </section>
