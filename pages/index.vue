@@ -84,7 +84,9 @@
     <section class="section">
       <p :class="{ 'catch-phrase side-space': true }"><ruby><rb>soco</rb><rp>（</rp><rt>ソコ</rt><rp>）</rp></ruby>のイベント</p>
     <div class="side-space calender-side">
-    <Calendar />
+    <Calendar 
+      :event="event"
+    />
     </div>
     <div class="section-bottom-button">
       <a href="/events/">イベントの詳細、主催をもっと見る</a>
@@ -508,6 +510,7 @@ position: absolute;
 <script>
   import News from '~/components/News.vue'
   import People from '~/components/People.vue'
+  import Calendar from '~/components/Calendar.vue'
   import {createClient} from '~/plugins/contentful.js'
 
   const client = createClient()
@@ -515,7 +518,8 @@ position: absolute;
   export default {
     components: {
       News,
-      People
+      People,
+      Calendar
     },
     asyncData ({env, active}) {
       return Promise.all([
@@ -528,8 +532,11 @@ position: absolute;
         }),
         client.getEntries({
           'content_type': "person"
+        }),
+        client.getEntries({
+          'content_type': "event"
         })
-      ]).then(([entries, news, people]) => {
+      ]).then(([entries, news, people, event]) => {
         // return data that should be available
         // in the template
         for (var post of news.items) {
@@ -542,7 +549,8 @@ position: absolute;
         }
         return {
           news: news.items,
-          people: people.items
+          people: people.items,
+          event: event.items
         }
       }).catch(console.error)
     },
