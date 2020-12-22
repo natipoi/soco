@@ -1,15 +1,13 @@
 <template>
-  <div :class="{ 'dark_mode': active }" id="wrap">
+  <div :class="{ 'dark_mode': $store.state.mode }" id="wrap">
     <Header />
-    <Nuxt 
-      :active=active
-    />
+    <Nuxt />
     <Footer />
     <div class="day-and-night-switch-wrap">
       <div class="day-and-night-switch">
-        <span id="switch-selected-bg" :class="{ 'change-switch': active }"></span>
-        <span :class="{ 'day-and-night-btn day-btn': true, 'switch-selected': !active }" @click="onClick" style="padding-left: 5px;">昼</span>
-        <span :class="{ 'day-and-night-btn night-btn': true, 'switch-selected': active }" @click="onClick" style="padding-right: 5px;">夜</span>
+        <span id="switch-selected-bg" :class="{ 'change-switch': $store.state.mode }"></span>
+        <span :class="{ 'day-and-night-btn day-btn': true, 'switch-selected': !$store.state.mode }" @click="onClick" style="padding-left: 5px;">昼</span>
+        <span :class="{ 'day-and-night-btn night-btn': true, 'switch-selected': $store.state.mode }" @click="onClick" style="padding-right: 5px;">夜</span>
       </div>
     </div>
     
@@ -91,6 +89,8 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
 .dark_mode .story-main-body, .dark_mode .story-h1 {color: #fff;}
 .dark_mode  a.no-link {color: rgba(229, 229, 229, 0.3) !important;}
 
+
+
 p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
 #header-background, #sp-modal-menu-wrap, .hamburger-bar, footer, .selected:before, .day-and-night-switch, header { transition: all 0.2s;}
 .logo-svg {transition: all 0.2s;}
@@ -166,33 +166,13 @@ p, a, li, .h3, td, .switch-selected, footer p  {transition: all 0.2s;}
 
 <script>
 export default {
-  data() {
-    var firstActive = true;
-  　var path = this.$route.path;
-    path = path.split("/");
-    if (path[1] === "bar") {
-      firstActive = true;
-    } else if (path[1] === "kitchen") {
-      firstActive = false;
-    } else {
-      const japanStandardTime = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
-      const hour = new Date(japanStandardTime).getHours();
-      // 5時〜18時の間はお昼モード
-      if ( parseInt(hour) >= 5 && parseInt(hour) < 18 ) {
-        firstActive = false
-      }
-    }
-    return {
-      active: firstActive
-    }
-  },
   mounted() {
     Typekit.load({async: true})
   },
   methods: {
     onClick() {
-      this.active = !this.active
       if (process.client) {
+        this.$store.dispatch('changeDayNightMode', !this.$store.state.mode)
         var path = location.pathname;
         path = path.split("/");
         if (path[1] === "bar") {
@@ -201,8 +181,23 @@ export default {
           window.location.href = "https://soco-kyoto.com/bar/"
         }
       }
-      
     }
+  },
+  mounted() {
+      var path = this.$route.path;
+      path = path.split("/");
+      if (path[1] === "bar") {
+        this.$store.dispatch('changeDayNightMode', false)
+      } else if (path[1] === "kitchen") {
+        this.$store.dispatch('changeDayNightMode', true)
+      } else {
+        const japanStandardTime = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
+        const hour = new Date(japanStandardTime).getHours();
+        // 5時〜18時の間はお昼モード
+        if ( parseInt(hour) >= 5 && parseInt(hour) < 18 ) {
+          this.$store.dispatch('changeDayNightMode', false)
+        }
+      }
   }
 
 }

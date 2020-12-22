@@ -1,12 +1,14 @@
 <template>
     <div class="calendar">
     
-    <div class="calendar-title">
-        <button @click="prevMonth" :class="{'calendar-btn': true, 'calendar-arrow prev-arrow': true, 'calender-hidden': !formatMonth}"></button>
-        <button @click="prevWeek" :class="{'calendar-btn': true, 'calendar-arrow prev-arrow': true, 'calender-hidden': formatMonth}"></button>
-        <div class="calendar-sapn">{{ formatDate }}</div>
-        <button @click="nextMonth" :class="{'calendar-btn': true, 'calendar-arrow next-arrow': true, 'calender-hidden': !formatMonth}"></button>
-        <button @click="nextWeek" :class="{'calendar-btn': true, 'calendar-arrow next-arrow': true, 'calender-hidden': formatMonth}"></button>
+    <div class="calendar-title-wrap">
+        <div class="calendar-title">
+            <button @click="prevMonth" :class="{'calendar-btn': true, 'calendar-arrow prev-arrow': true, 'calender-hidden': !formatMonth}"></button>
+            <button @click="prevWeek" :class="{'calendar-btn': true, 'calendar-arrow prev-arrow': true, 'calender-hidden': formatMonth}"></button>
+            <div class="calendar-sapn">{{ formatDate }}</div>
+            <button @click="nextMonth" :class="{'calendar-btn': true, 'calendar-arrow next-arrow': true, 'calender-hidden': !formatMonth}"></button>
+            <button @click="nextWeek" :class="{'calendar-btn': true, 'calendar-arrow next-arrow': true, 'calender-hidden': formatMonth}"></button>
+        </div>
         <div class="calendar-change-status-wrap">
         <button @click="formatChangeToWeek" :class="{ 'calendar-status-active': !formatMonth, 'calendar-change-status': true, 'calendar-btn': true}">週</button>
         <button @click="formatChangeToMonth" :class="{ 'calendar-status-active': formatMonth, 'calendar-change-status': true, 'calendar-btn': true}">月</button>
@@ -35,13 +37,13 @@
                 <span>{{ day.date }}</span>
                 <div class="event-box">
                     <ul>
-                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red">event1</li>
-                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-blue">event2</li>
-                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-green">event3</li>
-                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red">event4</li>
-                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red">event5</li>
-                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red">event6</li>
-                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red">event7</li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red"><span class="only-pc">event1</span></li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-blue"><span class="only-pc">event1</span></li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-green"><span class="only-pc">event1</span></li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red"><span class="only-pc">event1</span></li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red"><span class="only-pc">event1</span></li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red"><span class="only-pc">event1</span></li>
+                        <li v-show="Math.random() > 0.9" class="calendar-event event-color-red"><span class="only-pc">event1</span></li>
                     </ul>
                 </div>
             </div>
@@ -83,38 +85,43 @@
 .calendar {overflow: hidden;margin: 0px auto 30px; }
 .calender-hidden {display: none;}
 .calendar-sapn {font-weight:900;font-size:1.2rem;}
+
 /* .calendar-btn {border: none;appearance: none;background: transparent;}
 .calendar-btn:hover, .calendar-btn:focus {outline: none;cursor: pointer;} */
-.calendar-title {display: flex;justify-content: center;position:relative;    margin-bottom: 10px;}
-.calendar-wrap {border: solid 2px rgba(0,0,0,0.1);color:#a2a2a2;border-radius: 10px;}
-.calendar-row {display:flex;}
-.calendar-row:last-child {overflow: hidden;}
-.calendar-each-box {flex:1;border-bottom: solid 2px rgba(0,0,0,0.1);border-right: solid 2px rgba(0,0,0,0.1);padding: 5px;}
-.calendar-each-box:last-child {border-right: none;}
-.calendar-row:last-child .calendar-each-box {border-bottom: 0;}
-.calendar-change-status-wrap {position: absolute;right:0;bottom:0;}
+.calendar-title-wrap {display: block;position:relative;margin-bottom: 10px;}
+.calendar-title {display: flex;justify-content: center;}
+.calendar-change-status-wrap {position: relative;}
 .calendar-change-status {border: solid 2px rgba(0,0,0,0.1);border-radius: 10px;padding: 0px 30px;color:#a2a2a2;font-weight: 900;}
+
+.calendar-wrap {border: solid 2px rgba(0,0,0,0.1);color:#a2a2a2;border-radius: 10px;}
+
+.calendar-row {display:flex;}
+.calendar-each-box {overflow: hidden;flex:1;width: 100%;border-bottom: solid 2px rgba(0,0,0,0.1);border-right: solid 2px rgba(0,0,0,0.1);padding: 5px;}
+.calendar-each-box:last-child {border-right: none;}
+.week-wrap .calendar-each-box {overflow: visible;}
+.calendar-row:last-child .calendar-each-box {border-bottom: 0;}
+
 
 .calendar-status-active {background: #a2a2a2; color: #fff;}
 .week-title {text-align: center;min-height: 30px;padding:5px;}
-.calendar-arrow:before {font-family: "Font Awesome 5 Free"; font-weight: 900;width: 100px;display: block;font-size: 20px;}
-
+.calendar-arrow:before {font-family: "Font Awesome 5 Free"; font-weight: 900;width: 50px;display: block;font-size: 20px;}
+.calendar-arrow:hover {cursor: pointer;}
 .prev-arrow:before {content:"\f053";}
 .next-arrow:before {content:"\f054";}
 
-.event-box {height: 100px;overflow-y: scroll;}
-.calendar-event {margin-bottom: 5px;padding: 0px 5px;}
+.event-box {height: calc((96vw)/7 - 15px);overflow-y: scroll;}
+.calendar-event {padding: 3px;margin-bottom: 5px;}
 .event-color-red {background: #e4474a;border-radius: 5px; color: #fff;}
 .event-color-blue {background: #00bfff; border-radius: 5px; color: #fff;}
 .event-color-green {background:#00756f; border-radius: 5px; color: #fff;}
 
-.week-wrap {max-width: 750px;margin-left: auto;border-radius: 0;}
+.week-wrap { margin-left: 50px;border-radius: 0;}
 .week-youbi {display: block; font-size: 0.8rem;}
 .week-row {position: relative;}
 .week-row:before {content: "";position: absolute; left: -10px; top:-2px;width: 10px;height: 2px;background: rgba(0,0,0,0.1);}
 .week-memori {content: "11 AM"; position: absolute; left: -50px; top:-15px;width: 40px;height: 30px;line-height: 30px;color:#a2a2a2;font-size:0.8rem;}
-.week-each-box {height: 40px;padding:0;position: relative;}
-.week-event {position: absolute; top: 0; width: 100%;}
+.week-each-box {height: 25px;padding:0;position: relative;}
+.week-event {position: absolute; top: 0; width: 100%;font-size: 0.7rem;}
 .week-event-1 {height:40px;}
 .week-event-130 {height:60px;}
 .week-event-2 {height:80px;}
@@ -123,6 +130,25 @@
 .week-event-330 {height:140px;}
 .week-event-4 {height:160px;}
 .week-event-430 {height:180px;}
+
+/* dark_mode */
+.dark_mode .calendar-wrap, .dark_mode .calendar-each-box, .calendar-change-status {border-color: #fff !important;}
+.dark_mode .calendar-wrap, .dark_mode .week-memori, .dark_mode .calendar-title,.dark_mode .calendar-arrow:before {color: #fff;}
+.dark_mode .week-row:before {background: #fff;}
+@media screen and (max-width: 820px) {
+    .calender-side {margin-left: 2vw;margin-right:2vw;}
+}
+@media screen and (min-width: 821px) {
+
+    /* .calender-side {margin-left: 2vw;margin-right:2vw;} */
+    .calendar-title-wrap {display: flex;justify-content: center;}
+    .calendar-change-status-wrap {position: absolute;right:0;bottom:0;}
+    .calendar-event {padding: 0px 5px;}
+    .event-box {height: 100px;}
+    .week-wrap {max-width: 93%;}
+    .week-each-box {height: 40px;}
+    .week-event {font-size: 1.0rem;}
+}
 </style>
 <script>
 

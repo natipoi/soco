@@ -66,7 +66,7 @@
 
 <style>
 .main-menu-wrap {max-width: 1200px;padding-left: 20px;height: 650px; background: url(~assets/top/pipe-background.png) no-repeat center center/95% auto;margin: 60px auto 30px; position: relative;zoom: 1.1;}
-.main-menu-wrap-sp {max-width: 820px;height: 800px; background: url(~assets/top/sp-pipe-background.png) no-repeat top center/100% auto;margin: 60px auto 30px; position: relative;}
+
 .main-menu-box {position: absolute;background: gray; }
 .main-menu-box:before {content:"";position: absolute;top: 0; left:0;right: 0; bottom:0;background: rgba(0,0,0,0.4);}
 .kitchen-bar-box {top: -30px;left: 300px;width: 250px;height: 200px; background: url(~assets/top/food-box.jpg) no-repeat center center/100% auto;}
@@ -81,6 +81,7 @@
 .main-menu-hover {position: absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.9);opacity: 0;transition: opacity 0.3s;padding: 5px;font-size: 0.8rem;overflow: hidden;}
 .main-menu-box:hover .main-menu-hover {display: block;opacity: 1;transition: opacity 0.3s;}
 
+.main-menu-wrap-sp {max-width: 820px;height: 800px; background: url(~assets/top/sp-pipe-background.png) no-repeat top center/100% auto;margin: 60px auto 30px; position: relative;}
 .sp-kitchen-bar-box {top: -30px;left: 20px;width: 250px;height: 200px; background: url(~assets/top/food-box.jpg) no-repeat center center/100% auto;}
 .sp-talk-box {top: 20px;right: 85px;width: 180px;height: 140px;background: url(~assets/top/talk-box.jpg) no-repeat center center/100% auto;}
 .sp-rooms-box{top: 500px;right: 50px;width: 220px; height:180px;}
@@ -88,6 +89,9 @@
 .sp-gallery-box{top: 400px;left: 70px;width: 220px;height: 180px;background: url(~assets/top/gallery-box.jpg) no-repeat center center/100% auto;}
 .sp-honey-box {top: 680px;left: 100px;width: 180px;height: 140px;}
 .sp-therapy-box {top: 230px;left: 0px;width: 170px;height: 140px;}
+
+.dark_mode .main-menu-wrap {background-image: url(~assets/top/dark-pipe-background.png);}
+.dark_mode .main-menu-wrap-sp {background-image: url(~assets/top/sp-dark-pipe-background.png);}
 
 @media screen and (max-width: 1200px) {
     .main-menu-wrap {zoom: 0.9;}
@@ -135,8 +139,7 @@
 
 @media screen and (max-width: 500px) {
     .main-menu-wrap-sp {zoom: 0.7;}
-    /* .sp-kitchen-bar-box {left:40px;} */
-    /* .sp-talk-box {right: 100px;} */
+
     .sp-honey-box {top: 740px;}
     .sp-therapy-box {left: 10px;top: 220px;}
     .sp-gallery-box {top: 450px;}
@@ -153,6 +156,8 @@
     .sp-gallery-box {top: 450px;}
     .sp-rooms-box{top: 480px;}
     .sp-live-box {right: 50px;} */
+    .sp-gallery-box {top: 430px;}
+    .sp-honey-box {top: 710px;}
 }
 @media screen and (max-width: 400px) {
     .main-menu-wrap-sp {zoom: 0.55;}
@@ -176,6 +181,7 @@
 }
 @media screen and (max-width: 320px) {
     .main-menu-wrap-sp {zoom: 0.45;}
+    .sp-honey-box {top: 730px;}
     /* .sp-kitchen-bar-box {left:40px;} */
     /* .sp-talk-box {right: 100px;} */
     /* .sp-honey-box {top: 740px;}

@@ -28,6 +28,8 @@
 .catch-phrase {font-weight: 900; font-size: 1.2rem; line-height: 1.0; margin-bottom: 30px; text-align: center;}
 .story-image {position: relative;overflow:hidden; height:calc(100vw * 0.6);margin-bottom: 10px;}
 
+.dark_mode h3, .dark_mode h2, .dark_mode h4 {color: #fff}
+
 @media screen and (min-width: 820px){
   .catch-phrase {font-size: 1.5rem; margin-bottom: 50px;}
   .story-image {width: 50%; height: 300px;}

@@ -125,11 +125,11 @@
 .reservation-image-wrap {width: 100%;height: 400px; background: #e5e5e5;margin-bottom: 30px;}
 
 
-
-
-
 .contact-btn-wrap {margin-top: 30px;}
 .contact-btn {background: #f2cb0c;color: #fff;border-radius: 5px;font-weight:900;padding: 10px 20px;font-size: 1.2rem;}
+
+.dark_mode h3, .dark_mode h2, .dark_mode h4 {color: #fff}
+
 
 @media screen and (min-width: 820px) {
     .contents-navi li:last-child, .navi li:nth-child(6) {
