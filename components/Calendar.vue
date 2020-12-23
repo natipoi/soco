@@ -218,7 +218,9 @@
                     v-for="index in 15"
                     :key="index"
                     class="event-details-time-box">
-                    <div v-if="day_events[`${index + 9}`]" :class="{'popup-event': true}" data-server-rendered="false">
+                    <no-ssr>
+                    <div v-if="day_events[`${index + 9}`]" :class="{'popup-event': true}">
+
                         <nuxt-link
                             :to="`/events/` + day_events[`${index + 9}`].get('slug')"
                             :class="{ 
@@ -252,6 +254,7 @@
                             <p class="popup-event-description">{{ day_events[`${index + 9}`].get("description") }}</p>
                         </nuxt-link>
                     </div>
+                    </no-ssr>
                 </div>
 
             </div>
@@ -664,6 +667,12 @@ export default {
         showEvents(){
             let selected_day = this.popupDate.format("YYYY/MM/DD");
             var events = {}
+            // for( var i=11; i<25; i++){
+            //     var map = new Map();
+            //     map.set("title", "test");
+            //     events[`${i}`] = map
+
+            // }
             for (var e of this.event) {
                 let event_date = moment(e.fields.event_start_time);
                 let event_day = event_date.format("YYYY/MM/DD");
@@ -728,6 +737,7 @@ export default {
                     
                 }
             }
+            console.log("events is ", events)
             return events
         },
         calendarClick(ele){
