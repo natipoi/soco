@@ -40,28 +40,28 @@
                     
                     <ul>
                         <li v-show="day.event1" :class="{ 'calendar-event': true, 'event-color-red': day.event_color_red1, 'event-color-blue': day.event_color_blue1, 'event-color-green': day.event_color_green1}">
-                            <nuxt-link :to="`/events/${day.slug1}`">
+                            <a :href="`/events/${day.slug1}`">
                                 <span class="only-pc">{{ day.title1 }}</span>
                                 <span class="only-pc">{{ day.start_time1 }}〜{{ day.end_time1 }}</span>
-                            </nuxt-link>
+                            </a>
                         </li>
                         <li v-show="day.event2" :class="{ 'calendar-event': true, 'event-color-red': day.event_color_red1, 'event-color-blue': day.event_color_blue1, 'event-color-green': day.event_color_green1}">
-                            <nuxt-link :to="`/events/${day.slug2}`">
+                            <a :href="`/events/${day.slug2}`">
                                 <span class="only-pc">{{ day.title2 }}</span>
                                 <span class="only-pc">{{ day.start_time2 }}〜{{ day.end_time2 }}</span>
-                            </nuxt-link>
+                            </a>
                         </li>
                         <li v-show="day.event3" :class="{ 'calendar-event': true, 'event-color-red': day.event_color_red1, 'event-color-blue': day.event_color_blue1, 'event-color-green': day.event_color_green1}">
-                            <nuxt-link :to="`/events/${day.slug3}`">
+                            <a :href="`/events/${day.slug3}`">
                                 <span class="only-pc">{{ day.title3 }}</span>
                                 <span class="only-pc">{{ day.start_time3 }}〜{{ day.end_time3 }}</span>
-                            </nuxt-link>
+                            </a>
                         </li>
                         <li v-show="day.event4" :class="{ 'calendar-event': true, 'event-color-red': day.event_color_red1, 'event-color-blue': day.event_color_blue1, 'event-color-green': day.event_color_green1}">
-                            <nuxt-link :to="`/events/${day.slug4}`">
+                            <a :href="`/events/${day.slug4}`">
                                 <span class="only-pc">{{ day.title4 }}</span>
                                 <span class="only-pc">{{ day.start_time4 }}〜{{ day.end_time4 }}</span>
-                            </nuxt-link>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -118,7 +118,7 @@
                     'week-event-10': day.ten_hours1,
                     'week-event-1030': day.ten_half_hours1
                    }"
-                ><nuxt-link :to="`/events/${day.slug1}`" class="week-event-link">{{ day.title1 }}</nuxt-link></div>
+                ><a :href="`/events/${day.slug1}`" class="week-event-link">{{ day.title1 }}</a></div>
                 <div v-show="day.start_time2 == String(index + 9)" 
                   :class="{ 
                     'week-event': true, 
@@ -146,7 +146,7 @@
                     'week-event-10': day.ten_hours2,
                     'week-event-1030': day.ten_half_hours2
                    }"
-                ><nuxt-link :to="`/events/${day.slug2}`" class="week-event-link">{{ day.title2 }}</nuxt-link></div>
+                ><a :href="`/events/${day.slug2}`" class="week-event-link">{{ day.title2 }}</a></div>
                 <div v-show="day.start_time3 == String(index + 9)" 
                   :class="{ 
                     'week-event': true, 
@@ -174,7 +174,7 @@
                     'week-event-10': day.ten_hours3,
                     'week-event-1030': day.ten_half_hours3
                    }"
-                ><nuxt-link :to="`/events/${day.slug3}`" class="week-event-link">{{ day.title3 }}</nuxt-link></div>
+                ><a :href="`/events/${day.slug3}`" class="week-event-link">{{ day.title3 }}</a></div>
                 <div v-show="day.start_time4 == String(index + 9)" 
                   :class="{ 
                     'week-event': true, 
@@ -202,7 +202,7 @@
                     'week-event-10': day.ten_hours4,
                     'week-event-1030': day.ten_half_hours4
                    }"
-                ><nuxt-link :to="`/events/${day.slug4}`" class="week-event-link">{{ day.title4 }}</nuxt-link></div>
+                ><a :href="`/events/${day.slug4}`" class="week-event-link">{{ day.title4 }}</a></div>
             </div>
         </div>
     </div>
@@ -221,8 +221,8 @@
                     <no-ssr>
                     <div v-if="day_events[`${index + 9}`]" :class="{'popup-event': true}">
 
-                        <nuxt-link
-                            :to="`/events/` + day_events[`${index + 9}`].get('slug')"
+                        <a
+                            :href="`/events/` + day_events[`${index + 9}`].get('slug')"
                             :class="{ 
                                 'week-event': true, 
                                 'event-color-red': day_events[`${index + 9}`].get('event_color_red'), 
@@ -252,7 +252,7 @@
                         >
                             <p class="popup-event-title">{{ day_events[`${index + 9}`].get("title") }}</p>
                             <p class="popup-event-description">{{ day_events[`${index + 9}`].get("description") }}</p>
-                        </nuxt-link>
+                        </a>
                     </div>
                     </no-ssr>
                 </div>
@@ -307,7 +307,7 @@ html, body {
 .calendar-sapn {font-weight:900;font-size:1.2rem;}
 
 .calendar-title-wrap {display: block;position:relative;margin-bottom: 10px;}
-.calendar-title {display: flex;justify-content: center;}
+.calendar-title {display: flex;justify-content: center;margin-bottom: 10px;}
 .calendar-change-status-wrap {position: relative;}
 .calendar-change-status {border: solid 2px rgba(0,0,0,0.1);border-radius: 10px;padding: 0px 30px;color:#a2a2a2;font-weight: 900;}
 .calendar-wrap {border: solid 2px rgba(0,0,0,0.1);color:#a2a2a2;border-radius: 10px;}
@@ -321,7 +321,7 @@ html, body {
 
 .calendar-status-active {background: #a2a2a2; color: #fff;}
 .week-title {text-align: center;min-height: 30px;padding:5px;}
-.calendar-arrow:before {font-family: "Font Awesome 5 Free"; font-weight: 900;width: 50px;display: block;font-size: 20px;}
+.calendar-arrow:before {font-family: "Font Awesome 5 Free"; font-weight: 900;width: 80px;display: block;font-size: 2.0rem;}
 .calendar-arrow:hover {cursor: pointer;}
 .prev-arrow:before {content:"\f053";}
 .next-arrow:before {content:"\f054";}
@@ -382,7 +382,7 @@ html, body {
 .popup-event .week-event-10 {height:500px;}
 .popup-event .week-event-link {display: block;height: 100%;}
 /* dark_mode */
-.dark_mode .calendar-wrap, .dark_mode .calendar-each-box, .calendar-change-status {border-color: #fff !important;}
+.dark_mode .calendar-wrap, .dark_mode .calendar-each-box, .dark_mode .calendar-change-status {border-color: #fff !important;}
 .dark_mode .calendar-wrap, .dark_mode .week-memori, .dark_mode .calendar-title,.dark_mode .calendar-arrow:before {color: #fff;}
 .dark_mode .week-row:before {background: #fff;}
 
