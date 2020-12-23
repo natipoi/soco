@@ -13,6 +13,11 @@
         <button @click="formatChangeToWeek" :class="{ 'calendar-status-active': !formatMonth, 'calendar-change-status': true, 'calendar-btn': true}">週</button>
         <button @click="formatChangeToMonth" :class="{ 'calendar-status-active': formatMonth, 'calendar-change-status': true, 'calendar-btn': true}">月</button>
         </div>
+        <div class="calendar-category-list">
+            <div class="calendar-category category-live">live</div>
+            <div class="calendar-category category-talk">talk</div>
+            <div class="calendar-category category-gallery">gallary</div>
+        </div>
     </div>
     <div :class="{ 'calendar-wrap': true, 'calender-hidden': !formatMonth}">
         <div class="calendar-row">
@@ -45,19 +50,19 @@
                                 <span class="only-pc">{{ day.start_time1 }}〜{{ day.end_time1 }}</span>
                             </a>
                         </li>
-                        <li v-show="day.event2" :class="{ 'calendar-event': true, 'event-color-red': day.event_color_red1, 'event-color-blue': day.event_color_blue1, 'event-color-green': day.event_color_green1}">
+                        <li v-show="day.event2" :class="{ 'calendar-event': true, 'event-color-red': day.event_color_red2, 'event-color-blue': day.event_color_blue2, 'event-color-green': day.event_color_green2}">
                             <a :href="`/events/${day.slug2}`">
                                 <span class="only-pc">{{ day.title2 }}</span>
                                 <span class="only-pc">{{ day.start_time2 }}〜{{ day.end_time2 }}</span>
                             </a>
                         </li>
-                        <li v-show="day.event3" :class="{ 'calendar-event': true, 'event-color-red': day.event_color_red1, 'event-color-blue': day.event_color_blue1, 'event-color-green': day.event_color_green1}">
+                        <li v-show="day.event3" :class="{ 'calendar-event': true, 'event-color-red': day.event_color_red3, 'event-color-blue': day.event_color_blue3, 'event-color-green': day.event_color_green3}">
                             <a :href="`/events/${day.slug3}`">
                                 <span class="only-pc">{{ day.title3 }}</span>
                                 <span class="only-pc">{{ day.start_time3 }}〜{{ day.end_time3 }}</span>
                             </a>
                         </li>
-                        <li v-show="day.event4" :class="{ 'calendar-event': true, 'event-color-red': day.event_color_red1, 'event-color-blue': day.event_color_blue1, 'event-color-green': day.event_color_green1}">
+                        <li v-show="day.event4" :class="{ 'calendar-event': true, 'event-color-red': day.event_color_red4, 'event-color-blue': day.event_color_blue4, 'event-color-green': day.event_color_green4}">
                             <a :href="`/events/${day.slug4}`">
                                 <span class="only-pc">{{ day.title4 }}</span>
                                 <span class="only-pc">{{ day.start_time4 }}〜{{ day.end_time4 }}</span>
@@ -92,116 +97,16 @@
                 class="calendar-each-box week-each-box"
             >
                 <div v-show="day.start_time1 == String(index + 9)" 
-                  :class="{ 
-                    'week-event': true, 
-                    'event-color-red': day.event_color_red1, 
-                    'event-color-blue': day.event_color_blue1, 
-                    'event-color-green': day.event_color_green1,
-                    'week-event-1': day.one_hour1,
-                    'week-event-130': day.one_half_hours1,
-                    'week-event-2': day.two_hours1,
-                    'week-event-230': day.two_half_hours1,
-                    'week-event-3': day.three_hours1,
-                    'week-event-330': day.three_half_hours1,
-                    'week-event-4': day.four_hours1,
-                    'week-event-430': day.four_half_hours1,
-                    'week-event-5': day.five_hours1,
-                    'week-event-530': day.five_half_hours1,
-                    'week-event-6': day.six_hours1,
-                    'week-event-630': day.six_half_hours1,
-                    'week-event-7': day.seven_hours1,
-                    'week-event-730': day.seven_half_hours1,
-                    'week-event-8': day.eight_hours1,
-                    'week-event-830': day.eight_half_hours1,
-                    'week-event-9': day.nine_hours1,
-                    'week-event-930': day.nine_half_hours1,
-                    'week-event-10': day.ten_hours1,
-                    'week-event-1030': day.ten_half_hours1
-                   }"
+                  :class="day.classList1"
                 ><a :href="`/events/${day.slug1}`" class="week-event-link">{{ day.title1 }}</a></div>
                 <div v-show="day.start_time2 == String(index + 9)" 
-                  :class="{ 
-                    'week-event': true, 
-                    'event-color-red': day.event_color_red2, 
-                    'event-color-blue': day.event_color_blue2, 
-                    'event-color-green': day.event_color_green2,
-                    'week-event-1': day.one_hour2,
-                    'week-event-130': day.one_half_hours2,
-                    'week-event-2': day.two_hours2,
-                    'week-event-230': day.two_half_hours2,
-                    'week-event-3': day.three_hours2,
-                    'week-event-330': day.three_half_hours2,
-                    'week-event-4': day.four_hours2,
-                    'week-event-430': day.four_half_hours2,
-                    'week-event-5': day.five_hours2,
-                    'week-event-530': day.five_half_hours2,
-                    'week-event-6': day.six_hours2,
-                    'week-event-630': day.six_half_hours2,
-                    'week-event-7': day.seven_hours2,
-                    'week-event-730': day.seven_half_hours2,
-                    'week-event-8': day.eight_hours2,
-                    'week-event-830': day.eight_half_hours2,
-                    'week-event-9': day.nine_hours2,
-                    'week-event-930': day.nine_half_hours2,
-                    'week-event-10': day.ten_hours2,
-                    'week-event-1030': day.ten_half_hours2
-                   }"
+                  :class="day.classList2"
                 ><a :href="`/events/${day.slug2}`" class="week-event-link">{{ day.title2 }}</a></div>
-                <div v-show="day.start_time3 == String(index + 9)" 
-                  :class="{ 
-                    'week-event': true, 
-                    'event-color-red': day.event_color_red3, 
-                    'event-color-blue': day.event_color_blue3, 
-                    'event-color-green': day.event_color_green3,
-                    'week-event-1': day.one_hour3,
-                    'week-event-130': day.one_half_hours3,
-                    'week-event-2': day.two_hours3,
-                    'week-event-230': day.two_half_hours3,
-                    'week-event-3': day.three_hours3,
-                    'week-event-330': day.three_half_hours3,
-                    'week-event-4': day.four_hours3,
-                    'week-event-430': day.four_half_hours3,
-                    'week-event-5': day.five_hours3,
-                    'week-event-530': day.five_half_hours3,
-                    'week-event-6': day.six_hours3,
-                    'week-event-630': day.six_half_hours3,
-                    'week-event-7': day.seven_hours3,
-                    'week-event-730': day.seven_half_hours3,
-                    'week-event-8': day.eight_hours3,
-                    'week-event-830': day.eight_half_hours3,
-                    'week-event-9': day.nine_hours3,
-                    'week-event-930': day.nine_half_hours3,
-                    'week-event-10': day.ten_hours3,
-                    'week-event-1030': day.ten_half_hours3
-                   }"
+                <div v-show="day.start_time3 == String(index + 9)"
+                  :class="day.classList3"
                 ><a :href="`/events/${day.slug3}`" class="week-event-link">{{ day.title3 }}</a></div>
                 <div v-show="day.start_time4 == String(index + 9)" 
-                  :class="{ 
-                    'week-event': true, 
-                    'event-color-red': day.event_color_red4, 
-                    'event-color-blue': day.event_color_blue4, 
-                    'event-color-green': day.event_color_green4,
-                    'week-event-1': day.one_hour4,
-                    'week-event-130': day.one_half_hours4,
-                    'week-event-2': day.two_hours4,
-                    'week-event-230': day.two_half_hours4,
-                    'week-event-3': day.three_hours4,
-                    'week-event-330': day.three_half_hours4,
-                    'week-event-4': day.four_hours4,
-                    'week-event-430': day.four_half_hours4,
-                    'week-event-5': day.five_hours4,
-                    'week-event-530': day.five_half_hours4,
-                    'week-event-6': day.six_hours4,
-                    'week-event-630': day.six_half_hours4,
-                    'week-event-7': day.seven_hours4,
-                    'week-event-730': day.seven_half_hours4,
-                    'week-event-8': day.eight_hours4,
-                    'week-event-830': day.eight_half_hours4,
-                    'week-event-9': day.nine_hours4,
-                    'week-event-930': day.nine_half_hours4,
-                    'week-event-10': day.ten_hours4,
-                    'week-event-1030': day.ten_half_hours4
-                   }"
+                  :class="day.classList4"
                 ><a :href="`/events/${day.slug4}`" class="week-event-link">{{ day.title4 }}</a></div>
             </div>
         </div>
@@ -223,32 +128,7 @@
 
                         <a
                             :href="`/events/` + day_events[`${index + 9}`].get('slug')"
-                            :class="{ 
-                                'week-event': true, 
-                                'event-color-red': day_events[`${index + 9}`].get('event_color_red'), 
-                                'event-color-blue': day_events[`${index + 9}`].get('event_color_blue'), 
-                                'event-color-green': day_events[`${index + 9}`].get('event_color_green'),
-                                'week-event-1': day_events[`${index + 9}`].get('one_hour'),
-                                'week-event-130': day_events[`${index + 9}`].get('one_half_hours'),
-                                'week-event-2': day_events[`${index + 9}`].get('two_hours'),
-                                'week-event-230': day_events[`${index + 9}`].get('two_half_hours'),
-                                'week-event-3': day_events[`${index + 9}`].get('three_hours'),
-                                'week-event-330': day_events[`${index + 9}`].get('three_half_hours'),
-                                'week-event-4': day_events[`${index + 9}`].get('four_hours'),
-                                'week-event-430': day_events[`${index + 9}`].get('four_half_hours'),
-                                'week-event-5': day_events[`${index + 9}`].get('five_hours'),
-                                'week-event-530': day_events[`${index + 9}`].get('five_half_hours'),
-                                'week-event-6': day_events[`${index + 9}`].get('six_hours'),
-                                'week-event-630': day_events[`${index + 9}`].get('six_half_hours'),
-                                'week-event-7': day_events[`${index + 9}`].get('seven_hours'),
-                                'week-event-730': day_events[`${index + 9}`].get('seven_half_hours'),
-                                'week-event-8': day_events[`${index + 9}`].get('eight_hours'),
-                                'week-event-830': day_events[`${index + 9}`].get('eight_half_hours'),
-                                'week-event-9': day_events[`${index + 9}`].get('nine_hours'),
-                                'week-event-930': day_events[`${index + 9}`].get('nine_half_hours'),
-                                'week-event-10': day_events[`${index + 9}`].get('ten_hours'),
-                                'week-event-1030': day_events[`${index + 9}`].get('ten_half_hours')
-                            }"
+                            :class="day_events[`${index + 9}`].get('classList')"
                         >
                             <p class="popup-event-title">{{ day_events[`${index + 9}`].get("title") }}</p>
                             <p class="popup-event-description">{{ day_events[`${index + 9}`].get("description") }}</p>
@@ -264,6 +144,12 @@
   </div>
 </template>
 <style>
+.calendar-category-list {position: absolute;left:0; bottom:0;padding-left: 30px;}
+.calendar-category:before {content:"";position:absolute; left: -100%;top: 50%;transform: translateY(-50%); width:90%;height: 3px;border-radius: 10px;}
+.calendar-category {position: relative;text-align: left;color: #a2a2a2;line-height: 1.2;}
+.category-gallery:before{background: #e4474a;}
+.category-live:before {background: #00756f;}
+.category-talk:before{background: #00bfff;}
 html, body {
   overflow: auto;
   height: 100%;
@@ -306,7 +192,7 @@ html, body {
 .calender-hidden {display: none;}
 .calendar-sapn {font-weight:900;font-size:1.2rem;}
 
-.calendar-title-wrap {display: block;position:relative;margin-bottom: 10px;}
+.calendar-title-wrap {display: block;position:relative;margin-bottom: 10px; padding-top: 10px;}
 .calendar-title {display: flex;justify-content: center;margin-bottom: 10px;}
 .calendar-change-status-wrap {position: relative;}
 .calendar-change-status {border: solid 2px rgba(0,0,0,0.1);border-radius: 10px;padding: 0px 30px;color:#a2a2a2;font-weight: 900;}
@@ -322,7 +208,7 @@ html, body {
 .calendar-status-active {background: #a2a2a2; color: #fff;}
 .week-title {text-align: center;min-height: 30px;padding:5px;}
 .calendar-arrow:before {font-family: "Font Awesome 5 Free"; font-weight: 900;width: 80px;display: block;font-size: 2.0rem;}
-.calendar-arrow:hover {cursor: pointer;}
+.calendar-btn:hover,.calendar-arrow:focus {cursor: pointer;}
 .prev-arrow:before {content:"\f053";}
 .next-arrow:before {content:"\f054";}
 
@@ -361,25 +247,25 @@ html, body {
 .week-event-10 {height:275px;}
 .week-event-link {display: block;height: 100%;color: #fff}
 
-.popup-event .week-event-1 {height:50px;}
-.popup-event .week-event-130 {height:75px;}
-.popup-event .week-event-2 {height:100px;}
-.popup-event .week-event-230 {height:125px;}
-.popup-event .week-event-3 {height:150px;}
-.popup-event .week-event-330 {height:175px;}
-.popup-event .week-event-4 {height:200px;}
-.popup-event .week-event-430 {height:225px;}
-.popup-event .week-event-5 {height:250px;}
-.popup-event .week-event-530 {height:275px;}
-.popup-event .week-event-6 {height:300px;}
-.popup-event .week-event-630 {height:325px;}
-.popup-event .week-event-7 {height:350px;}
-.popup-event .week-event-730 {height:375px;}
-.popup-event .week-event-8 {height:400px;}
-.popup-event .week-event-830 {height:425px;}
-.popup-event .week-event-9 {height:450px;}
-.popup-event .week-event-930 {height:475px;}
-.popup-event .week-event-10 {height:500px;}
+.popup-event .week-event-1 {height:30px;}
+.popup-event .week-event-130 {height:45px;}
+.popup-event .week-event-2 {height:60px;}
+.popup-event .week-event-230 {height:75px;}
+.popup-event .week-event-3 {height:90px;}
+.popup-event .week-event-330 {height:105px;}
+.popup-event .week-event-4 {height:120px;}
+.popup-event .week-event-430 {height:135px;}
+.popup-event .week-event-5 {height:150px;}
+.popup-event .week-event-530 {height:165px;}
+.popup-event .week-event-6 {height:180px;}
+.popup-event .week-event-630 {height:195px;}
+.popup-event .week-event-7 {height:210px;}
+.popup-event .week-event-730 {height:225px;}
+.popup-event .week-event-8 {height:240px;}
+.popup-event .week-event-830 {height:255px;}
+.popup-event .week-event-9 {height:270px;}
+.popup-event .week-event-930 {height:285px;}
+.popup-event .week-event-10 {height:300px;}
 .popup-event .week-event-link {display: block;height: 100%;}
 /* dark_mode */
 .dark_mode .calendar-wrap, .dark_mode .calendar-each-box, .dark_mode .calendar-change-status {border-color: #fff !important;}
@@ -461,7 +347,7 @@ export default {
             return date.add(6 - youbiNum, "days");
         },
         getCalendar() {
-            
+            this.formatDate = this.currentDate.format("YYYY/MM")
             let startDate = this.getStartDate();
             const endDate = this.getEndDate();
             const weekNumber = Math.ceil(endDate.diff(startDate, "days") / 7);
@@ -531,8 +417,20 @@ export default {
             return date.add(6 - youbiNum, "days");
         },
         getWeek() {
-            let startDate = this.getStartWeekDate();
-            const endDate = this.getEndWeekDate();
+
+            const startMonth = this.getStartWeekDate();
+            const endMonth = this.getEndWeekDate();
+            if (startMonth.month() !== endMonth.month()) {
+                console.log(startMonth.year())
+                console.log(endMonth.year())
+                if (startMonth.year() !== endMonth.year()) {
+                    this.formatDate = startMonth.format("YYYY/MM") + "〜" + endMonth.format("YYYY/MM");
+                } else {
+                    this.formatDate = this.currentDate.format("YYYY") + "/" + startMonth.format("MM") + "〜" + endMonth.format("MM");
+                }
+            } else {
+                this.formatDate = this.currentDate.format("YYYY/MM")
+            }
             let week = [];
             const youbi = {
                 "Su": "日",
@@ -545,18 +443,14 @@ export default {
             }
             for (let day = 0; day < 7; day++) {
                 var obj = {};
-                var week_date = moment(startDate);
+                var week_date = moment(startMonth);
                 week_date = week_date.format("YYYY/MM/DD")
                 var event_cnt = 1;
                 for (var e of this.event) {
                     var start_date = moment(e.fields.event_start_time);
                     let end_date = moment(e.fields.event_end_time);
                     let start_oclock = start_date.format("H");
-                    let start_hour = start_date.hours();
-                    let end_hour = end_date.hours();
-                    let start_minutes = start_date.minutes();
-                    let end_minutes = end_date.minutes();
-                    let event_hours = (end_hour - start_hour) * 60 + (end_minutes - start_minutes);
+                    let event_hours = this.getEventHours(start_date, end_date)
                     start_date = start_date.format("YYYY/MM/DD")
                     
                     if (week_date === start_date) {
@@ -564,115 +458,69 @@ export default {
                         obj[`title${event_cnt}`] = e.fields.title
                         obj[`start_time${event_cnt}`] = start_oclock
                         obj[`slug${event_cnt}`] = e.fields.slug
-                        if (e.fields.category === "gallery") {
-                            obj[`event_color_red${event_cnt}`] = true
-                        } else if (e.fields.category === "talk") {
-                            obj[`event_color_blue${event_cnt}`] = true
-                        } else if (e.fields.category === "live") {
-                            obj[`event_color_green${event_cnt}`] = true
+                        
+      
+                        var classList = {}
+                        classList['week-event'] = true
+                        if (e.fields.category === "gallery") { classList['event-color-red'] = true
+                        } else if (e.fields.category === "talk") {classList['event-color-blue'] = true
+                        } else if (e.fields.category === "live") {classList['event-color-green'] = true
                         }
-                        if (event_hours === 60) {
-                            obj[`one_hour${event_cnt}`] = true
-                        } else if (event_hours === 90) {
-                            obj[`one_half_hours${event_cnt}`] = true
-                        } else if (event_hours === 120) {
-                            obj[`two_hours${event_cnt}`] = true
-                        } else if (event_hours === 150) {
-                            obj[`two_half_hours${event_cnt}`] = true
-                        } else if (event_hours === 180) {
-                            obj[`three_hours${event_cnt}`] = true
-                        } else if (event_hours === 210) {
-                            obj[`three_half_hours${event_cnt}`] = true
-                        } else if (event_hours === 240) {
-                            obj[`four_hours${event_cnt}`] = true
-                        } else if (event_hours === 270) {
-                            obj[`four_half_hours${event_cnt}`] = true
-                        } else if (event_hours === 300) {
-                            obj[`five_hours${event_cnt}`] = true
-                        } else if (event_hours === 330) {
-                            obj[`five_half_hours${event_cnt}`] = true
-                        } else if (event_hours === 360) {
-                            obj[`six_hours${event_cnt}`] = true
-                        } else if (event_hours === 390) {
-                            obj[`six_half_hours${event_cnt}`] = true
-                        } else if (event_hours === 420) {
-                            obj[`seven_hours${event_cnt}`] = true
-                        } else if (event_hours === 450) {
-                            obj[`seven_half_hours${event_cnt}`] = true
-                        } else if (event_hours === 480) {
-                            obj[`eight_hours${event_cnt}`] = true
-                        } else if (event_hours === 510) {
-                            obj[`eight_half_hours${event_cnt}`] = true
-                        } else if (event_hours === 540) {
-                            obj[`nine_hours${event_cnt}`] = true
-                        } else if (event_hours === 570) {
-                            obj[`nine_half_hours${event_cnt}`] = true
-                        } else if (event_hours === 600) {
-                            obj[`ten_hours${event_cnt}`] = true
+                        if (event_hours === 60) { classList['week-event-1'] = true
+                        } else if (event_hours === 90) {classList['week-event-130'] = true
+                        } else if (event_hours === 120) {classList['week-event-2'] = true
+                        } else if (event_hours === 150) {classList['week-event-230'] = true
+                        } else if (event_hours === 180) {classList['week-event-3'] = true
+                        } else if (event_hours === 210) {classList['week-event-330'] = true
+                        } else if (event_hours === 240) {classList['week-event-4'] = true
+                        } else if (event_hours === 270) {classList['week-event-430'] = true
+                        } else if (event_hours === 300) {classList['week-event-5'] = true
+                        } else if (event_hours === 330) {classList['week-event-530'] = true
+                        } else if (event_hours === 360) {classList['week-event-6'] = true
+                        } else if (event_hours === 390) {classList['week-event-630'] = true
+                        } else if (event_hours === 420) {classList['week-event-7'] = true
+                        } else if (event_hours === 450) {classList['week-event-730'] = true
+                        } else if (event_hours === 480) {classList['week-event-8'] = true
+                        } else if (event_hours === 510) {classList['week-event-830'] = true
+                        } else if (event_hours === 540) {classList['week-event-9'] = true
+                        } else if (event_hours === 570) {classList['week-event-930'] = true
+                        } else if (event_hours === 600) {classList['week-event-10'] = true
                         }
+                        obj[`classList${event_cnt}`] = classList;
                         event_cnt ++;
                     }
                 }
-                const youbiKey = startDate.format("dd");
+                const youbiKey = startMonth.format("dd");
                 obj["formatYoubi"] = youbi[youbiKey];
-                obj["date"] = startDate.get("date")
+                obj["date"] = startMonth.get("date")
                 week.push(obj);
-                startDate.add(1, "days");
+                startMonth.add(1, "days");
             }
  
             return week;
         },
         nextWeek() {
             this.currentDate = moment(this.currentDate).add(1, "week");
-            const startMonth = this.getStartWeekDate();
-            const endMonth = this.getEndWeekDate();
-            if (startMonth.month() !== endMonth.month()) {
-                console.log(startMonth.year())
-                console.log(endMonth.year())
-                if (startMonth.year() !== endMonth.year()) {
-                    this.formatDate = startMonth.format("YYYY/MM") + "〜" + endMonth.format("YYYY/MM");
-                } else {
-                    this.formatDate = this.currentDate.format("YYYY") + "/" + startMonth.format("MM") + "〜" + endMonth.format("MM");
-                }
-                
-            } else {
-                this.formatDate = this.currentDate.format("YYYY/MM")
-            }
             this.getWeek();
         },
         prevWeek() {
             this.currentDate = moment(this.currentDate).subtract(1, "week");
-            const startMonth = this.getStartWeekDate();
-            const endMonth = this.getEndWeekDate();
-            if (startMonth.month() !== endMonth.month()) {
-                console.log(startMonth.year())
-                console.log(endMonth.year())
-                if (startMonth.year() !== endMonth.year()) {
-                    this.formatDate = startMonth.format("YYYY/MM") + "〜" + endMonth.format("YYYY/MM");
-                } else {
-                    this.formatDate = this.currentDate.format("YYYY") + "/" + startMonth.format("MM") + "〜" + endMonth.format("MM");
-                }
-                
-            } else {
-                this.formatDate = this.currentDate.format("YYYY/MM")
-            }
             this.getWeek();
         },
         formatChangeToMonth(){
+            this.currentDate = moment()
+            this.getCalendar()
             this.formatMonth = true
+            
         },
         formatChangeToWeek(){
+            this.currentDate = moment()
+            this.getWeek();
             this.formatMonth = false
         },
         showEvents(){
             let selected_day = this.popupDate.format("YYYY/MM/DD");
             var events = {}
-            // for( var i=11; i<25; i++){
-            //     var map = new Map();
-            //     map.set("title", "test");
-            //     events[`${i}`] = map
-
-            // }
             for (var e of this.event) {
                 let event_date = moment(e.fields.event_start_time);
                 let event_day = event_date.format("YYYY/MM/DD");
@@ -680,64 +528,43 @@ export default {
                     var start_date = moment(e.fields.event_start_time);
                     let end_date = moment(e.fields.event_end_time);
                     let start_oclock = start_date.format("H");
-                    let start_hour = start_date.hours();
-                    let end_hour = end_date.hours();
-                    let start_minutes = start_date.minutes();
-                    let end_minutes = end_date.minutes();
-                    let event_hours = (end_hour - start_hour) * 60 + (end_minutes - start_minutes);
-
+                    let event_hours = this.getEventHours(start_date, end_date)
                     var map = new Map();
                     events[`${start_oclock}`] = map
                     events['date'] = event_date.format("MM月D日");
                     map.set("title", e.fields.title);
                     map.set("slug", e.fields.slug);
                     map.set("description", e.fields.description);
-                    if (e.fields.category === "gallery") { map.set(`event_color_red`,true)
-                    } else if (e.fields.category === "talk") { map.set(`event_color_blue`,true)
-                    } else if (e.fields.category === "live") { map.set(`event_color_green`, true)
+
+                    var classList = {"week-event": true};
+                    if (e.fields.category === "gallery") { classList["event-color-red"] = true
+                    } else if (e.fields.category === "talk") { classList["event-color-blue"] = true
+                    } else if (e.fields.category === "live") { classList["event-color-green"] = true
                     }
-                    if (event_hours === 60) { map.set(`one_hour`, true)
-                    } else if (event_hours === 90) {
-                        map.set(`one_half_hours`, true)
-                    } else if (event_hours === 120) {
-                        map.set(`two_hours`, true)
-                    } else if (event_hours === 150) {
-                        map.set(`two_half_hours`, true)
-                    } else if (event_hours === 180) {
-                        map.set(`three_hours`, true)
-                    } else if (event_hours === 210) {
-                        map.set(`three_half_hours`, true)
-                    } else if (event_hours === 240) {
-                        map.set(`four_hours`, true)
-                    } else if (event_hours === 270) {
-                        map.set(`four_half_hours`, true)
-                    } else if (event_hours === 300) {
-                        map.set(`five_hours`, true)
-                    } else if (event_hours === 330) {
-                        map.set(`five_half_hours`, true)
-                    } else if (event_hours === 360) {
-                        map.set(`six_hours`, true)
-                    } else if (event_hours === 390) {
-                        map.set(`six_half_hours`, true)
-                    } else if (event_hours === 420) {
-                        map.set(`seven_hours`, true)
-                    } else if (event_hours === 450) {
-                        map.set(`seven_half_hours`, true)
-                    } else if (event_hours === 480) {
-                        map.set(`eight_hours`, true)
-                    } else if (event_hours === 510) {
-                        map.set(`eight_half_hours`, true)
-                    } else if (event_hours === 540) {
-                        map.set(`nine_hours`, true)
-                    } else if (event_hours === 570) {
-                        map.set(`nine_half_hours`, true)
-                    } else if (event_hours === 600) {
-                        map.set(`ten_hours`, true)
+   
+                    if (event_hours === 60) { classList['week-event-1'] = true
+                    } else if (event_hours === 90) {classList['week-event-130'] = true
+                    } else if (event_hours === 120) {classList['week-event-2'] = true
+                    } else if (event_hours === 150) {classList['week-event-230'] = true
+                    } else if (event_hours === 180) {classList['week-event-3'] = true
+                    } else if (event_hours === 210) {classList['week-event-330'] = true
+                    } else if (event_hours === 240) {classList['week-event-4'] = true
+                    } else if (event_hours === 270) {classList['week-event-430'] = true
+                    } else if (event_hours === 300) {classList['week-event-5'] = true
+                    } else if (event_hours === 330) {classList['week-event-530'] = true
+                    } else if (event_hours === 360) {classList['week-event-6'] = true
+                    } else if (event_hours === 390) {classList['week-event-630'] = true
+                    } else if (event_hours === 420) {classList['week-event-7'] = true
+                    } else if (event_hours === 450) {classList['week-event-730'] = true
+                    } else if (event_hours === 480) {classList['week-event-8'] = true
+                    } else if (event_hours === 510) {classList['week-event-830'] = true
+                    } else if (event_hours === 540) {classList['week-event-9'] = true
+                    } else if (event_hours === 570) {classList['week-event-930'] = true
+                    } else if (event_hours === 600) {classList['week-event-10'] = true
                     }
-                    
+                    map.set("classList", classList);
                 }
             }
-            console.log("events is ", events)
             return events
         },
         calendarClick(ele){
@@ -750,6 +577,13 @@ export default {
         },
         handleTouchMove(e) {
             e.preventDefault();
+        },
+        getEventHours(start_date, end_date){
+            let start_hour = start_date.hours();
+            let end_hour = end_date.hours();
+            let start_minutes = start_date.minutes();
+            let end_minutes = end_date.minutes();
+            return (end_hour - start_hour) * 60 + (end_minutes - start_minutes);
         }
     },
     computed: {
