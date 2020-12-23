@@ -218,7 +218,7 @@
                     v-for="index in 15"
                     :key="index"
                     class="event-details-time-box">
-                    <div v-if="day_events[`${index + 9}`]" :class="{'popup-event': true}">
+                    <div v-if="day_events[`${index + 9}`]" :class="{'popup-event': true}" data-server-rendered="false">
                         <nuxt-link
                             :to="`/events/` + day_events[`${index + 9}`].get('slug')"
                             :class="{ 
