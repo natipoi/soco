@@ -2,7 +2,7 @@
 
 <div class="blog">
 <nuxt-link 
-    :to="`/stories/${slug}`">
+    :to="`/news/${slug}`">
     <div class="blog-img">
     <img 
         :src=image
