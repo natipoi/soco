@@ -35,7 +35,8 @@
                     <li><a href="/bar/" :class="{ 'sp-modal-menu-a': true }">Bar</a></li>
                     <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a no-link': true }">Labo</a></li>
                     <li><a href="javascript:void(0)" :class="{ 'sp-modal-menu-a no-link': true }">Rooms</a></li>
-                    <li><nuxt-link v-scroll-to="'#map'" class="sp-modal-menu-a" id="navi-access"　to>Access</nuxt-link></li>
+                    <li><a href="/company/" :class="{ 'sp-modal-menu-a': true }">Company</a></li>
+                    <li><nuxt-link v-scroll-to="'#map'" class="sp-modal-menu-a" id="navi-access" to>Access</nuxt-link></li>
                 </ul>
                 <!--<div class="change-lang">
                 <p><span class="selected-lang">日本語</span> / <span class="noselected-lang">English</span></p>
