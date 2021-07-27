@@ -48,7 +48,7 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description",content: "京都・河原町のキッチン・バー＆イベント"},
-      { hid: "og:site_name",property: "og:site_name",content: "soco"},
+      { hid: "og:site_name",property: "og:site_name",content: "SOCO | 京都・河原町のキッチン・バー＆イベント"},
       { hid: "og:type", property: "og:type", content: "website" },
       { hid: "og:url", property: "og:url", content: "https://soco-kyoto.com" },
       { hid: "og:title", property: "og:title", content: "socoソコにいけば何かある。だからちょっとsocoソコまで。| soco" },
@@ -92,10 +92,7 @@ export default {
   modules: [
     'nuxt-basic-auth-module'
   ],
-  basic: {
-    name: 'soco',
-    pass: '0816'
-  },
+
 
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,

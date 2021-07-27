@@ -74,9 +74,9 @@
     },
     head () {
         return {
-            title: "socoのニュース｜soco",
+            title: "SOCOのニュース | 京都・河原町のキッチン・バー＆イベント",
             meta: [
-                { hid: 'og:title', property: 'og:title', content: "socoのニュース｜soco" },
+                { hid: 'og:title', property: 'og:title', content: "SOCOのニュース | 京都・河原町のキッチン・バー＆イベント" },
                 { hid: 'og:url', property: 'og:url', content: `https://soco-kyoto.com/news/` },
                 // { hid: 'og:image', property: 'og:image', content: this.post.fields.heroImage.fields.file.url },
             ],

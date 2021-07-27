@@ -536,7 +536,7 @@ position: absolute;
     },
     head () {
         return {
-            title: "soco",
+            title: "SOCO | 京都・河原町のキッチン・バー＆イベント",
         }
     }
   }

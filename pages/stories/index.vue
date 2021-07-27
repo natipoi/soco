@@ -74,9 +74,9 @@
     },
     head () {
         return {
-            title: "socoのストーリー｜soco",
+            title: "SOCOのストーリー | 京都・河原町のキッチン・バー＆イベント",
             meta: [
-                { hid: 'og:title', property: 'og:title', content: "socoのストーリー｜soco" },
+                { hid: 'og:title', property: 'og:title', content: "SOCOのストーリー | 京都・河原町のキッチン・バー＆イベント" },
                 { hid: 'og:url', property: 'og:url', content: `https://soco-kyoto.com/stories/` },
                 // { hid: 'og:image', property: 'og:image', content: this.post.fields.heroImage.fields.file.url },
             ],

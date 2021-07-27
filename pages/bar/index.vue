@@ -48,9 +48,9 @@
     },
     head () {
         return {
-            title: "socoのバー｜soco",
+            title: "SOCOのバー | 京都・河原町のキッチン・バー＆イベント",
             meta: [
-                { hid: 'og:title', property: 'og:title', content: "socoのバー｜soco" },
+                { hid: 'og:title', property: 'og:title', content: "SOCOのバー | 京都・河原町のキッチン・バー＆イベント" },
                 { hid: 'og:url', property: 'og:url', content: `https://soco-kyoto.com/bar/` },
                 // { hid: 'og:image', property: 'og:image', content: this.post.fields.heroImage.fields.file.url },
             ],
