@@ -13,6 +13,7 @@
             <li><a href="/bar/">Bar</a></li>
             <li><a href="javascript:void(0)" class="no-link">Space</a></li>
             <li><a href="javascript:void(0)" class="no-link">Rooms</a></li>
+            <li><a href="/company/">Company</a></li>
             <li><nuxt-link v-scroll-to="'#map'" to>Access</nuxt-link></li>
         </ul>
         <ul class="header-menu only-pc" id="header-menu-sns">
