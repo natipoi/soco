@@ -71,7 +71,7 @@ table {text-align: left;border-collapse:separate;border-spacing: 10px}
 
 
 .dark_mode, .dark_mode, .dark_mode header  {background: #000 !important; transition: all 0.2s;}
-.dark_mode p, .dark_mode a, .dark_mode li, .dark_mode .h3, .dark_mode td {color: #fff; transition: all 0.2s;}
+.dark_mode p, .dark_mode a, .dark_mode li, .dark_mode .h3, .dark_mode td, .dark_mode th {color: #fff; transition: all 0.2s;}
 .dark_mode a {color: #fff !important; border-color: #fff !important; transition: all 0.2s;}
 .dark_mode #header-background, .dark_mode #sp-modal-menu-wrap {background: #000 !important; transition: all 0.2s;}
 .dark_mode .logo-svg {fill: #fff; transition: fill 0.2s;}
