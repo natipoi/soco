@@ -75,7 +75,7 @@
     .twitter::before {content: '\f099';}
 
     #header-sp-menu {position: relative; margin-left: auto; width: 48px; height: 48px;}
-    #header-hamburger {position: relative;z-index: 1000}
+    #header-hamburger {position: relative;z-index: 1000;width: 48px;height: 48px;display: block;}
     .hamburger-bar-wrap {position: absolute; top: 9px;left: 9px;width: 30px;height: 30px;}
     .hamburger-bar {display: block; position: absolute; width: 17px;height: 2px; left: 7px;background: rgb(0 0 0);border-radius: 0.5px;}
     #hamburger-bar-top {top: 10px;}
