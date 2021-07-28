@@ -20,6 +20,14 @@
       <td>京都府京都市上京区出水町260番地</td>
     </tr>
     <tr>
+      <th>電話番号</th>
+      <td>075-285-4385</td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td>soco@soco-kyoto.com</td>
+    </tr>
+    <tr>
       <th>設立年月日</th>
       <td>2021年6月15日</td>
     </tr>
